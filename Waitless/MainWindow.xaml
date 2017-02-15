@@ -21,7 +21,7 @@
             <Button Grid.Column="0" FontSize="25" Background="White" Height="33" VerticalAlignment="Top">
                 <TextBlock Text="&#8592;" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             </Button>
-            <TextBlock Text="Waitless" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Segoe Marker"/>
+            <TextBlock Text="Waitless" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="MV Boli"/>
             <Button Grid.Column="2" Background="White">
                 <Grid>
                     <TextBlock VerticalAlignment="Center">
