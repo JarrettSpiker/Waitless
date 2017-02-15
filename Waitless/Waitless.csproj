@@ -126,6 +126,11 @@
   <ItemGroup>
     <Resource Include="Images\cook.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chequeIcon.png" />
+    <Resource Include="Images\menuIcon.png" />
+    <Resource Include="Images\optionsIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
