@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="MainWindow" Height="525" Width="350">
+        Title="MainWindow" Height="525" Width="355">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
@@ -48,7 +48,7 @@
                         <TextBlock Text="Cheque Image"/>
                     </StackPanel>
                 </TabItem.Header>
-                <Label Content="Cheque content goes here..." />
+                <Frame Source="/ChequePage.xaml" NavigationUIVisibility="Hidden"/>
             </TabItem>
             <TabItem Width="115">
                 <TabItem.Header>
@@ -57,7 +57,7 @@
                         <TextBlock Text="Options Image"/>
                     </StackPanel>
                 </TabItem.Header>
-                <Label Content="Order content goes here..."/>
+                <Frame Source="/OptionsPage.xaml" NavigationUIVisibility="Hidden"/>
             </TabItem>
         </TabControl>
     </Grid>
