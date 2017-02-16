@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Waitless
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class CategoriesPage : Page
+    public partial class MainWindow : Window
     {
-        public CategoriesPage()
+        public MainWindow()
         {
             InitializeComponent();
         }

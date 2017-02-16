@@ -1,0 +1,30 @@
+﻿<Page x:Class="Waitless.CategoriesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Waitless"
+      mc:Ignorable="d" 
+      d:DesignHeight="344" d:DesignWidth="448"
+      Title="Categories">
+    <ScrollViewer Background="WhiteSmoke" VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical">
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200">
+                <TextBlock Text="Appetizers" Margin="5,5,5,5" Width="Auto"/>
+            </Border>
+            <TextBlock Text="Appetizers buttons"/>
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200">
+                <TextBlock Text="Entrees" Margin="5,5,5,5" Width="Auto"/>
+            </Border>
+            <TextBlock Text="Entrees buttons"/>
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200">
+                <TextBlock Text="Desserts" Margin="5,5,5,5" Width="Auto"/>
+            </Border>
+            <TextBlock Text="Desserts buttons"/>
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200">
+                <TextBlock Text="Drinks" Margin="5,5,5,5" Width="Auto"/>
+            </Border>
+            <TextBlock Text="Drinks buttons"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
