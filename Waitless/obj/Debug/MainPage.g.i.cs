@@ -52,7 +52,7 @@ namespace Waitless {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApplication1;component/mainpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Waitless;component/mainpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\MainPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
