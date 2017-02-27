@@ -24,8 +24,8 @@
         <Image x:Name="image" Source="Images/TBoneSteak.png" HorizontalAlignment="Left" Height="400" Margin="2,0,0,0" VerticalAlignment="Top" Width="345" RenderTransformOrigin="0.51,0.576" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="2"/>
         <TextBlock x:Name="itemTitle" Background="#FFFF5100" TextAlignment="Center" HorizontalAlignment="Center" Height="47" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" FontSize="36" Foreground="White" Text="T-Bone Steak" Grid.Column="1"/>
         <TextBlock x:Name="itemPrice" HorizontalAlignment="Left" Background="NavajoWhite" Height="47" Grid.Column="0" Grid.Row="1" Grid.RowSpan="1" TextWrapping="Wrap" Text="$21" VerticalAlignment="Top" Width="69" FontSize="36"/>
-        <TextBox x:Name="itemStars" Grid.Column="1" Background="NavajoWhite" HorizontalAlignment="Left" Height="47" Grid.Row="1" TextWrapping="Wrap" Text="✰✰✰✰✰ 4.6" VerticalAlignment="Top" Width="278" TextChanged="textBox_TextChanged" FontSize="36" TextAlignment="Center"/>
-        <Button x:Name="backButton" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="69" Click="button_Click" FontSize="24" FontWeight="Bold"/>
+        <TextBox x:Name="itemStars" Grid.Column="1" Background="NavajoWhite" HorizontalAlignment="Left" Height="47" Grid.Row="1" TextWrapping="Wrap" Text="✰✰✰✰✰ 4.6" VerticalAlignment="Top" Width="278" FontSize="36" TextAlignment="Center"/>
+        <Button x:Name="backButton" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="69" FontSize="24" FontWeight="Bold"/>
 
 
             <StackPanel Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Left" Height="212" Grid.Row="3" VerticalAlignment="Top" Width="347">
@@ -38,7 +38,7 @@
                 </Grid.RowDefinitions>
                 <Expander BorderBrush="Black" Header="Description" Grid.Row="0" Width="347" FontSize="24">
                     <StackPanel>
-                        <TextBox TextChanged="TextBox_TextChanged_1" Text="Twenty ounces of the classic combination of filet and New York &#xD;&#xA;strip.  Well-trimmed and aged 'bone-in' for flavor and &#xD;&#xA;tenderness." FontSize="12" Height="60"/>
+                        <TextBox Text="Twenty ounces of the classic combination of filet and New York &#xD;&#xA;strip.  Well-trimmed and aged 'bone-in' for flavor and &#xD;&#xA;tenderness." FontSize="12" Height="60"/>
                     </StackPanel>
                 </Expander>
                 <Expander Grid.Row="1" BorderBrush="Black" Header="Preparation" FontSize="24">
@@ -80,7 +80,7 @@
                     </StackPanel>
                 </Expander>
 
-                <Button Grid.Row="3" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" Content="Special Request" Margin="0,0,172,-104" Click="Button_Click_1" FontSize="24"></Button>
+                <Button Grid.Row="3" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" Content="Special Request" Margin="0,0,172,-104" FontSize="24"></Button>
                 
                         <Button Background="NavajoWhite"  BorderBrush="Black" BorderThickness="3" Content="Add to Order" Grid.Row="3" Margin="175,0,0,-104" FontSize="24">
                             
