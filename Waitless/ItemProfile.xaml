@@ -33,7 +33,7 @@
 
             <Expander Header="Description"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Width="347" FontSize="24">
                 <Grid>
-                    <TextBox IsReadOnly="True" Text="Twenty ounces of the classic combination of filet and New York &#xD;&#xA;strip.  Well-trimmed and aged 'bone-in' for flavor and &#xD;&#xA;tenderness." FontSize="12" Height="60"/>
+                    <TextBox IsReadOnly="True" Text="Twenty ounces of the classic combination of filet and &#xD;&#xA;New York strip.  Well-trimmed and aged 'bone-in' for flavor &#xD;&#xA;and tenderness." FontSize="12" Height="60"/>
                 </Grid>
             </Expander>
             <Expander Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Black" Header="Preparation" FontSize="24">
