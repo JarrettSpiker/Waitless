@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="MainWindow" Height="525" Width="355">
+        Title="MainWindow" Height="525" MaxHeight="525" MinHeight="525" Width="355" MaxWidth="355" MinWidth="355">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
