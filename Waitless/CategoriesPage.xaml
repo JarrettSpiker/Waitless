@@ -9,86 +9,92 @@
       Title="Categories">
     <ScrollViewer Background="WhiteSmoke" VerticalScrollBarVisibility="Auto">
         <StackPanel Orientation="Vertical">
-            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200" Width="321">
-                <TextBlock Text="Appetizers" Margin="5,5,5,5" Width="Auto"/>
-            </Border>
-            <TextBlock><Run Text="Appetizers "/><Run Text="buttons"/></TextBlock>
-            <TextBlock><Grid><Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-
-                                    <Button Grid.Column="1" Grid.Row="1"><TextBlock><Image Source="Images/MenuItems/Jalapeno.png" Height="60" Width="60" />
-           <Run Text="&#x0a;Jalapeno&#x0a;Poppers  "/></TextBlock></Button>
-                              <Button Grid.Column="2" Grid.Row="1"> <TextBlock>     <Image  Source="Images/MenuItems/burger_sliders.png" Height="60" Width="70" HorizontalAlignment="Right" RenderTransformOrigin="0.667,0.5" Margin="0,0,10,0"/>
-          <Run Text="&#x0a;Burger Sliders"/></TextBlock></Button>
-                                                    <Button Grid.Column="3" Grid.Row="1"><TextBlock><Image Source="Images/MenuItems/nachos.png" Height="60" Width="60" Margin="0,0,10,0" HorizontalAlignment="Right" RenderTransformOrigin="0.667,0.5"/>
-            <Run Text="&#x0a;Nachos"/></TextBlock></Button>
-
-            </Grid></TextBlock>
-
-            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200" Width="321">
-                <TextBlock Text="Entrees" Margin="5,5,5,5" Width="Auto"/>
-            </Border>
-            <TextBlock Text="Entrees buttons"/>
-            <TextBlock>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-
-                <Button Grid.Column="1" Grid.Row="1"><TextBlock><Image Source="Images/MenuItems/Burger.png" Height="60" Width="60" />
-                <Run Text="&#x0a;Burger"/></TextBlock></Button>
-                <Button Grid.Column="2" Grid.Row="1"><TextBlock><Image Source="Images/MenuItems/Steak.png" Height="60" Width="60" />
-                <Run Text="&#x0a;Steak"/></TextBlock></Button><Button Grid.Column="3" Grid.Row="1"><TextBlock>
-                <Image Source="Images/MenuItems/FishChips.png" Height="60" Width="60" />
-                <Run Text="&#x0a;Fish &amp;&#x0a;Chips"/></TextBlock></Button>
-                
-            </Grid>
-            </TextBlock>
-
-            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200" Width="321">
-                <TextBlock Text="Desserts" Margin="5,5,5,5" Width="Auto"/>
-            </Border>
-            <TextBlock Text="Desserts buttons"/>
-            <Border BorderBrush="Black" BorderThickness="2" Margin="5,5,0,0" HorizontalAlignment="Left" MinWidth="200" Width="321">
-                <TextBlock Text="Drinks" Margin="5,5,5,5" Width="Auto"/>
-            </Border>
-            <TextBlock Text="Drinks buttons"/>
-            <TextBlock>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
-                </Grid.RowDefinitions>
-                <Button Grid.Column="1" Grid.Row="1"><TextBlock><Image Source="Images/MenuItems/Pepsi.png" Height="60" Width="60" Margin="5,5,5,5"/></TextBlock></Button>
-                <Button Grid.Column="2" Grid.Row="1"><TextBlock><Image Source="Images/MenuItems/7up.png" Height="60" Width="60" Margin="5,5,5,5"/></TextBlock></Button>
-</Grid></TextBlock>
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Appetizers">
+                <StackPanel Orientation="Horizontal">
+                    <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="Images/MenuItems/Jalapeno.png" Height="40" Width="40" />
+                            <TextBlock Text="For One" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="Images/MenuItems/nachos.png" Height="40" Width="40" />
+                            <TextBlock Text="To Share" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Expander>
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Entrees">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="Images/MenuItems/burgerCategory.jpg" Height="40" Width="40" />
+                                <TextBlock Text="Burgers" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="Images/MenuItems/steak.png" Height="40" Width="40" />
+                                <TextBlock Text="Steaks" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="Images/MenuItems/seaFoodCategory.jpg" Height="40" Width="40" />
+                                <TextBlock Text="Sea Food" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="Images/MenuItems/sandwichCategory.jpg" Height="40" Width="40" />
+                                <TextBlock Text="Sandwiches" HorizontalAlignment="Center" FontSize="10"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="Images/MenuItems/pastaCategory.jpg" Height="40" Width="40" />
+                                <TextBlock Text="Pasta" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="Images/MenuItems/pizzaCategory.jpg" Height="40" Width="40" />
+                                <TextBlock Text="Pizza" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Expander>
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Dessert">
+                <StackPanel Orientation="Horizontal">
+                    <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="Images/MenuItems/IceCream.jpg" Height="40" Width="40" />
+                            <TextBlock Text="All Desserts" HorizontalAlignment="Center" FontSize="10"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Expander>
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Drinks">
+                <StackPanel Orientation="Horizontal">
+                    <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="Images/MenuItems/Pepsi.png" Height="40" Width="40" />
+                            <TextBlock Text="Non-alcoholic" HorizontalAlignment="Center" FontSize="8"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="Images/MenuItems/beerCategory.jpg" Height="40" Width="40" />
+                            <TextBlock Text="Alchoholic" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Expander>
         </StackPanel>
     </ScrollViewer>
 </Page>
