@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="OpeningWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,6 +87,9 @@
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="OpeningWindow.xaml.cs">
       <DependentUpon>OpeningWindow.xaml</DependentUpon>
@@ -155,7 +162,6 @@
     <Resource Include="Images\MenuItems\burger_sliders.png" />
     <Resource Include="Images\MenuItems\FishChips.png" />
     <Resource Include="Images\MenuItems\IcedTea.png" />
-    <Resource Include="Images\MenuItems\Jalapeno.png" />
     <Resource Include="Images\MenuItems\nachos.png" />
     <Resource Include="Images\MenuItems\Pepsi.png" />
     <Resource Include="Images\MenuItems\Steak.png" />
@@ -176,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MenuItems\beerCategory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\jalapenoPopper.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

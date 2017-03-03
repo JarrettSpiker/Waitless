@@ -13,7 +13,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical">
-                            <Image Source="Images/MenuItems/Jalapeno.png" Height="40" Width="40" />
+                            <Image Source="Images/MenuItems/jalapenoPopper.jpg" Height="40" Width="40" />
                             <TextBlock Text="For One" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </Button>
