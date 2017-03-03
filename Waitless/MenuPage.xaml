@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="448" d:DesignWidth="344"
       Title="MenuPage">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25px"/>
@@ -19,8 +18,13 @@
                 <TextBlock Text="&#8592; Back To Categories" Margin="5,0"/>
             </Button>
         </StackPanel>
+        
+        
+        
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">
             <StackPanel Orientation="Vertical" Background="White">
+                
+                
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: For One"/>
                 </Border>
@@ -51,22 +55,65 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
-                        <Image Margin="0,0,10,0" Grid.Column="0" Source="/Images/MenuItems/JalapenoPopper.jpg"/>
+                        <Image Margin="0,0,10,0" Grid.Column="0" Source="/Images/MenuItems/calamari.jpg"/>
                         <StackPanel Grid.Column="1" Orientation="Vertical">
-                            <TextBlock Text="Jalapeno Poppers"/>
+                            <TextBlock Text="Calamari"/>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="$9"/>
-                                <TextBlock Text="✰✰✰✰✰ 4.6" Margin="10,0"/>
-                                <Image Source="/Images/hotIcon.png" Margin="5,0" Height="16" Width="16"/>
-                                <Image Source="/Images/leafIcon.png" Margin="5,0" Height="16" Width="16"/>
+                                <TextBlock Text="$11"/>
+                                <TextBlock Text="✰✰✰✰ 3.7" Margin="10,0"/>
+                                <Image Source="/Images/specialtyIcon.gif" Margin="5,0" Height="16" Width="16"/>
                             </StackPanel>
                         </StackPanel>
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
+                
+                
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: To Share"/>
                 </Border>
+                <Button Height="40" HorizontalContentAlignment="Stretch">
+                    <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Margin="0,0,10,0" Grid.Column="0" Source="/Images/MenuItems/nachos.jpg"/>
+                        <StackPanel Grid.Column="1" Orientation="Vertical">
+                            <TextBlock Text="Nachos"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="$11"/>
+                                <TextBlock Text="✰✰✰✰✰ 4.8" Margin="10,0"/>
+                                <Image Source="/Images/hotIcon.png" Margin="5,0" Height="16" Width="16"/>
+                                <Image Source="/Images/specialtyIcon.gif" Margin="5,0" Height="16" Width="16"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
+                    </Grid>
+                </Button>
+                <Button Height="40" HorizontalContentAlignment="Stretch">
+                    <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Margin="0,0,10,0" Grid.Column="0" Source="/Images/MenuItems/shortRibs.jpg"/>
+                        <StackPanel Grid.Column="1" Orientation="Vertical">
+                            <TextBlock Text="Short Ribs"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="$15"/>
+                                <TextBlock Text="✰✰✰✰ 3.9" Margin="10,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
+                    </Grid>
+                </Button>
+                
+                
+                
+                
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Burgers"/>
                 </Border>

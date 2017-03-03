@@ -19,7 +19,7 @@
                     </Button>
                     <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical">
-                            <Image Source="Images/MenuItems/nachos.png" Height="40" Width="40" />
+                            <Image Source="Images/MenuItems/nachos.jpg" Height="40" Width="40" />
                             <TextBlock Text="To Share" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </Button>
