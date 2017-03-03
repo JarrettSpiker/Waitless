@@ -28,10 +28,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: For One"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -48,10 +48,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -72,10 +72,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: To Share"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -92,10 +92,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -117,10 +117,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Burgers"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -136,10 +136,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -154,10 +154,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -179,10 +179,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Steak"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -197,10 +197,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -222,10 +222,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Seafood"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -240,10 +240,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -266,10 +266,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Sandwiches"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -284,10 +284,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -309,10 +309,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Pasta"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -328,10 +328,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -353,10 +353,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Pizza"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -372,10 +372,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -396,10 +396,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Desserts"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -415,10 +415,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -440,10 +440,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Drinks: Non-alcoholic"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -455,10 +455,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -473,10 +473,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -491,10 +491,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -515,10 +515,10 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Drinks: Alcoholic"/>
                 </Border>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -533,10 +533,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
@@ -551,10 +551,10 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="40" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="60"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
