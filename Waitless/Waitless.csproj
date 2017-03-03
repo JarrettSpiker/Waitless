@@ -67,10 +67,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MenuItemButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MenuPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -91,9 +87,6 @@
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MenuItemButton.xaml.cs">
-      <DependentUpon>MenuItemButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
@@ -169,7 +162,6 @@
     <Resource Include="Images\MenuItems\burger_sliders.png" />
     <Resource Include="Images\MenuItems\FishChips.png" />
     <Resource Include="Images\MenuItems\IcedTea.png" />
-    <Resource Include="Images\MenuItems\nachos.png" />
     <Resource Include="Images\MenuItems\Pepsi.png" />
     <Resource Include="Images\MenuItems\Steak.png" />
   </ItemGroup>
@@ -197,6 +189,31 @@
     <Resource Include="Images\hotIcon.png" />
     <Resource Include="Images\specialtyIcon.gif" />
     <Resource Include="Images\vegIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\chickenBurger.jpg" />
+    <Resource Include="Images\MenuItems\classicBurger.jpg" />
+    <Resource Include="Images\MenuItems\westernBurger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\blt.jpg" />
+    <Resource Include="Images\MenuItems\cheesePizza.jpg" />
+    <Resource Include="Images\MenuItems\chickenClub.jpg" />
+    <Resource Include="Images\MenuItems\fishAndChips.jpg" />
+    <Resource Include="Images\MenuItems\lasagna.jpg" />
+    <Resource Include="Images\MenuItems\newYorkStrip.jpg" />
+    <Resource Include="Images\MenuItems\pepperoniPizza.jpg" />
+    <Resource Include="Images\MenuItems\salmon.jpg" />
+    <Resource Include="Images\MenuItems\spaghetti.jpg" />
+    <Resource Include="Images\MenuItems\tBone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leafIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\calamari.jpg" />
+    <Resource Include="Images\MenuItems\nachos.jpg" />
+    <Resource Include="Images\MenuItems\shortRibs.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
