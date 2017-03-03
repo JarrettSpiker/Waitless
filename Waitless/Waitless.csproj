@@ -166,9 +166,6 @@
     <Resource Include="Images\MenuItems\Steak.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\IceCream.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\MenuItems\burgerCategory.jpg" />
     <Resource Include="Images\MenuItems\seaFoodCategory.jpg" />
   </ItemGroup>
@@ -214,6 +211,15 @@
     <Resource Include="Images\MenuItems\calamari.jpg" />
     <Resource Include="Images\MenuItems\nachos.jpg" />
     <Resource Include="Images\MenuItems\shortRibs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MenuItems\alexanderKeiths.jpg" />
+    <Resource Include="Images\MenuItems\brownie.jpg" />
+    <Resource Include="Images\MenuItems\IceCream.jpg" />
+    <Resource Include="Images\MenuItems\milk.jpg" />
+    <Resource Include="Images\MenuItems\rickardsRed.jpg" />
+    <Resource Include="Images\MenuItems\water.jpg" />
+    <Resource Include="Images\MenuItems\wine.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
