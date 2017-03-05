@@ -48,7 +48,7 @@ namespace Waitless
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-         
+          
         }
     }
 }
