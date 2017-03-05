@@ -72,7 +72,7 @@
                 <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: To Share"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Click="Button_Click">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>

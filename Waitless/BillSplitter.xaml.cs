@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Waitless
 {
     /// <summary>
-    /// Interaction logic for MenuPage.xaml
+    /// Interaction logic for BillSplitter.xaml
     /// </summary>
-    public partial class MenuPage : Page
+    public partial class BillSplitter : Window
     {
-        public MenuPage()
+        public BillSplitter()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

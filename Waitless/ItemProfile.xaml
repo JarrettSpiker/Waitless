@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
         Title="Waitless" Height="525" Width="355">
-        
+
 
     <Window.Resources>
         <Storyboard x:Key="sbShowRightMenu" >
@@ -38,7 +38,7 @@
                 <RowDefinition Height="Auto" />
 
             </Grid.RowDefinitions>
-            <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top" Width="82" FontSize="24" FontWeight="Bold" Click="backButton_Click"/>
+            <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top" Width="66" FontSize="24" FontWeight="Bold" Click="backButton_Click"/>
 
 
             <TextBlock x:Name="itemTitle" Grid.Column='1' Grid.ColumnSpan="2" Panel.ZIndex="1" Background="#FFFF5100" TextAlignment="Center" HorizontalAlignment="Center" Height="48" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" FontSize="30" Foreground="White" Text="T-Bone Steak" />
@@ -94,7 +94,7 @@
                             <Run Text="Calories:" FontStyle="Italic" /> <Run Text="340"/>   <Run Text="Protein:" FontStyle="Italic" /> <Run Text="6g"/>
                                 <LineBreak/>
                                 <Run Text="Fats:" FontStyle="Italic" /> <Run Text="27g"/>     <Run Text="Carbs:" FontStyle="Italic" /> <Run Text="14g"/>
-                                <LineBreak/>                            
+                                <LineBreak/>
 
                         </TextBlock>
                     </StackPanel>
