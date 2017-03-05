@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="BillSplitter" Height="525" Width="355">
+        Title="BillSplitter" Height="525" MaxHeight="525" MinHeight="525" MaxWidth="350" MinWidth="350" Width="350">
 
 
 
@@ -73,9 +73,9 @@
 
                         <Grid HorizontalAlignment="Stretch" Height="50">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2.5*"/>
                                 <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1.5*"/>
 
                             </Grid.ColumnDefinitions>
 
@@ -111,9 +111,9 @@
 
                         <Grid HorizontalAlignment="Stretch" Height="50">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2.5*"/>
                                 <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1.5*"/>
 
                             </Grid.ColumnDefinitions>
 
@@ -152,9 +152,9 @@
 
                         <Grid HorizontalAlignment="Stretch" Height="50">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2.5*"/>
                                 <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1.5*"/>
 
                             </Grid.ColumnDefinitions>
 
@@ -193,9 +193,9 @@
 
                         <Grid HorizontalAlignment="Stretch" Height="50">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2.5*"/>
                                 <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1.5*"/>
 
                             </Grid.ColumnDefinitions>
 
