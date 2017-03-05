@@ -154,7 +154,7 @@
 
 
             <Button Grid.Row="6" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="22" Content="Customize"  ></Button>
-            <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" Content="Special Request" FontSize="18"></Button>
+            <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" Content="Special Request" FontSize="18" Click="SpecialRequestClicked"></Button>
 
 
             <Button Background="NavajoWhite" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" Content="Add to Order" FontSize="22" Click="Button_Click" Grid.RowSpan="2"></Button>

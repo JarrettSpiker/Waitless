@@ -63,6 +63,16 @@ namespace Waitless
             }
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SpecialRequestClicked(object sender, RoutedEventArgs e)
+        {
+            SpecialRequest h = new SpecialRequest();
+            h.Show();
+        }
     }
 }
 
