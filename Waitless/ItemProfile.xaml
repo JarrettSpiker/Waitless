@@ -22,12 +22,32 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
 
             </Grid.RowDefinitions>
             <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top" Width="82" FontSize="24" FontWeight="Bold" Click="backButton_Click"/>
-            <TextBlock x:Name="itemTitle" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Background="#FFFF5100" TextAlignment="Center" HorizontalAlignment="Center" Height="48" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontSize="36" Foreground="White" Text="T-Bone Steak" />
+
+
+
+            <StackPanel Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+
+                            <TextBlock x:Name="itemTitle" Background="#FFFF5100" TextAlignment="Center" HorizontalAlignment="Center" Height="48" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" FontSize="30" Foreground="White" Text="T-Bone Steak" />
+
+                    <Button Grid.Column="1" FontFamily="Segoe MDL2 Assets" Background="White" Content="&#xE700;" FontSize="28">
+                        
+                    </Button>
+                </Grid>
+      
+                    
+
+            </StackPanel>
             <TextBlock x:Name="itemPrice" Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Center" Background="NavajoWhite" Height="49"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Text="$21" Margin="2,0,0,0" Width="85"/>
-            <TextBox x:Name="itemStars" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="NavajoWhite" HorizontalAlignment="Left" Height="49" TextWrapping="Wrap" Text="✰✰✰✰✰ 4.6" VerticalAlignment="Top" Width="260" FontSize="36" TextAlignment="Center"/>
+            <TextBox x:Name="itemStars" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="NavajoWhite" HorizontalAlignment="Left" Height="49" TextWrapping="Wrap" Text="✰✰✰✰✰ 4.6" VerticalAlignment="Top" Width="260" FontSize="36" TextAlignment="Center" Margin="0,0,-12,0"/>
             <Image x:Name="image" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Source="Images/TBoneSteak.png" HorizontalAlignment="Left" Height="Auto" Margin="2,0,0,0" VerticalAlignment="Top" Width="345" RenderTransformOrigin="0.51,0.576"/>
 
 
@@ -77,9 +97,11 @@
 
 
 
-            <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Height="100" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" Content="Special Request" FontSize="22"></Button>
-
-            <Button Background="NavajoWhite" Grid.Row="6" Grid.Column="2"  BorderBrush="Black"  BorderThickness="3" Content="Add to Order" FontSize="22" Click="Button_Click"></Button>
+            <Button Grid.Row="6" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="22" Content="Customize"  > </Button>
+            <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" Content="Special Request" FontSize="22"></Button>
+            
+            
+            <Button Background="NavajoWhite" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2"  BorderBrush="Black"  BorderThickness="3" Content="Add to Order" FontSize="22" Click="Button_Click"></Button>
 
 
 
