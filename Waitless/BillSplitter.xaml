@@ -234,7 +234,7 @@
                 </Ellipse>
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
             </Grid>
-                <TextBlock FontSize="30" Margin="10,0,0,0"> (YOU) owe $19.95</TextBlock>
+                <TextBlock FontSize="30" Margin="10,0,0,0"> (YOU) owe $20.95</TextBlock>
         </StackPanel>
             </Border>
 
