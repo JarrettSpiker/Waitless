@@ -221,6 +221,9 @@
     <Resource Include="Images\MenuItems\water.jpg" />
     <Resource Include="Images\MenuItems\wine.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Whiteout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

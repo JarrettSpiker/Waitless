@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
         Title="OpeningWindow" Height="525" MaxHeight="525" MinHeight="525" Width="350" MinWidth="350" MaxWidth="350">
+
+
+
     <Grid Background="#FF00FFE8">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="3*" />
@@ -14,13 +18,14 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+       
         <TextBlock x:Name="Waitless" Grid.Row="0" Text="Waitless" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" FontFamily="Segoe Marker"/>
-        <Image x:Name="image" Source="Images/cook.gif" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,0,10"/>
-        <Button x:Name="loginButton" Content="Log In" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFF0F0F0" IsDefault="True" FontFamily="MV Boli" FontSize="36"/>
-        <Button x:Name="tableCodeButton" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFF0F0F0" IsDefault="True" FontFamily="MV Boli" FontSize="36">
+        <Image x:Name="image" Source="Images/cook.gif" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,0,10" />
+        <Button x:Name="loginButton" Content="Log In" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFF0F0F0" IsDefault="True" FontFamily="MV Boli" FontSize="36" Click="loginButton_Click"/>
+        <Button x:Name="tableCodeButton" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFF0F0F0" IsDefault="True" FontFamily="MV Boli" FontSize="36" Click="tableCodeButton_Click">
             <TextBlock>
                 <Run Text="Enter Table Code&#xa;" Foreground="Black"/>
-                <TextBox Width="293" Height="39" FontSize="14" TextAlignment="Center"/>
+                <TextBox x:Name="tableCodeField" Width="293" Height="39" FontSize="14" TextAlignment="Center" TextChanged="TextBox_TextChanged"/>
                 <Run Text="&#xa;Currently logged in as: Guest" Foreground="Red" FontSize="16"/>
             </TextBlock>
         </Button>

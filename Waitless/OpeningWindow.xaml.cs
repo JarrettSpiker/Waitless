@@ -23,6 +23,32 @@ namespace Waitless
         public OpeningWindow()
         {
             InitializeComponent();
+           
+        }
+
+        public String TableCode = "";
+     
+        private void tableCodeButton_Click(object sender, RoutedEventArgs e)
+        {   if (TableCode.Equals(""));
+            else {
+                this.Hide();
+                MainWindow MaineWindow = new MainWindow();
+                MaineWindow.Show();
+                this.Close(); }
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+      
+            TableCode = tableCodeField.Text;
+            
+         
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+         
         }
     }
 }
