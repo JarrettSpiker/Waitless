@@ -10,19 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApplication3
+namespace Waitless
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : Window
     {
-        public MainWindow()
+      
+        public OpeningWindow theWindow;
+        public Login(OpeningWindow ow)
         {
             InitializeComponent();
+            theWindow = ow;
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+                if (UsernameField.Text.Equals(""))
+                    UsernameField.Text = "Guest";
+                theWindow.setLoggedInUser(UsernameField.Text);
+                theWindow.loginButton.IsEnabled = true;
+                theWindow.tableCodeButton.IsEnabled = true;
+                theWindow.tableCodeField.IsEnabled = true;
+                theWindow.helpButton.IsEnabled = true;
+                this.Close(); 
         }
     }
 }

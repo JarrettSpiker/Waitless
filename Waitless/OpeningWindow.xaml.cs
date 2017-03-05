@@ -26,8 +26,13 @@ namespace Waitless
            
         }
 
+        public void setLoggedInUser(String user)
+        {
+            LoggedInUser.Text = "Currently logged in as: "+user;
+      
+        }
+
         public String TableCode = "";
-     
         private void tableCodeButton_Click(object sender, RoutedEventArgs e)
         {   if (TableCode.Equals(""));
             else {
@@ -48,7 +53,14 @@ namespace Waitless
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-          
+            loginButton.IsEnabled = false;
+            tableCodeButton.IsEnabled = false;
+            tableCodeField.IsEnabled = false;
+            helpButton.IsEnabled = false;   
+              Login  h = new Login(this);
+                     h.Show();
+            
+            
         }
     }
 }
