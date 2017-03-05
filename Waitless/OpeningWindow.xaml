@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="OpeningWindow" Height="525" Width="350">
+        Title="OpeningWindow" Height="525" MaxHeight="525" MinHeight="525" Width="350" MinWidth="350" MaxWidth="350">
     <Grid Background="#FF00FFE8">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -20,7 +20,8 @@
         <Button x:Name="tableCodeButton" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFF0F0F0" IsDefault="True" FontFamily="MV Boli" FontSize="36">
             <TextBlock>
                 <Run Text="Enter Table Code&#xa;" Foreground="Black"/>
-                <Run Text="Currently logged in as: Guest" Foreground="Red" FontSize="18"/>
+                <TextBox Width="293" Height="39" FontSize="14" TextAlignment="Center"/>
+                <Run Text="&#xa;Currently logged in as: Guest" Foreground="Red" FontSize="16"/>
             </TextBlock>
         </Button>
         <Button x:Name="helpButton" Content="Help" HorizontalAlignment="Stretch" Grid.Row="4" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFF0F0F0" IsDefault="True" FontFamily="MV Boli" FontSize="36"/>
