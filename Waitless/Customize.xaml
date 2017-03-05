@@ -1,0 +1,51 @@
+﻿<Window x:Class="Waitless.Customize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waitless"
+        mc:Ignorable="d"
+        Title="Customize" Height="300" Width="300">
+    <Grid Background="#FFF0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" >
+            <Run Text="Customize your order here" FontFamily="MV Boli" FontSize="22"/>
+            <LineBreak/>
+        </TextBlock>
+
+       <StackPanel Grid.Row="1">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Name="CheckBoxPanel" Orientation="Horizontal" Margin="0,0,0,0">
+                <Viewbox Height="{Binding Path=ActualHeight, ElementName=CheckBoxPanel}">
+                    <CheckBox> Steak Sauce </CheckBox>
+                </Viewbox>
+                <TextBlock/>
+                <!-- for CheckBox Content -->
+            </StackPanel>
+                <StackPanel Grid.Row="1" Name="CheckBoxPanel1" Orientation="Horizontal" Margin="0,0,0,0" Grid.RowSpan="1">
+                    <Viewbox Height="{Binding Path=ActualHeight, ElementName=CheckBoxPanel1}">
+                        <CheckBox>Peppercorn</CheckBox>
+                    </Viewbox>
+                    <TextBlock/>
+                    <!-- for CheckBox Content -->
+                </StackPanel>
+
+
+            </Grid>
+        </StackPanel>
+
+        <Button x:Name="ConfirmButton" Grid.Row="2" FontFamily="MV Boli" FontSize="44">Confirm</Button>
+
+    </Grid>
+</Window>

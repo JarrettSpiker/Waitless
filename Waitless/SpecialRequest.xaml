@@ -19,7 +19,7 @@
             <Run Text="Tell us anything we should know" FontFamily="MV Boli" FontSize="18"/>
         </TextBlock>
         <TextBox x:Name="RequestField" Grid.Row="1" FontFamily="MV Boli" FontSize="18" Margin="0,5,0,62" Grid.RowSpan="2"/>
-        <Button x:Name="LoginButton" Grid.Row="2" FontFamily="MV Boli" FontSize="44">Confirm</Button>
+        <Button x:Name="ConfirmButton" Grid.Row="2" FontFamily="MV Boli" FontSize="44">Confirm</Button>
 
     </Grid>
 </Window>
