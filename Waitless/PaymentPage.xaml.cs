@@ -17,7 +17,7 @@ namespace Waitless
     /// <summary>
     /// Interaction logic for PaymentPage.xaml
     /// </summary>
-    public partial class PaymentPage : Window
+    public partial class PaymentPage : Page
     {
         public PaymentPage()
         {
