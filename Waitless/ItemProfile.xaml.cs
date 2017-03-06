@@ -73,6 +73,12 @@ namespace Waitless
             SpecialRequest h = new SpecialRequest();
             h.Show();
         }
+
+        private void CustomizeClicked(object sender, RoutedEventArgs e)
+        {
+            Customize customizeDialog = new Customize();
+            customizeDialog.Show();
+        }
     }
 }
 

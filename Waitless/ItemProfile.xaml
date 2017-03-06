@@ -118,13 +118,15 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <RadioButton Grid.Column="0" FontSize="14">Rare</RadioButton>
-                    <RadioButton Grid.Column="1" FontSize="14" Margin="1,0,0,0">Medium-Rare</RadioButton>
-                    <RadioButton Grid.Column="2" FontSize="14">Medium</RadioButton>
-                    <RadioButton Grid.Column="3" FontSize="14">Well-Done</RadioButton>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <RadioButton Grid.Column="0" FontSize="14" Margin="5,0">Rare</RadioButton>
+                    <RadioButton Grid.Column="1" FontSize="14" Margin="5,0">Medium-Rare</RadioButton>
+                    <RadioButton Grid.Column="0" Grid.Row="2" FontSize="14" Margin="5,0">Medium</RadioButton>
+                    <RadioButton Grid.Column="1" Grid.Row="2" FontSize="14" Margin="5,0">Well-Done</RadioButton>
                 </Grid>
 
             </Expander>
@@ -143,17 +145,17 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <CheckBox Grid.Column="0" FontSize="14">Yukon Fries</CheckBox>
-                    <CheckBox Grid.Column="1" FontSize="14" Margin="1,0,0,0">Yam Fries</CheckBox>
-                    <CheckBox Grid.Column="0" Grid.Row="1" FontSize="14">Mashed Potatoes</CheckBox>
-                    <CheckBox Grid.Column="1" Grid.Row="1" FontSize="14">Caesar Salad</CheckBox>
+                    <CheckBox Grid.Column="0" FontSize="14" Margin="5,0">Yukon Fries</CheckBox>
+                    <CheckBox Grid.Column="1" FontSize="14"  Margin="5,0">Yam Fries</CheckBox>
+                    <CheckBox Grid.Column="0" Grid.Row="1" FontSize="14" Margin="5,0">Mashed Potatoes</CheckBox>
+                    <CheckBox Grid.Column="1" Grid.Row="1" FontSize="14" Margin="5,0">Caesar Salad</CheckBox>
                 </Grid>
 
             </Expander>
 
 
 
-            <Button Grid.Row="6" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="22"  FontFamily="MV Boli" Content="Customize"  ></Button>
+            <Button Grid.Row="6" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="22"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
             <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontFamily="MV Boli" Content="Special Request" FontSize="16" Click="SpecialRequestClicked"></Button>
 
 

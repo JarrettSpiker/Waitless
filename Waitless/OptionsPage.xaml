@@ -11,25 +11,25 @@
     <ScrollViewer Background="WhiteSmoke" VerticalScrollBarVisibility="Auto">
         <DockPanel>
             <StackPanel DockPanel.Dock="Top" Orientation="Vertical">
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="Aquamarine">
+                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
                     <DockPanel>
                         <TextBlock Text="Submit Feedback" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/submitFeedback.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="GreenYellow">
+                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
                     <DockPanel>
                         <TextBlock Text="Payment Methods" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/paymentMethods.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="AliceBlue">
+                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
                     <DockPanel>
                         <TextBlock Text="Order History" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/orderHistory.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="Yellow">
+                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
                     <DockPanel>
                         <TextBlock Text="Submit Review" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/submitRating.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>

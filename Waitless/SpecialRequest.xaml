@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="SpecialRequest" Height="300" Width="300">
+        Title="SpecialRequest" Height="300" Width="320"  MinHeight="300" MinWidth="320" MaxHeight="300" MaxWidth="320">
     <Grid Background="#FFF0F0F0">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -16,9 +16,9 @@
         <TextBlock Grid.Row="0"  Background="Wheat">
             <Run Text="Any special requests?" FontFamily="MV Boli" FontSize="18"/>
             <LineBreak/>
-            <Run Text="Tell us anything we should know" FontFamily="MV Boli" FontSize="18"/>
+            <Run Text="Tell us anything we should know:" FontFamily="MV Boli" FontSize="18"/>
         </TextBlock>
-        <TextBox x:Name="RequestField" Grid.Row="1" FontFamily="MV Boli" FontSize="18" Grid.RowSpan="2"/>
+        <TextBox x:Name="RequestField" Grid.Row="1" FontFamily="MV Boli" FontSize="18" Grid.RowSpan="2" TextWrapping="WrapWithOverflow"/>
         <Button x:Name="ConfirmButton" Grid.Row="2" FontFamily="MV Boli" Background="GreenYellow" FontSize="44">Confirm</Button>
 
     </Grid>
