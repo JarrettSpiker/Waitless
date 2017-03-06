@@ -67,6 +67,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PaymentPage.xaml.cs">
+      <DependentUpon>PaymentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialRequest.xaml.cs">
       <DependentUpon>SpecialRequest.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaymentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SpecialRequest.xaml">
       <SubType>Designer</SubType>
@@ -260,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\specialtyIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\payPal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
