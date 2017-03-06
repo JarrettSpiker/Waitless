@@ -58,6 +58,9 @@
     <Compile Include="BillSplitter.xaml.cs">
       <DependentUpon>BillSplitter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Confirmation.xaml.cs">
+      <DependentUpon>Confirmation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customize.xaml.cs">
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChequePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Confirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
