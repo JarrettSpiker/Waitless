@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="Confirmation" Height="300" Width="300">
+        Title="Confirmation" Height="300" Width="300" MinHeight="300" MinWidth="320" MaxHeight="300" MaxWidth="320">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -13,17 +13,10 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Width="300" Background="Wheat">
-            <TextBlock>
-                <Run FontSize="14" Text="Would you like to order these items?"/>
-                <LineBreak/>
-                <Run FontSize="14" Text="Once they have been ordered, food"/>
-                <LineBreak/>
-                <Run FontSize="14" Text="preparation will begin, and items may" />
-                <LineBreak/>
-                <Run FontSize="14" Text="not be cancelled through Waitless." />
-            </TextBlock>
-         </StackPanel>
+        <StackPanel Background="Wheat">
+            <TextBlock FontSize="14" Text="Would you like to order these items?" Margin="5"/>
+            <TextBlock FontSize="14" VerticalAlignment="Stretch" TextWrapping="Wrap"  Margin="5 0" Text="Once they have been ordered, food preparation will begin, and items may not be cancelled through Waitless."/>
+        </StackPanel>
 
         <ScrollViewer Grid.Row="1">
             <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal">
@@ -50,8 +43,8 @@
                     <ColumnDefinition Width="1*"/>
                     
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Height="50">Cancel</Button>
-                <Button Background="GreenYellow" Grid.Column="1" Height="50">Confirm</Button>
+                <Button Grid.Column="0" Height="50" FontFamily="MV Boli" FontSize="22">Cancel</Button>
+                <Button Background="GreenYellow" FontFamily="MV Boli" FontSize="22" Grid.Column="1" Height="50">Confirm</Button>
             </Grid>
 
             
