@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="448" d:DesignWidth="344"
       Title="Categories">
-    <ScrollViewer Background="WhiteSmoke" VerticalScrollBarVisibility="Auto">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="Wheat">
         <StackPanel Orientation="Vertical">
-            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Appetizers">
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Appetizers" Background="White">
                 <StackPanel Orientation="Horizontal">
                     <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical">
@@ -25,7 +25,7 @@
                     </Button>
                 </StackPanel>
             </Expander>
-            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Entrees">
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Entrees" Background="White">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
                         <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
@@ -69,7 +69,7 @@
                     </StackPanel>
                 </StackPanel>
             </Expander>
-            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Dessert">
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Dessert" Background="White">
                 <StackPanel Orientation="Horizontal">
                     <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical">
@@ -79,7 +79,7 @@
                     </Button>
                 </StackPanel>
             </Expander>
-            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Drinks">
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Drinks" Background="White">
                 <StackPanel Orientation="Horizontal">
                     <Button Width="60" Height="60" Margin="5,5,5,5" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical">

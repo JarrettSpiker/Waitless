@@ -14,38 +14,16 @@
 
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" >
-            <Run Text="Customize your order here" FontFamily="MV Boli" FontSize="22"/>
-            <LineBreak/>
-        </TextBlock>
+        <TextBlock Grid.Row="0" Text="Customize your order here:" FontFamily="MV Boli" FontSize="22" Background="Wheat" />
 
-       <StackPanel Grid.Row="1">
-            <Grid>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Name="CheckBoxPanel" Orientation="Horizontal" Margin="0,0,0,0">
-                <Viewbox Height="{Binding Path=ActualHeight, ElementName=CheckBoxPanel}">
-                    <CheckBox> Steak Sauce </CheckBox>
-                </Viewbox>
-                <TextBlock/>
-                <!-- for CheckBox Content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="BlanchedAlmond" >
+            <StackPanel>
+                <CheckBox Height="30" VerticalContentAlignment="Center">Steak Sauce</CheckBox>
+                <CheckBox Height="30" VerticalContentAlignment="Center">Peppercorn</CheckBox>
+                
             </StackPanel>
-                <StackPanel Grid.Row="1" Name="CheckBoxPanel1" Orientation="Horizontal" Margin="0,0,0,0" Grid.RowSpan="1">
-                    <Viewbox Height="{Binding Path=ActualHeight, ElementName=CheckBoxPanel1}">
-                        <CheckBox>Peppercorn</CheckBox>
-                    </Viewbox>
-                    <TextBlock/>
-                    <!-- for CheckBox Content -->
-                </StackPanel>
-
-
-            </Grid>
-        </StackPanel>
-
-        <Button x:Name="ConfirmButton" Grid.Row="2" FontFamily="MV Boli" FontSize="44">Confirm</Button>
+        </ScrollViewer>
+        <Button x:Name="ConfirmButton" Grid.Row="2" Background="GreenYellow" FontFamily="MV Boli" FontSize="44">Confirm</Button>
 
     </Grid>
 </Window>

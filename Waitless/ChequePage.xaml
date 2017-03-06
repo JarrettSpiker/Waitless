@@ -14,30 +14,30 @@
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Height="75">
+            <Button Grid.Column="0" Height="75" Background="#FFFBCB86">
                 <TextBlock Text="Split Bill" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
             </Button>
-            <Button Grid.Column="1" Height="75">
+            <Button Grid.Column="1" Height="75" Background="GreenYellow">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Place Order" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
                     <TextBlock Text="1 item pending" FontSize="12" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="Red"/>
                 </StackPanel>
             </Button>
-            <Button Grid.Column="2" Height="75">
+            <Button Grid.Column="2" Height="75" Background="#FFFBCB86">
                 <TextBlock Text="Pay Now" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
             </Button>
         </Grid>
         <DockPanel DockPanel.Dock="Top" LastChildFill="True" Background="White">
-            <Border BorderThickness="0 0 0 1" BorderBrush="Black" DockPanel.Dock="Top">
-                <Grid Background="White">
+            <Border BorderThickness="0 0 0 1" BorderBrush="Black" DockPanel.Dock="Top" Height="25px" Margin="0,0,0,5">
+                <Grid Background="Orange">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="5*" />
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="2*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="Item"/>
-                    <TextBlock Grid.Column="1" Text="Qty." HorizontalAlignment="Center"/>
-                    <TextBlock Grid.Column="2" Text="Price" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="0" Text="Item" VerticalAlignment="Center" Margin="5 0 0 0" FontWeight="Bold"/>
+                    <TextBlock Grid.Column="1" Text="Qty." HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock Grid.Column="2" Text="Price ($)" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
                 </Grid>
             </Border>
             <StackPanel DockPanel.Dock="Bottom">
@@ -50,9 +50,9 @@
                             <ColumnDefinition Width="1*" />
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Content="X" Margin="2 2 2 2"/>
-                        <TextBlock Grid.Column="1" Text="Burger" Foreground="Red"/>
-                        <Button Grid.Column="2" Content="Edit" Margin="2 2 2 2"/>
+                        <Button Grid.Column="0" Content="X" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="5,0" Background="White" Foreground="Red" BorderThickness="1"/>
+                        <TextBlock Grid.Column="1" Text="Burger" VerticalAlignment="Center" Foreground="Red"/>
+                        <Button Grid.Column="2" Content="Edit" Margin="2 2 2 2" Background="White" Foreground="Red"/>
                         <TextBlock Grid.Column="3" Text="1" Foreground="Red" HorizontalAlignment="Right"/>
                         <TextBlock Grid.Column="4" Text="13.65" HorizontalAlignment="Right" Foreground="Red"/>
                     </Grid>
@@ -70,11 +70,11 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Column="0" Grid.Row="0" Text="Steak" Foreground="Blue"/>
-                        <Button Grid.Column="1" Grid.Row="0" Content="Reorder" Margin="2 2 2 2" FontSize="10"/>
+                        <Button Grid.Column="1" Grid.Row="0" Content="Reorder" Foreground="Blue" Background="White" Margin="2 2 2 2" FontSize="10"/>
                         <TextBlock Grid.Column="2" Grid.Row="0" Text="1" Foreground="Blue" HorizontalAlignment="Right"/>
                         <TextBlock Grid.Column="3" Grid.Row="0" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
                         <TextBlock Grid.Column="0" Grid.Row="1" Text="Coca-Cola" Foreground="Blue"/>
-                        <Button Grid.Column="1" Grid.Row="1" Content="Refill" Margin="2 2 2 2" FontSize="10"/>
+                        <Button Grid.Column="1" Grid.Row="1" Content="Refill" Foreground="Blue" Background="White"  Margin="2 2 2 2" FontSize="10"/>
                         <TextBlock Grid.Column="2" Grid.Row="1" Text="1" Foreground="Blue" HorizontalAlignment="Right"/>
                         <TextBlock Grid.Column="3"  Grid.Row="1" Text="3.50" HorizontalAlignment="Right" Foreground="Blue"/>
                     </Grid>
