@@ -51,7 +51,7 @@
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="0" Content="X" Margin="2 2 2 2"/>
-                        <TextBlock Grid.Column="1" Text="Burger" Foreground="Red"/>
+                        <TextBlock Grid.Column="1" Text="T-Bone Steak" Foreground="Red"/>
                         <Button Grid.Column="2" Content="Edit" Margin="2 2 2 2"/>
                         <TextBlock Grid.Column="3" Text="1" Foreground="Red" HorizontalAlignment="Right"/>
                         <TextBlock Grid.Column="4" Text="13.65" HorizontalAlignment="Right" Foreground="Red"/>
@@ -69,7 +69,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Steak" Foreground="Blue"/>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Burger" Foreground="Blue"/>
                         <Button Grid.Column="1" Grid.Row="0" Content="Reorder" Margin="2 2 2 2" FontSize="10"/>
                         <TextBlock Grid.Column="2" Grid.Row="0" Text="1" Foreground="Blue" HorizontalAlignment="Right"/>
                         <TextBlock Grid.Column="3" Grid.Row="0" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
