@@ -7,34 +7,31 @@
         mc:Ignorable="d"
         Title="BillSplitter" Height="525" MaxHeight="525" MinHeight="525" MaxWidth="350" MinWidth="350" Width="350">
 
-
-
-    <Grid>
+    <Grid Background="Wheat">
         <Grid.RowDefinitions>
             <RowDefinition Height="40px"/>
-            <RowDefinition Height="40px"/>
+            <RowDefinition Height="50px"/>
             <RowDefinition Height="*" />
             <RowDefinition Height="60px"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="1*"/>
 
         </Grid.ColumnDefinitions>
 
 
-        <Button Grid.Row="0" Background="Azure">
-        <TextBlock Text="&#8592;" FontSize="32" VerticalAlignment="Bottom" Margin="5,0"/>
-    </Button>
-
-        <TextBlock Grid.Column="1" FontSize="24" TextAlignment="Center" Foreground="Black" Background="Azure" Grid.ColumnSpan="2" Text="Bill Splitter"/>
-        <Image Grid.Row="1"/>
-
-   
-
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="2">
+        <Button Grid.Row="0" Grid.ColumnSpan="2" Background="Azure">
+            <TextBlock Text="&#8592;" FontSize="32" VerticalAlignment="Bottom" Margin="5,0"/>
+        </Button>
+        <TextBlock Grid.Column="2" FontSize="24" TextAlignment="Center" Foreground="Black" Background="Azure"  FontFamily="MV Boli" Grid.ColumnSpan="2" Text="Bill Splitter"/>
+        <Border Grid.Column="0" Grid.Row="1" BorderThickness="0 0 1 0" BorderBrush="Black">
+            <Image Source="/Images/garbageIcon.png"/>
+        </Border>
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="2">
 
             <Grid Height="40" Width="40" Margin="5,0,5,0">
                 <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
@@ -42,13 +39,11 @@
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
             </Grid>
 
-            
             <Grid Height="40" Width="40" Margin="5,0,5,0">
                 <Ellipse Height="40" Width="40" Fill="LawnGreen" StrokeThickness="15">
                 </Ellipse>
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="MJ" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
             </Grid>
-
 
             <Grid Height="40" Width="40" Margin="5,0,5,0">
                 <Ellipse Height="40" Width="40" Fill="CadetBlue" StrokeThickness="15">
@@ -64,179 +59,177 @@
         </StackPanel>
 
 
-        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="3" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch">
+        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="4" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="White">
             <StackPanel Orientation="Vertical">
-                
-                
-                <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Stretch">
-                    <Border BorderThickness="2,2,2,0" BorderBrush="Black" VerticalAlignment="Stretch" Width="348">
+                <Grid HorizontalAlignment="Stretch" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
 
-                        <Grid HorizontalAlignment="Stretch" Height="50">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2.5*"/>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1.5*"/>
+                    <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">Rickards Red</TextBlock>
+                    </Border>
 
-                            </Grid.ColumnDefinitions>
-
-                            <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">Rickards Red</TextBlock>
-                            </Border>
-
-                            <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                <Grid Height="40" Width="40" Margin="5,0,5,0">
-                                    <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
-                                    </Ellipse>
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-                                </Grid>
-                                
-                            </StackPanel>
-
-                            <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun"> $7.95</TextBlock>
-                            </Border>
-
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <Grid Height="40" Width="40" Margin="5,0,5,0">
+                            <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
                         </Grid>
 
+                    </StackPanel>
 
+                    <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun"> $7.95</TextBlock>
                     </Border>
-                </StackPanel>
+                </Grid>
 
+                <Grid HorizontalAlignment="Stretch" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="1.5*"/>
 
-                <!--           Item Break             -->
+                    </Grid.ColumnDefinitions>
 
+                    <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock HorizontalAlignment="Center"  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">Nachos</TextBlock>
+                    </Border>
 
-                <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Stretch">
-                    <Border BorderThickness="2,2,2,0" BorderBrush="Black" VerticalAlignment="Stretch" Width="348">
-
-                        <Grid HorizontalAlignment="Stretch" Height="50">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2.5*"/>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1.5*"/>
-
-                            </Grid.ColumnDefinitions>
-
-                            <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock HorizontalAlignment="Center"  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">Nachos</TextBlock>
-                            </Border>
-
-                            <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                <Grid Height="40" Width="40" Margin="5,0,5,0">
-                                    <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
-                                    </Ellipse>
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-                                </Grid>
-
-                                <Grid Height="40" Width="40" Margin="5,0,5,0">
-                                    <Ellipse Height="40" Width="40" Fill="CadetBlue" StrokeThickness="15">
-                                    </Ellipse>
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="SO" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-                                </Grid>
-                            </StackPanel>
-
-                            <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun"> $8.00</TextBlock>
-                            </Border>
-
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <Grid Height="40" Width="40" Margin="5,0,5,0">
+                            <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
                         </Grid>
 
+                        <Grid Height="40" Width="40" Margin="5,0,5,0">
+                            <Ellipse Height="40" Width="40" Fill="CadetBlue" StrokeThickness="15">
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="SO" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
+                        </Grid>
+                    </StackPanel>
 
+                    <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun">$16.00</TextBlock>
                     </Border>
-                </StackPanel>
 
+                </Grid>
+                <Grid HorizontalAlignment="Stretch" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="1.5*"/>
 
+                    </Grid.ColumnDefinitions>
 
-                <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Stretch">
-                    <Border BorderThickness="2,2,2,0" BorderBrush="Black" VerticalAlignment="Stretch" Width="348">
+                    <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock HorizontalAlignment="Center"  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">Jalapeno P..</TextBlock>
+                    </Border>
 
-                        <Grid HorizontalAlignment="Stretch" Height="50">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2.5*"/>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1.5*"/>
-
-                            </Grid.ColumnDefinitions>
-
-                            <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock HorizontalAlignment="Center"  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">Jalapeno P..</TextBlock>
-                            </Border>
-
-                            <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                <Grid Height="40" Width="40" Margin="5,0,5,0">
-                                    <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
-                                    </Ellipse>
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-                                </Grid>
-
-                                <Grid Height="40" Width="40" Margin="5,0,5,0">
-                                    <Ellipse Height="40" Width="40" Fill="LawnGreen" StrokeThickness="15">
-                                    </Ellipse>
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="MJ" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-                                </Grid>
-
-                            </StackPanel>
-
-                            <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun"> $5.00</TextBlock>
-                            </Border>
-
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <Grid Height="40" Width="40" Margin="5,0,5,0">
+                            <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
                         </Grid>
 
-
-                    </Border>
-                </StackPanel>
-
-
-                <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Stretch">
-                    <Border BorderThickness="2,2,2,2" BorderBrush="Black" VerticalAlignment="Stretch" Width="348">
-
-                        <Grid HorizontalAlignment="Stretch" Height="50">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2.5*"/>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="1.5*"/>
-
-                            </Grid.ColumnDefinitions>
-
-                            <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock HorizontalAlignment="Center"  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">T-Bone Steak</TextBlock>
-                            </Border>
-
-                            <StackPanel Grid.Column="1" Orientation="Horizontal">
-
-
-                                <Grid Height="40" Width="40" Margin="5,0,5,0">
-                                    <Ellipse Height="40" Width="40" Fill="CadetBlue" StrokeThickness="15">
-                                    </Ellipse>
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="SO" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-                                </Grid>
-                            </StackPanel>
-
-                            <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
-                                <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun"> $0.00</TextBlock>
-                            </Border>
-
+                        <Grid Height="40" Width="40" Margin="5,0,5,0">
+                            <Ellipse Height="40" Width="40" Fill="LawnGreen" StrokeThickness="15">
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="MJ" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
                         </Grid>
 
+                    </StackPanel>
 
+                    <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun">$10.00</TextBlock>
                     </Border>
-                </StackPanel>
-                
 
+                </Grid>
+
+                <Grid HorizontalAlignment="Stretch" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="1.5*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Border BorderThickness="0,0,2,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock HorizontalAlignment="Center"  Grid.Column="0" FontSize="16" VerticalAlignment="Center" FontFamily="SimSun">T-Bone Steak</TextBlock>
+                    </Border>
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+
+
+                        <Grid Height="40" Width="40" Margin="5,0,5,0">
+                            <Ellipse Height="40" Width="40" Fill="CadetBlue" StrokeThickness="15">
+                            </Ellipse>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="SO" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <Border Grid.Column="2" BorderThickness="2,0,0,0" BorderBrush="Black" VerticalAlignment="Stretch">
+                        <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun">$21.00</TextBlock>
+                    </Border>
+                </Grid>
             </StackPanel>
         </ScrollViewer>
 
-        <Border Grid.Row="3" Grid.ColumnSpan="3" BorderThickness="4,4,4,4" BorderBrush="Black" >
-            <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Orientation="Horizontal">
-            <Grid Height="40" Width="40" Margin="5,0,5,0">
-                <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
-                </Ellipse>
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-            </Grid>
-                <TextBlock FontSize="30" Margin="10,0,0,0"> (YOU) owe $20.95</TextBlock>
-        </StackPanel>
-            </Border>
-
+        <Border Grid.Row="3" Grid.ColumnSpan="4" BorderThickness="4,4,4,4" BorderBrush="Black" >
+            <StackPanel Orientation="Horizontal">
+                <Border BorderBrush="Black" BorderThickness="0 0 1 0">
+                    <Grid Margin="5,0,5,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Height="20" Width="20" Fill="BlueViolet" StrokeThickness="15">
+                        </Ellipse>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
+                        <TextBlock Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" FontSize="20" Text="$20.95"/>
+                    </Grid>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0 0 1 0">
+                    <Grid Margin="5,0,5,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Height="20" Width="20" Fill="LawnGreen" StrokeThickness="15">
+                        </Ellipse>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="MJ" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
+                        <TextBlock Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" FontSize="20" Text="$5.00"/>
+                    </Grid>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0 0 1 0">
+                    <Grid Margin="5,0,5,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Height="20" Width="20" Fill="CadetBlue" StrokeThickness="15">
+                        </Ellipse>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="SO" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
+                        <TextBlock Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" FontSize="20" Text="$29.00"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
