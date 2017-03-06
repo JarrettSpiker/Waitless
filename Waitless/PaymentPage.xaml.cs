@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Waitless
@@ -18,7 +17,7 @@ namespace Waitless
     /// <summary>
     /// Interaction logic for PaymentPage.xaml
     /// </summary>
-    public partial class PaymentPage : Page
+    public partial class PaymentPage : Window
     {
         public PaymentPage()
         {
