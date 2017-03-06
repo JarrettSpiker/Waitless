@@ -6,20 +6,26 @@
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
         Title="Login" Height="192" MinHeight="192" MaxHeight="192" MinWidth="240" MaxWidth="240" Width="240">
-    <Grid Background="#FFF0F0F0">
+    <Grid Background="Wheat">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="3"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Username:" FontFamily="MV Boli" FontSize="18" />
-        <TextBox x:Name="UsernameField" Grid.Row="1" FontFamily="MV Boli" FontSize="18"></TextBox>
-        <TextBlock Grid.Row="2" Text="Password:" FontFamily="MV Boli" FontSize="18" />
-        <PasswordBox x:Name="PasswordField" Grid.Row="3" FontFamily="Symbol" PasswordChar="·"  FontSize="18"></PasswordBox>
-        <Button x:Name="LoginButton" Grid.Row="4" FontFamily="MV Boli" FontSize="18" Height="33" VerticalAlignment="Bottom" Click="LoginButton_Click">Login</Button>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Username:" FontFamily="MV Boli" FontSize="18" />
+        <TextBox x:Name="UsernameField" Grid.Row="1" Grid.Column="1" FontFamily="MV Boli" FontSize="18"/>
+        <TextBlock Grid.Row="2" Text="Password:" Grid.ColumnSpan="2" FontFamily="MV Boli" FontSize="18" />
+        <PasswordBox x:Name="PasswordField" Grid.Row="3" Grid.Column="1" FontFamily="Symbol" PasswordChar="·"  FontSize="18"/>
+        <Button x:Name="LoginButton" Grid.Row="5" Grid.ColumnSpan="3" FontFamily="MV Boli" Background="GreenYellow" FontSize="18" Height="33" VerticalAlignment="Bottom" Click="LoginButton_Click">Login</Button>
 
     </Grid>
     </Window>

@@ -219,7 +219,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\hotIcon.png" />
-    <Resource Include="Images\specialtyIcon.gif" />
     <Resource Include="Images\vegIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -258,6 +257,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Whiteout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\specialtyIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
