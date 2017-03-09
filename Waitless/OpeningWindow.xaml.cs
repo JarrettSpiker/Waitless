@@ -20,10 +20,23 @@ namespace Waitless
     /// </summary>
     public partial class OpeningWindow : Window
     {
+        private String TABLECODE_TEXT = "Enter Table Code";
+        private Boolean noTableCode;
         public OpeningWindow()
         {
             InitializeComponent();
-           
+            tableCodeField.Text = TABLECODE_TEXT;
+            noTableCode = true;
+
+        }
+
+        public void CheckNoTableCode()
+        {
+            if (tableCodeField.Text.Equals(""))
+            {
+                tableCodeField.Text = TABLECODE_TEXT;
+                noTableCode = true;
+            }
         }
 
         public void setLoggedInUser(String user)
@@ -34,31 +47,36 @@ namespace Waitless
 
         public String TableCode = "";
         private void tableCodeButton_Click(object sender, RoutedEventArgs e)
-        {   if (TableCode.Equals(""));
-            else {
+        {
+            CheckNoTableCode();
+            if (noTableCode==false)
+             {
                 this.Hide();
                 MainWindow MaineWindow = new MainWindow();
                 MaineWindow.Show();
+                Global.tablecode = TableCode;
+                
                 this.Close(); }
 
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-      
+            if (noTableCode)
+            { tableCodeField.Text = Global.ChangeFromDefault(TABLECODE_TEXT, tableCodeField.Text); tableCodeField.Focus(); tableCodeField.Select(1, 0); noTableCode = false; }
             TableCode = tableCodeField.Text;
             
-         
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
+            CheckNoTableCode();
             loginButton.IsEnabled = false;
-            tableCodeButton.IsEnabled = false;
-            tableCodeField.IsEnabled = false;
-            helpButton.IsEnabled = false;   
-              Login  h = new Login(this);
-                     h.Show();
+                tableCodeButton.IsEnabled = false;
+                tableCodeField.IsEnabled = false;
+                helpButton.IsEnabled = false;
+                Login h = new Login(this);
+                h.Show();
             
             
         }

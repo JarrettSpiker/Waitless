@@ -22,6 +22,18 @@ namespace Waitless
         public SpecialRequest()
         {
             InitializeComponent();
+            RequestField.AcceptsReturn = true;
         }
+
+        private void RequestField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
+
     }
 }

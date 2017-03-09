@@ -32,6 +32,7 @@ namespace Waitless
             
                 if (UsernameField.Text.Equals(""))
                     UsernameField.Text = "Guest";
+            Global.username = UsernameField.Text;
                 theWindow.setLoggedInUser(UsernameField.Text);
                 theWindow.loginButton.IsEnabled = true;
                 theWindow.tableCodeButton.IsEnabled = true;

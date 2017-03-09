@@ -58,6 +58,7 @@
     <Compile Include="BillSplitter.xaml.cs">
       <DependentUpon>BillSplitter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="Confirmation.xaml.cs">
       <DependentUpon>Confirmation.xaml</DependentUpon>
     </Compile>
