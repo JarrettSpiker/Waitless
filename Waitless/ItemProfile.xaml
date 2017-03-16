@@ -34,8 +34,8 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
 
             </Grid.RowDefinitions>
             <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Center" Height="48" VerticalAlignment="Top" Width="66" FontSize="24" FontWeight="Bold" Click="backButton_Click"/>
@@ -155,7 +155,7 @@
 
 
 
-            <Button Grid.Row="6" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="22"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
+            <Button Grid.Row="6" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="16"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
             <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Height="50" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontFamily="MV Boli" Content="Special Request" FontSize="16" Click="SpecialRequestClicked"></Button>
 
 

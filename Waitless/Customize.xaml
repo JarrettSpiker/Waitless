@@ -18,12 +18,11 @@
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="BlanchedAlmond" >
             <StackPanel>
-                <CheckBox Height="30" VerticalContentAlignment="Center">Steak Sauce</CheckBox>
-                <CheckBox Height="30" VerticalContentAlignment="Center">Peppercorn</CheckBox>
-                
+                <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="steaksauce" Unchecked="steaksauce_Unchecked" Checked="CheckBox_Checked">Steak Sauce</CheckBox>
+                <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="peppercorn" Unchecked="peppercorn_Unchecked" Checked="CheckBox_Checked_1">Peppercorn</CheckBox>
             </StackPanel>
         </ScrollViewer>
-        <Button x:Name="ConfirmButton" Grid.Row="2" Background="GreenYellow" FontFamily="MV Boli" FontSize="44">Confirm</Button>
+        <Button x:Name="ConfirmButton" Grid.Row="2" Background="GreenYellow" FontFamily="MV Boli" FontSize="44" Click="ConfirmButton_Click">Confirm</Button>
 
     </Grid>
 </Window>

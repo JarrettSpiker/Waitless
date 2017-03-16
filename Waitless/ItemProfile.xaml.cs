@@ -24,8 +24,11 @@ namespace Waitless
         public ItemProfile()
         {
             InitializeComponent();
+            options = new List<string>();
         }
 
+        public List<String> options;
+        public String SpecialRequest="";
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -70,13 +73,13 @@ namespace Waitless
 
         private void SpecialRequestClicked(object sender, RoutedEventArgs e)
         {
-            SpecialRequest h = new SpecialRequest();
+            SpecialRequest h = new SpecialRequest(this);
             h.Show();
         }
 
         private void CustomizeClicked(object sender, RoutedEventArgs e)
         {
-            Customize customizeDialog = new Customize();
+            Customize customizeDialog = new Customize(this);
             customizeDialog.Show();
         }
     }

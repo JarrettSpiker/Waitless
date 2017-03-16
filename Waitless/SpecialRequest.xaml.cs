@@ -19,20 +19,26 @@ namespace Waitless
     /// </summary>
     public partial class SpecialRequest : Window
     {
-        public SpecialRequest()
+        private Boolean Ready = false;
+        private ItemProfile IP;
+        public SpecialRequest(ItemProfile ip)
         {
             InitializeComponent();
+            IP = ip;
             RequestField.AcceptsReturn = true;
+            RequestField.Text = ip.SpecialRequest;
+            Ready = true;
         }
 
         private void RequestField_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            if (Ready)
+            IP.SpecialRequest = RequestField.Text;
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
     }
