@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
+        Closing="Window_Closing"
         Title="SpecialRequest" Height="300" Width="320"  MinHeight="300" MinWidth="320" MaxHeight="300" MaxWidth="320">
     <Grid Background="#FFF0F0F0">
         <Grid.RowDefinitions>

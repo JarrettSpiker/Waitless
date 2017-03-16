@@ -26,9 +26,9 @@ namespace Waitless
 
             InitializeComponent();
             IP = ip;
-            if (IP.options.Contains("Peppercorn"))
+            if (IP.Customisations.Contains("Peppercorn"))
                 peppercorn.IsChecked = true;
-            if (IP.options.Contains("Steak Sauce"))
+            if (IP.Customisations.Contains("Steak Sauce"))
                 steaksauce.IsChecked = true;
             Ready = true;
 
@@ -37,33 +37,37 @@ namespace Waitless
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
             if (Ready)
-            IP.options.Add("Steak Sauce");
+            IP.Customisations.Add("Steak Sauce");
         }
 
         private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
         {
             if (Ready)
-            IP.options.Add("Peppercorn");
+            IP.Customisations.Add("Peppercorn");
            
         }
         
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
+            IP.SetEnabled(true);
             this.Close();
         }
 
         private void steaksauce_Unchecked(object sender, RoutedEventArgs e)
         {
-            IP.options.Remove("Steak Sauce");
+            IP.Customisations.Remove("Steak Sauce");
            
         }
 
         private void peppercorn_Unchecked(object sender, RoutedEventArgs e)
         {
-            IP.options.Remove("Peppercorn");
+            IP.Customisations.Remove("Peppercorn");
            
         }
 
-        
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            IP.SetEnabled(true);
+        }
     }
 }

@@ -38,8 +38,13 @@ namespace Waitless
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
+            IP.SetEnabled(true);
             this.Close();
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            IP.SetEnabled(true);
+        }
     }
 }

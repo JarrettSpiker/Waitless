@@ -22,7 +22,8 @@
                 <TextBlock Text="&#8592;" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             </Button>
             <TextBlock Text="Waitless" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="MV Boli"/>
-            <Button Grid.Column="2" Background="White">
+            <Button x:Name="request" Grid.Column="2" Background="White" HorizontalAlignment="Right" Width="130" Click="request_Click">
+            
                 <Grid>
                     <TextBlock VerticalAlignment="Center">
                         <Run Text="!" Foreground="Red" FontWeight="Bold" FontSize="20" />
@@ -30,6 +31,16 @@
                     </TextBlock>
                 </Grid>
             </Button>
+            <Button x:Name="requested" Visibility="Hidden" Grid.Column="2" Background="White" HorizontalAlignment="Right" Width="130" Click="request_Click">
+
+                <Grid>
+                    <TextBlock VerticalAlignment="Center">
+                        <Run Text="!" Foreground="Red" FontWeight="Bold" FontSize="20" />
+                        <Run Text="Service Requested"/>
+                    </TextBlock>
+                </Grid>
+            </Button>
+
         </Grid>
         <TabControl Grid.Row="1">
             <TabItem Width="110">

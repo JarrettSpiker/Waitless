@@ -21,14 +21,45 @@ namespace Waitless
     /// </summary>
     public partial class ItemProfile : Window
     {
+        public ItemProfile(List<String> sides, List<String> customisations)
+        {
+            Sides = sides;
+            Customisations = customisations;
+            if (sides.Contains("Yukon Fries")) YukonFries.IsChecked = true;
+            if (sides.Contains("Caesar Salad")) CaesarSalad.IsChecked = true;
+            if (sides.Contains("Mashed Potatoes")) MashedPotatoes.IsChecked = true;
+            if (sides.Contains("Yam Fries")) YamFries.IsChecked = true;
+            Ready = true;
+            InitializeComponent();
+        }
+
         public ItemProfile()
         {
             InitializeComponent();
-            options = new List<string>();
+            Customisations = new List<string>();
+            Sides = new List<string>();
+            Ready = true;
+        }
+        public Boolean Ready = false;
+        public List<String> Customisations;
+        public String SpecialRequest="";
+        public String Preparation = "";
+        public List<String> Sides;
+
+        public void SetEnabled(Boolean b)
+        {
+            Xdescription.IsEnabled = b;
+            Xprep.IsEnabled = b;
+            Xsides.IsEnabled = b;
+            Customise.IsEnabled = b;
+            AddToOrder.IsEnabled = b;
+            Customise.IsEnabled = b;
+            backButton.IsEnabled = b;
+            btnRightMenuHide.IsEnabled = b;
+            btnRightMenuShow.IsEnabled = b;
+            SR.IsEnabled = b;
         }
 
-        public List<String> options;
-        public String SpecialRequest="";
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -73,14 +104,81 @@ namespace Waitless
 
         private void SpecialRequestClicked(object sender, RoutedEventArgs e)
         {
+            SetEnabled(false);
             SpecialRequest h = new SpecialRequest(this);
             h.Show();
         }
 
         private void CustomizeClicked(object sender, RoutedEventArgs e)
         {
+            SetEnabled(false);
             Customize customizeDialog = new Customize(this);
             customizeDialog.Show();
+        }
+
+        private void Rare_Checked(object sender, RoutedEventArgs e)
+        {  
+            Preparation = "Rare";
+        }
+
+        private void Medium_Rare_Checked(object sender, RoutedEventArgs e)
+        {  
+            Preparation = "Medium-Rare";
+        }
+
+        private void Medium_Checked(object sender, RoutedEventArgs e)
+        {  
+            Preparation = "Medium";
+        }
+
+        private void Well_Done_Checked(object sender, RoutedEventArgs e)
+        {
+            Preparation = "Well-Done";
+        }
+
+        private void YukonFries_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Ready)
+                Sides.Add("Yukon Fries");
+        }
+
+        private void YukonFries_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Sides.Remove("Yokon Fries");
+        }
+
+        private void YamFries_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Ready)
+                Sides.Add("Yam Fries");
+        }
+
+        private void YamFries_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Sides.Remove("Yam Fries");
+        }
+
+        private void MashedPotatoes_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Ready)
+                Sides.Add("Mashed Potatoes");
+        }
+
+        private void MashedPotatoes_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Sides.Remove("Mashed Potatoes");
+
+        }
+
+        private void CaesarSalad_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Ready)
+                Sides.Add("Caesar Salad");
+        }
+
+        private void CaesarSalad_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Sides.Remove("Caesar Salad");
         }
     }
 }

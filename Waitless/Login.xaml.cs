@@ -29,16 +29,27 @@ namespace Waitless
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            
-                if (UsernameField.Text.Equals(""))
-                    UsernameField.Text = "Guest";
+            closure();
+            this.Close();
+              }
+
+        private void closure()
+        {
+            if (UsernameField.Text.Equals(""))
+                UsernameField.Text = "Guest";
             Global.username = UsernameField.Text;
-                theWindow.setLoggedInUser(UsernameField.Text);
-                theWindow.loginButton.IsEnabled = true;
-                theWindow.tableCodeButton.IsEnabled = true;
-                theWindow.tableCodeField.IsEnabled = true;
-                theWindow.helpButton.IsEnabled = true;
-                this.Close(); 
+            theWindow.setLoggedInUser(UsernameField.Text);
+            theWindow.loginButton.IsEnabled = true;
+            theWindow.tableCodeButton.IsEnabled = true;
+            theWindow.tableCodeField.IsEnabled = true;
+            theWindow.helpButton.IsEnabled = true;
+            
+
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            closure();  
         }
     }
 }
