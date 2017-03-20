@@ -23,6 +23,8 @@ namespace Waitless
         public MainWindow()
         {
             InitializeComponent();
+            ItemDefinitionController.CreateSerialization();
+            ItemDefinitionController.InitializeItemDefinitions();
         }
 
         private void request_Click(object sender, RoutedEventArgs e)
