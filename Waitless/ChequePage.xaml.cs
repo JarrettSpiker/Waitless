@@ -43,7 +43,6 @@ namespace Waitless
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Water"], "currentUserId"), 2.0));
 
             RedrawItems();
-            RecalculatePrice();
             initialized = true;
         }
 
@@ -51,7 +50,6 @@ namespace Waitless
         {
             pendingItems.Add(item);
             RedrawPendingItems();
-            RecalculatePrice();
         }
 
         private void RedrawItems()
@@ -73,6 +71,7 @@ namespace Waitless
 
                 PendingItemsComponent.Children.Add(component);
             }
+            RecalculatePrice();
         }
 
         private void RedrawConfirmedItems()
@@ -97,6 +96,7 @@ namespace Waitless
 
                 ConfirmedItemsComponent.Children.Add(component);
             }
+            RecalculatePrice();
         }
 
         private void RedrawOthersItems()
@@ -125,7 +125,7 @@ namespace Waitless
                 subtotal += tuple.Item2 * (tuple.Item1.itemDefinition.cost);
             }
             
-            double amntTax = (Int32.Parse(TaxAmount.Text.Split('%')[0])/100.0) +1;
+            double amntTax = (Int32.Parse(((TaxAmount.SelectedItem as ComboBoxItem).Content as string).Split('%')[0])/100.0) +1;
             double grandTotal = subtotal * amntTax;
 
             Subtotal.Text = "$" + (subtotal / 100.0).ToString("F");
