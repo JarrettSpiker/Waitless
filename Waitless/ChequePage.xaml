@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Waitless"
+      xmlns:local="clr-namespace:Waitless.controls"
       mc:Ignorable="d" 
       d:DesignHeight="448" d:DesignWidth="334"
       Title="ChequePage">
@@ -66,61 +66,19 @@
             </Border>
             <StackPanel DockPanel.Dock="Bottom">
                 <Border BorderBrush="Red" BorderThickness="0 0 0 1" Padding="0 0 0 3">
-                    <Grid Background="White" Margin="2 0 0 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="3*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="2*" />
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Content="X" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="5,0" Background="White" Foreground="Red" BorderThickness="1"/>
-                        <TextBlock Grid.Column="1" Text="Burger" VerticalAlignment="Center" Foreground="Red"/>
-                        <Button Grid.Column="2" Content="Edit" Margin="2 2 2 2" Background="White" Foreground="Red"/>
-                        <TextBlock Grid.Column="3" Text="1" Foreground="Red" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="4" Text="13.65" HorizontalAlignment="Right" Foreground="Red"/>
-                    </Grid>
+                    <StackPanel Background="White" Margin="2 0 0 0" Name="PendingItemsComponent">
+                        <local:PendingItemControl/>
+                    </StackPanel>
                 </Border>
                 <Border BorderBrush="Blue" BorderThickness="0 0 0 1" Padding="0 0 0 3">
-                    <Grid Background="White" Margin="2 0 0 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="4*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="2*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Steak" Foreground="Blue"/>
-                        <Button Grid.Column="1" Grid.Row="0" Content="Reorder" Foreground="Blue" Background="White" Margin="2 2 2 2" FontSize="9"/>
-                        <TextBlock Grid.Column="2" Grid.Row="0" Text="1" Foreground="Blue" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="3" Grid.Row="0" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
-                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Coca-Cola" Foreground="Blue"/>
-                        <Button Grid.Column="1" Grid.Row="1" Content="Refill" Foreground="Blue" Background="White"  Margin="2 2 2 2" FontSize="10"/>
-                        <TextBlock Grid.Column="2" Grid.Row="1" Text="1" Foreground="Blue" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="3"  Grid.Row="1" Text="3.50" HorizontalAlignment="Right" Foreground="Blue"/>
-                    </Grid>
+                    <StackPanel Background="White" Margin="2 0 0 0" Name="ConfirmedItemsComponent">
+                        <local:ConfirmedItemControl/>
+                    </StackPanel>
                 </Border>
                 <Border BorderBrush="Black" BorderThickness="0 0 0 1" Padding="0 0 0 3">
-                    <Grid Background="White" Margin="2 0 0 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="5*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="2*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Beer" Foreground="Black"/>
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="0" Foreground="Black" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="2" Grid.Row="0" Text="7.50" HorizontalAlignment="Right" Foreground="Black"/>
-                        <TextBlock Grid.Column="0" Grid.Row="1" Text="Salad" Foreground="Black"/>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="0" Foreground="Black" HorizontalAlignment="Right"/>
-                        <TextBlock Grid.Column="2"  Grid.Row="1" Text="10.50" HorizontalAlignment="Right" Foreground="Black"/>
-                    </Grid>
+                    <StackPanel Background="White" Margin="2 0 0 0" Name="OthersItemsComponent">
+                        <local:OthersItemControl/>
+                    </StackPanel>
                 </Border>
             </StackPanel>
         </DockPanel>

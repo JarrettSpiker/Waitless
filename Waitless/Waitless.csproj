@@ -59,6 +59,15 @@
     <Compile Include="BillSplitter.xaml.cs">
       <DependentUpon>BillSplitter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="controls\ConfirmedItemControl.xaml.cs">
+      <DependentUpon>ConfirmedItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\OthersItemControl.xaml.cs">
+      <DependentUpon>OthersItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\PendingItemControl.xaml.cs">
+      <DependentUpon>PendingItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Confirmation.xaml.cs">
       <DependentUpon>Confirmation.xaml</DependentUpon>
@@ -87,6 +96,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Confirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\ConfirmedItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\OthersItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\PendingItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
