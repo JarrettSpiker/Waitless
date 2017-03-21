@@ -72,6 +72,7 @@ namespace Waitless
                 PendingItemsComponent.Children.Add(component);
             }
             RecalculatePrice();
+            UpdateAddToOrderButton();
         }
 
         private void RedrawConfirmedItems()
@@ -132,6 +133,17 @@ namespace Waitless
 
             GrandTotal.Text = "$" + (subtotal * amntTax / 100.0).ToString("F");
 
+        }
+
+        private void UpdateAddToOrderButton()
+        {
+            if(pendingItems.Count == 1)
+            {
+                NumItemsPendingText.Text = "1 item pending";
+            }else
+            {
+                NumItemsPendingText.Text = pendingItems.Count + " items pending";
+            }
         }
 
         private void TaxAmount_SelectionChanged(object sender, SelectionChangedEventArgs e)
