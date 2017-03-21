@@ -17,17 +17,17 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0" Orientation="Horizontal">
-                        <TextBlock Text="$13.65" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16px" Margin="5 0 0 0"/>
+                        <TextBlock Name="Subtotal" Text="$13.65" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16px" Margin="5 0 0 0"/>
                         <TextBlock Text="+" Foreground="Black" VerticalAlignment="Center" FontSize="16px" Margin="10 0 0 0"/>
                     </StackPanel>
-                    <ComboBox Grid.Column="1" Background="Wheat" SelectedIndex="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <ComboBox Grid.Column="1" Name="TaxAmount" Background="Wheat" SelectedIndex="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="TaxAmount_SelectionChanged">
                         <ComboBoxItem Content="10%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <ComboBoxItem Content="15%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <ComboBoxItem Content="20%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     </ComboBox>
                     <DockPanel Grid.Column="2">
                         <TextBlock Text="=" DockPanel.Dock="Left" Margin="5 0" FontSize="16px" VerticalAlignment="Center" Width="20"/>
-                        <TextBlock Text="$15.70" DockPanel.Dock="Right" FontSize="16px" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Text="$15.70" Name="GrandTotal" DockPanel.Dock="Right" FontSize="16px" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </DockPanel>
                 </Grid>
             </Border>

@@ -11,6 +11,9 @@ namespace Waitless
     /// </summary>
     public partial class ChequePage : Page
     {
+
+        bool initialized = false;
+
         List<OrderedItem> pendingItems;
         List<Tuple<OrderedItem,double>> confirmedItems;
         List<OrderedItem> othersItems;
@@ -40,12 +43,15 @@ namespace Waitless
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Water"], "currentUserId"), 2.0));
 
             RedrawItems();
+            RecalculatePrice();
+            initialized = true;
         }
 
         void addPendingItem(OrderedItem item)
         {
             pendingItems.Add(item);
             RedrawPendingItems();
+            RecalculatePrice();
         }
 
         private void RedrawItems()
@@ -61,10 +67,9 @@ namespace Waitless
             foreach (OrderedItem item in pendingItems)
             {
                 PendingItemControl component = new PendingItemControl();
-                component.ItemName.Inlines.Clear();
-                component.ItemName.Inlines.Add(item.itemDefinition.name);
-                component.Price.Inlines.Clear();
-                component.Price.Inlines.Add((item.itemDefinition.cost / 100.0).ToString("F"));
+                component.ItemName.Text = item.itemDefinition.name;
+                
+                component.Price.Text= (item.itemDefinition.cost / 100.0).ToString("F");
 
                 PendingItemsComponent.Children.Add(component);
             }
@@ -78,18 +83,16 @@ namespace Waitless
             foreach (Tuple<OrderedItem,double> item in confirmedItems)
             {
                 ConfirmedItemControl component = new ConfirmedItemControl();
-                component.ItemName.Inlines.Clear();
-                component.ItemName.Inlines.Add(item.Item1.itemDefinition.name);
-                component.Price.Inlines.Clear();
-                component.Price.Inlines.Add((item.Item2 * item.Item1.itemDefinition.cost / 100.0).ToString("F"));
+                component.ItemName.Text = item.Item1.itemDefinition.name;
+                
+                component.Price.Text = (item.Item2 * item.Item1.itemDefinition.cost / 100.0).ToString("F");
 
                 if (item.Item1.itemDefinition.freeRefills)
                 {
                     component.ReorderButton.Content = "Refill";
                 }
 
-                component.Quantity.Inlines.Clear();
-                component.Quantity.Inlines.Add(item.Item2.ToString("0.##"));
+                component.Quantity.Text = item.Item2.ToString("0.##");
 
 
                 ConfirmedItemsComponent.Children.Add(component);
@@ -102,13 +105,41 @@ namespace Waitless
             foreach(OrderedItem item in othersItems)
             {
                 OthersItemControl component = new OthersItemControl();
-                component.ItemName.Inlines.Clear();
-                component.ItemName.Inlines.Add(item.itemDefinition.name);
-                component.Price.Inlines.Clear();                    
-                component.Price.Inlines.Add((item.itemDefinition.cost / 100.0).ToString("F"));
+
+                component.ItemName.Text = item.itemDefinition.name;                
+                component.Price.Text = (item.itemDefinition.cost / 100.0).ToString("F");
                 OthersItemsComponent.Children.Add(component);
             }
             
+        }
+
+        private void RecalculatePrice()
+        {
+            double subtotal = 0;
+            foreach(OrderedItem item in pendingItems)
+            {
+                subtotal += item.itemDefinition.cost;
+            }
+            foreach(Tuple<OrderedItem,double> tuple in confirmedItems)
+            {
+                subtotal += tuple.Item2 * (tuple.Item1.itemDefinition.cost);
+            }
+            
+            double amntTax = (Int32.Parse(TaxAmount.Text.Split('%')[0])/100.0) +1;
+            double grandTotal = subtotal * amntTax;
+
+            Subtotal.Text = "$" + (subtotal / 100.0).ToString("F");
+
+            GrandTotal.Text = "$" + (subtotal * amntTax / 100.0).ToString("F");
+
+        }
+
+        private void TaxAmount_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (initialized)
+            {
+                RecalculatePrice();
+            }
         }
     }
 }
