@@ -10,6 +10,7 @@
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
+            <RowDefinition Height="1.3*" />
             <RowDefinition Height="15*" />
         </Grid.RowDefinitions>
         <Grid>
@@ -18,7 +19,7 @@
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" FontSize="25" Background="White" Height="33" VerticalAlignment="Top">
+            <Button Grid.Column="0" FontSize="25" Background="White" Height="33" VerticalAlignment="Top" x:Name="Back" Click="Button_Click">
                 <TextBlock Text="&#8592;" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             </Button>
             <TextBlock Text="Waitless" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="MV Boli"/>
@@ -31,7 +32,7 @@
                     </TextBlock>
                 </Grid>
             </Button>
-            <Button x:Name="requested" Visibility="Hidden" Grid.Column="2" Background="White" HorizontalAlignment="Right" Width="130" Click="request_Click">
+            <Button x:Name="requested" Visibility="Hidden" IsEnabled="False" Grid.Column="2" Background="White" HorizontalAlignment="Right" Width="130" Click="request_Click">
 
                 <Grid>
                     <TextBlock VerticalAlignment="Center">
@@ -42,34 +43,39 @@
             </Button>
 
         </Grid>
-        <TabControl Grid.Row="1">
-            <TabItem Width="110">
-                <TabItem.Header>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Menu" HorizontalAlignment="Center" FontFamily="Segoe Marker" />
-                        <Image Source="Images/menuIcon.png" Width="16" Height="16"/>
-                    </StackPanel>
-                </TabItem.Header>
-                <Frame Name="MenuFrame" Source="/MenuPage.xaml" NavigationUIVisibility="Hidden" />
-            </TabItem>
-            <TabItem Width="110">
-                <TabItem.Header>
+        <TextBlock Grid.Row="1">
+            <TextBlock Width="110">
+                <Grid>
+                    <Button Width="110" x:Name="MenuButton" IsEnabled="False" Click="MenuButton_Click">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Menu" HorizontalAlignment="Center" FontFamily="Segoe Marker" />
+                            <Image Source="Images/menuIcon.png" Width="16" Height="16"/>
+                        </StackPanel></Button>
+                    </Grid>
+                
+                
+            </TextBlock>
+            <TextBlock Width="110">
+                <Grid Width="110">
+                    <Button x:Name="ChequeButton" Click="ChequeButton_Click">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="Cheque" HorizontalAlignment="Center" FontFamily="Segoe Marker" />
                         <Image Source="/Images/chequeIcon.png" Height="16" Width="16"/>
-                    </StackPanel>
-                </TabItem.Header>
-                 <Frame Source="/ChequePage.xaml" NavigationUIVisibility="Hidden"/>
-            </TabItem>
-            <TabItem Width="115">
-                <TabItem.Header>
+                    </StackPanel></Button>
+                </Grid>
+                
+            </TextBlock>
+            <TextBlock Width="115">
+                <Grid Width="115">
+                    <Button x:Name="OptionsButton" Click="OptionsButton_Click" >
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="Options" HorizontalAlignment="Center" FontFamily="Segoe Marker"/>
                         <Image Source="Images/optionsIcon.png" Width="16" Height="16"/>
-                    </StackPanel>
-                </TabItem.Header>
-                <Frame Source="/OptionsPage.xaml" NavigationUIVisibility="Hidden"/>
-            </TabItem>
-        </TabControl>
+                    </StackPanel></Button>
+                </Grid>
+                
+            </TextBlock>
+        </TextBlock>
+        <Frame Grid.Row="3" Name="TheFrame" Source="MenuPage.xaml" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

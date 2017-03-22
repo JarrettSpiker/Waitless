@@ -22,6 +22,7 @@ namespace Waitless
     {
         private String TABLECODE_TEXT = "Enter Table Code";
         private Boolean noTableCode;
+        public Boolean notHelping=true;
         public OpeningWindow()
         {
             InitializeComponent();
@@ -79,6 +80,14 @@ namespace Waitless
                 h.Show();
             
             
+        }
+
+        private void helpButton_Click(object sender, RoutedEventArgs e)
+        {
+            image.Visibility = Visibility.Hidden;
+            HelpText.Visibility = Visibility.Visible;
+            helpButton.IsEnabled = false;
+            notHelping = false;
         }
     }
 }
