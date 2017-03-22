@@ -33,9 +33,12 @@ namespace Waitless
 
 
             //testing code, add some hard coded values
-
+            OrderedItem customBurger = new OrderedItem(ItemDefinitionController.itemDefinitions["Western Burger"], "currentUserId");
+            customBurger.customizations[customBurger.itemDefinition.possibleCustomizations[0]] = true;
+            pendingItems.Add(customBurger);
             pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Western Burger"], "currentUserId"));
             pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Nachos"], "currentUserId"));
+            pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "currentUserId"));
 
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "currentUserId"), 1.0));
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Jalapeno Poppers"], "currentUserId"), 0.25));
@@ -160,6 +163,34 @@ namespace Waitless
             if (initialized)
             {
                 RecalculatePrice();
+            }
+        }
+
+        private void OnPlaceOrderClicked(object sender, RoutedEventArgs e)
+        {
+            if (initialized)
+            {
+                foreach (OrderedItem pending in pendingItems)
+                {
+                    Tuple<OrderedItem,double> found = null;
+                    foreach (Tuple<OrderedItem, double> confirmedItem in confirmedItems)
+                    {
+                        if (pending.Equals(confirmedItem.Item1))
+                        {
+                            found = confirmedItem;
+                        }
+                    }
+                    if (found!=null)
+                    {
+                        confirmedItems.Remove(found);
+                        confirmedItems.Add(Tuple.Create(pending, found.Item2+1));
+                    }else
+                    {
+                        confirmedItems.Add(Tuple.Create(pending, 1.0));
+                    }
+                }
+                pendingItems.Clear();
+                RedrawItems();
             }
         }
     }

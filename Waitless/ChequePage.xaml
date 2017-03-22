@@ -20,10 +20,13 @@
                         <TextBlock Name="Subtotal" Text="$13.65" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16px" Margin="5 0 0 0"/>
                         <TextBlock Text="+" Foreground="Black" VerticalAlignment="Center" FontSize="16px" Margin="10 0 0 0"/>
                     </StackPanel>
-                    <ComboBox Grid.Column="1" Name="TaxAmount" Background="Wheat" SelectedIndex="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="TaxAmount_SelectionChanged">
+                    <ComboBox Grid.Column="1" Name="TaxAmount" Background="Wheat" SelectedIndex="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionChanged="TaxAmount_SelectionChanged">
+                        <ComboBoxItem Content="0%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <ComboBoxItem Content="5%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <ComboBoxItem Content="10%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <ComboBoxItem Content="15%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <ComboBoxItem Content="20%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <ComboBoxItem Content="25%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     </ComboBox>
                     <DockPanel Grid.Column="2">
                         <TextBlock Text="=" DockPanel.Dock="Left" Margin="5 0" FontSize="16px" VerticalAlignment="Center" Width="20"/>
@@ -40,7 +43,7 @@
                 <Button Grid.Column="0" Height="75" Background="#FFFBCB86">
                     <TextBlock Text="Split Bill" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
                 </Button>
-                <Button Grid.Column="1" Height="75" Background="GreenYellow">
+                <Button Grid.Column="1" Height="75" Background="GreenYellow" Click="OnPlaceOrderClicked">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="Place Order" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
                         <TextBlock Name="NumItemsPendingText" Text="1 item pending" FontSize="12" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="Red"/>

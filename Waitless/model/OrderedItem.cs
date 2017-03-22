@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Waitless.model
 {
@@ -28,5 +29,57 @@ namespace Waitless.model
             
         }
 
+        public override bool Equals(object obj)
+        {
+            var item = obj as OrderedItem;
+
+            if (item == null)
+            {
+                return false;
+            }
+
+            if(itemDefinition != item.itemDefinition)
+            {
+                return false;
+            }
+            if(selectedSide != item.selectedSide
+                || selectedSize != item.selectedSize
+                || selectedPreparation != item.selectedPreparation
+                || specialRequest != item.specialRequest)
+            {
+                return false;
+            }
+
+            if (itemDefinition.isCustomizable)
+            {
+                bool equal = false;
+                if (customizations.Count == item.customizations.Count) // Require equal count.
+                {
+                    equal = true;
+                    foreach (var pair in customizations)
+                    {
+                        bool value;
+                        if (item.customizations.TryGetValue(pair.Key, out value))
+                        {
+                            // Require value be equal.
+                            if (value != pair.Value)
+                            {
+                                equal = false;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            // Require key be present.
+                            equal = false;
+                            break;
+                        }
+                    }
+                }
+
+                return equal;
+            }
+            return true;
+        }
     }
 }
