@@ -23,9 +23,7 @@
         
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="Wheat">
             <StackPanel Orientation="Vertical">
-
-
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="AppetizersForOne" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: For One"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -69,7 +67,7 @@
                 </Button>
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="AppetizersToShare" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: To Share"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -114,7 +112,7 @@
 
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Burgers" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Burgers"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -173,7 +171,7 @@
                     </Grid>
                 </Button>
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Steak" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Steak"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -214,7 +212,7 @@
                     </Grid>
                 </Button>
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Seafood" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Seafood"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -255,7 +253,7 @@
                     </Grid>
                 </Button>
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Sandwiches" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Sandwiches"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -296,7 +294,7 @@
                 </Button>
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Pasta" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Pasta"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -340,7 +338,7 @@
                 </Button>
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Pizza" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Pizza"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -383,7 +381,7 @@
 
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Desserts" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Desserts"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -427,7 +425,7 @@
 
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="NonAlcoholic" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Drinks: Non-alcoholic"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
@@ -502,7 +500,7 @@
 
 
 
-                <Border BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
+                <Border Name="Alcoholic" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Drinks: Alcoholic"/>
                 </Border>
                 <Button Height="60" HorizontalContentAlignment="Stretch">
