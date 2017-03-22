@@ -25,6 +25,10 @@ namespace Waitless
             InitializeComponent();
             ItemDefinitionController.CreateSerialization();
             ItemDefinitionController.InitializeItemDefinitions();
+
+            MenuFrame.NavigationService.Navigate(new Uri("MenuPage.xaml", UriKind.Relative));
+
+            HackyCommunicationClass.registerMainWindow(this);
         }
 
         private void request_Click(object sender, RoutedEventArgs e)
@@ -44,10 +48,19 @@ namespace Waitless
 
         }
 
+        public void OnBackToCategoriesEvent()
+        {
+            MenuFrame.Navigate(new Uri("CategoriesPage.xaml", UriKind.Relative));
+        }
+
+        public void OnCategorySelected(string categoryName)
+        {
+            MenuFrame.Navigate(new Uri("MenuPage.xaml", UriKind.Relative));
+        }
     }
 
 
 
-    }
+}
 
 

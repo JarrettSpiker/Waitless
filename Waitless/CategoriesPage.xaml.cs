@@ -22,6 +22,14 @@ namespace Waitless
         public CategoriesPage()
         {
             InitializeComponent();
+
+            HackyCommunicationClass.registerCategoriesPage(this);
+        }
+
+
+        public void OnCategorySelected(object sender, RoutedEventArgs e)
+        {
+            HackyCommunicationClass.mainWindow.OnCategorySelected(((Button)sender).Name);
         }
     }
 }

@@ -50,7 +50,7 @@
                         <Image Source="Images/menuIcon.png" Width="16" Height="16"/>
                     </StackPanel>
                 </TabItem.Header>
-                <Frame Source="/MenuPage.xaml" NavigationUIVisibility="Hidden" />
+                <Frame Name="MenuFrame" Source="/MenuPage.xaml" NavigationUIVisibility="Hidden" />
             </TabItem>
             <TabItem Width="110">
                 <TabItem.Header>

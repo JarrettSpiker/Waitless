@@ -20,9 +20,17 @@ namespace Waitless
     /// </summary>
     public partial class MenuPage : Page
     {
+
+       
         public MenuPage()
         {
             InitializeComponent();
+            HackyCommunicationClass.registerMenuPage(this);
+        }
+
+        public void OnBackToCategories(object sender, RoutedEventArgs e)
+        {
+            HackyCommunicationClass.mainWindow.OnBackToCategoriesEvent();
         }
     }
 }

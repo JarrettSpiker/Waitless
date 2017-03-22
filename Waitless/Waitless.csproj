@@ -75,6 +75,7 @@
     <Compile Include="Customize.xaml.cs">
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HackyCommunicationClass.cs" />
     <Compile Include="ItemDefinitionController.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

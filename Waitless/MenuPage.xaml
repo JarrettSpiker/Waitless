@@ -14,7 +14,7 @@
             <RowDefinition Height="25px"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Background="Orange">
-            <Button Width="Auto" Background="Azure">
+            <Button Name="BackToCategoriesButton"  Width="Auto" Background="Azure" Click="OnBackToCategories">
                 <TextBlock Text="&#8592; Back To Categories" Margin="5,0"/>
             </Button>
         </StackPanel>
