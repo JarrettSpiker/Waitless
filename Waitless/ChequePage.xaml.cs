@@ -39,10 +39,12 @@ namespace Waitless
             pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Western Burger"], "currentUserId"));
             pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Nachos"], "currentUserId"));
             pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "currentUserId"));
+            pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Pepsi"], "currentUserId"));
+
 
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "currentUserId"), 1.0));
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Jalapeno Poppers"], "currentUserId"), 0.25));
-
+            
 
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Water"], "currentUserId"), 2.0));
 
@@ -70,7 +72,8 @@ namespace Waitless
             {
                 PendingItemControl component = new PendingItemControl();
                 component.ItemName.Text = item.itemDefinition.name;
-                component.Price.Text = (item.itemDefinition.cost / 100.0).ToString("F");
+                component.Price.Text = item.isRefill ? "0.00" : (item.itemDefinition.cost / 100.0).ToString("F");
+                
                 component.XButton.Click += (s, eArgs) =>
                 {
                     if (initialized)
@@ -105,7 +108,24 @@ namespace Waitless
 
                 component.Quantity.Text = item.Item2.ToString("0.##");
 
-
+                
+                component.ReorderButton.Click += (s, eArgs) =>
+                {
+                    if (initialized)
+                    {
+                        if (item.Item1.itemDefinition.freeRefills)
+                        {
+                            OrderedItem refill = item.Item1.CreateCopy();
+                            refill.isRefill = true;
+                            pendingItems.Add(refill);
+                            RedrawPendingItems();
+                        }else
+                        {
+                            pendingItems.Add(item.Item1.CreateCopy());
+                            RedrawPendingItems();
+                        }
+                    }
+                };
                 ConfirmedItemsComponent.Children.Add(component);
             }
             RecalculatePrice();
@@ -130,7 +150,7 @@ namespace Waitless
             double subtotal = 0;
             foreach (OrderedItem item in pendingItems)
             {
-                subtotal += item.itemDefinition.cost;
+                subtotal += item.isRefill ? 0 : item.itemDefinition.cost;
             }
             foreach (Tuple<OrderedItem, double> tuple in confirmedItems)
             {
@@ -183,7 +203,7 @@ namespace Waitless
                     if (found!=null)
                     {
                         confirmedItems.Remove(found);
-                        confirmedItems.Add(Tuple.Create(pending, found.Item2+1));
+                        confirmedItems.Add(Tuple.Create(pending, found.Item2+ (pending.isRefill ? 0 : 1)));
                     }else
                     {
                         confirmedItems.Add(Tuple.Create(pending, 1.0));

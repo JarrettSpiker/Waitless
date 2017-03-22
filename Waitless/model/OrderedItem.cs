@@ -12,12 +12,13 @@ namespace Waitless.model
         public string selectedSize { get; set; }
         public string selectedPreparation { get; set; }
         public string specialRequest { get; set; }
+        public bool isRefill { get; set; }
 
         public OrderedItem(ItemDefinition _itemDefinition, string _userId)
         {
             itemDefinition = _itemDefinition;
             userId = _userId;
-
+            isRefill = false;
             if (itemDefinition.isCustomizable)
             {
                 customizations = new Dictionary<string, bool>();
@@ -27,6 +28,28 @@ namespace Waitless.model
                 }
             }
             
+        }
+
+        public OrderedItem CreateCopy()
+        {
+            OrderedItem copy = new OrderedItem(itemDefinition, userId);
+            copy.selectedSide = selectedSide;
+            copy.selectedSize = selectedSize;
+            copy.selectedPreparation = selectedPreparation;
+            copy.specialRequest = specialRequest;
+            if (itemDefinition.isCustomizable)
+            {
+                foreach(KeyValuePair<string,bool> entry in customizations)
+                {
+                    copy.customizations[entry.Key] = entry.Value;
+                }
+            }
+            return copy;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         public override bool Equals(object obj)
