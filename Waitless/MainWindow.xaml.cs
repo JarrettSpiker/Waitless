@@ -48,7 +48,7 @@ namespace Waitless
             requested.Visibility = Visibility.Visible;
             System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += new EventHandler(timer_tick);
-            timer.Interval = new TimeSpan(0, 1, 0);
+            timer.Interval = new TimeSpan(0, 0, 5);
             timer.Start();
         }
             
