@@ -42,7 +42,9 @@
 
                 </Grid.ColumnDefinitions>
                 <Button Name="btnRightMenuHide" Panel.ZIndex="1000" Background="White"  Height="50" Width="75" Grid.Column="0" Click="btnRightMenuHide_Click" Margin="-105,-250,0,0" Content="Hide" Visibility="Hidden"/>
-                <Button Name="btnRightMenuShow" Panel.ZIndex="1000" Height="55" Width="70" Grid.Column="0" Click="btnRightMenuShow_Click" Margin="-105,-250,0,0" FontSize="25" Background="#FFFF5100" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"/>
+                <Button Name="btnRightMenuShow" Panel.ZIndex="1000" Height="55" Width="70" Grid.Column="0" Click="btnRightMenuShow_Click" Margin="-105,-250,0,0" FontSize="25" Background="#FFFF5100" >
+                    <Image Source="Images/Info.png" Height="40"/>
+                </Button>
 
 
                 <StackPanel Grid.Column="1">

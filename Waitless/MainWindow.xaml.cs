@@ -25,7 +25,7 @@ namespace Waitless
             InitializeComponent();
             ItemDefinitionController.CreateSerialization();
             ItemDefinitionController.InitializeItemDefinitions();
-            CurrentUri = Menu;
+            CurrentUri = MenuCategories;
             TheFrame.NavigationService.Navigate(CurrentUri);
             CurrentButton = MenuButton;
             Back.IsEnabled = false;
@@ -40,6 +40,7 @@ namespace Waitless
         private Uri Cheque = new Uri("ChequePage.xaml", UriKind.Relative);
         private Uri Menu= new Uri("MenuPage.xaml", UriKind.Relative);
         private Uri Options = new Uri("OptionsPage.xaml", UriKind.Relative);
+        private Uri MenuCategories = new Uri("CategoriesPage.xaml", UriKind.Relative);
 
         private void request_Click(object sender, RoutedEventArgs e)
         {
@@ -60,7 +61,7 @@ namespace Waitless
 
         public void OnBackToCategoriesEvent()
         {
-            TheFrame.Navigate(new Uri("CategoriesPage.xaml", UriKind.Relative));
+            Toggle(MenuCategories, MenuButton);
         }
 
         public void OnCategorySelected(string categoryName)
@@ -93,7 +94,7 @@ namespace Waitless
 
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
-            Toggle(Menu, MenuButton);
+            Toggle(MenuCategories, MenuButton);
             Back.IsEnabled = true;
         }
 
