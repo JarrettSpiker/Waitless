@@ -15,39 +15,13 @@ namespace Waitless
 
         bool initialized = false;
 
-        List<OrderedItem> pendingItems;
-        List<Tuple<OrderedItem, double>> confirmedItems;
-        List<OrderedItem> othersItems;
+        public static List<OrderedItem> pendingItems = new List<OrderedItem>();
+        public static List<Tuple<OrderedItem, double>> confirmedItems = new List<Tuple<OrderedItem, double>>();
+        public static List<OrderedItem> othersItems = new List<OrderedItem>();
 
         public ChequePage()
         {
             InitializeComponent();
-            pendingItems = new List<OrderedItem>();
-            confirmedItems = new List<Tuple<OrderedItem, double>>();
-            othersItems = new List<OrderedItem>();
-
-            //init fixed "others" items
-
-            othersItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Rickards Red"], "otherUserId"));
-            othersItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Classic Burger"], "otherUserId"));
-
-
-            //testing code, add some hard coded values
-            OrderedItem customBurger = new OrderedItem(ItemDefinitionController.itemDefinitions["Western Burger"], "currentUserId");
-            customBurger.customizations[customBurger.itemDefinition.possibleCustomizations[0]] = true;
-            pendingItems.Add(customBurger);
-            pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Western Burger"], "currentUserId"));
-            pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Nachos"], "currentUserId"));
-            pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "currentUserId"));
-            pendingItems.Add(new OrderedItem(ItemDefinitionController.itemDefinitions["Pepsi"], "currentUserId"));
-
-
-            confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "currentUserId"), 1.0));
-            confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Jalapeno Poppers"], "currentUserId"), 0.25));
-            
-
-            confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Water"], "currentUserId"), 2.0));
-
             RedrawItems();
             initialized = true;
         }
@@ -83,6 +57,12 @@ namespace Waitless
                     }
                 };
 
+                component.EditButton.Click += (s, args) =>
+                {
+                    ItemProfile itemProfile = new ItemProfile(item);
+                    itemProfile.EnterEditMode();
+                    itemProfile.ShowDialog();
+                };
                 PendingItemsComponent.Children.Add(component);
             }
             RecalculatePrice();

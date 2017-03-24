@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Waitless.model;
 using System.Web.Script.Serialization;
 using System.IO;
@@ -53,7 +49,7 @@ namespace Waitless
                false, false, false, false));
 
             definitions.Add(new ItemDefinition("Classic Burger", "Sample Description", ItemDefinition.Categories.Burgers,
-               "/Images/MenuItems/classicBurger.jpg", 4, 1600, "Sample Nutritional Info", false, true, false, false,
+               "/Images/MenuItems/classicBurger.jpg", 4, 1600, "Sample Nutritional Info", false, true, false, true,
                new List<string> { "Remove Lettuce", "Remove Tomato", "Remove Pickles" }, null, null,
                new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad" },
                false, false, false, true));
@@ -83,7 +79,7 @@ namespace Waitless
               false, false, false, false));
 
             definitions.Add(new ItemDefinition("Fish and Chips", "Sample Description", ItemDefinition.Categories.SeaFood,
-              "/Images/MenuItems/fishAndChips.jpg", 3, 1300, "Sample Nutritional Info", false, true, false, true,
+              "/Images/MenuItems/fishAndChips.png", 3, 1300, "Sample Nutritional Info", false, true, false, true,
               new List<string> { "Add Lemon" }, null,
               null, new List<string> { "Yukon Fries", "Caesar Salad" },
               false, false, false, false));
@@ -119,13 +115,13 @@ namespace Waitless
               false, false, true, true));
 
             definitions.Add(new ItemDefinition("Cheese Pizza", "Sample Description", ItemDefinition.Categories.Pizza,
-              "/Images/MenuItems/cheesePizza.jpg", 5, 2100, "Sample Nutritional Info", false, true, true, false,
+              "/Images/MenuItems/cheesePizza.jpg", 5, 2100, "Sample Nutritional Info", false, false, true, false,
               new List<string> { "Add Parmesean" }, null,
               new List<string> { "12 inch", "14 inch" }, null,
               false, false, false, false));
 
             definitions.Add(new ItemDefinition("Pepperoni Pizza", "Sample Description", ItemDefinition.Categories.Pizza,
-              "/Images/MenuItems/pepperoniPizza.jpg", 4, 2200, "Sample Nutritional Info", false, true, true, false,
+              "/Images/MenuItems/pepperoniPizza.jpg", 4, 2200, "Sample Nutritional Info", false, false, true, false,
               new List<string> { "Add Parmesean" }, null,
               new List<string> { "12 inch", "14 inch" }, null,
               false, false, false, false));
@@ -147,11 +143,11 @@ namespace Waitless
                 true, false, false, false));
 
             definitions.Add(new ItemDefinition("Pepsi", "Sample Description", ItemDefinition.Categories.Drinks,
-                "/Images/MenuItems/pepsi.jpg", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
+                "/Images/MenuItems/Pepsi.png", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                 true, false, false, false));
 
             definitions.Add(new ItemDefinition("7-Up", "Sample Description", ItemDefinition.Categories.Drinks,
-               "/Images/MenuItems/7up.jpg", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
+               "/Images/MenuItems/7up.png", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                true, false, false, false));
 
             definitions.Add(new ItemDefinition("Rickards Red", "Sample Description", ItemDefinition.Categories.Alcohol,

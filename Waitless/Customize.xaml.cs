@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Waitless.model;
 
 namespace Waitless
 {
@@ -19,55 +9,44 @@ namespace Waitless
     /// </summary>
     public partial class Customize : Window
     {
-        private ItemProfile IP;
-        private Boolean Ready = false;
-        public Customize(ItemProfile ip)
+
+        OrderedItem menuItem;
+
+        public Customize(OrderedItem item)
         {
 
             InitializeComponent();
-            IP = ip;
-            if (IP.Customisations.Contains("Peppercorn"))
-                peppercorn.IsChecked = true;
-            if (IP.Customisations.Contains("Steak Sauce"))
-                steaksauce.IsChecked = true;
-            Ready = true;
-
+            menuItem = item;
+            UpdateCustomItems();
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        private void UpdateCustomItems()
         {
-            if (Ready)
-            IP.Customisations.Add("Steak Sauce");
+            CustomizationOptions.Children.Clear();
+            foreach(string customization in menuItem.itemDefinition.possibleCustomizations)
+            {
+                CheckBox button = new CheckBox();
+                button.Height = 40;
+                button.VerticalAlignment = VerticalAlignment.Center;
+                button.Content = customization;
+                button.IsChecked = menuItem.customizations[customization];
+                button.Checked += (s, args) =>
+                {
+                    menuItem.customizations[customization] = true;
+                };
+                button.Unchecked += (s, args) =>
+                {
+                    menuItem.customizations[customization] = false;
+                };
+
+                CustomizationOptions.Children.Add(button);
+            }
         }
 
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
-        {
-            if (Ready)
-            IP.Customisations.Add("Peppercorn");
-           
-        }
-        
+       
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            IP.SetEnabled(true);
             this.Close();
-        }
-
-        private void steaksauce_Unchecked(object sender, RoutedEventArgs e)
-        {
-            IP.Customisations.Remove("Steak Sauce");
-           
-        }
-
-        private void peppercorn_Unchecked(object sender, RoutedEventArgs e)
-        {
-            IP.Customisations.Remove("Peppercorn");
-           
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            IP.SetEnabled(true);
         }
     }
 }

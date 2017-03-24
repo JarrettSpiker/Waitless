@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Closing="Window_Closing"
         Title="Customize" Height="300" Width="300" MinHeight="300" MinWidth="320" MaxHeight="300" MaxWidth="320">
     <Grid Background="#FFF0F0F0">
         <Grid.RowDefinitions>
@@ -18,9 +17,9 @@
         <TextBlock Grid.Row="0" Text="Customize your order here:" FontFamily="MV Boli" FontSize="22" Background="Wheat" />
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="BlanchedAlmond" >
-            <StackPanel>
-                <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="steaksauce" Unchecked="steaksauce_Unchecked" Checked="CheckBox_Checked">Steak Sauce</CheckBox>
-                <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="peppercorn" Unchecked="peppercorn_Unchecked" Checked="CheckBox_Checked_1">Peppercorn</CheckBox>
+            <StackPanel Name="CustomizationOptions">
+                <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="steaksauce">Steak Sauce</CheckBox>
+                <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="peppercorn">Peppercorn</CheckBox>
             </StackPanel>
         </ScrollViewer>
         <Button x:Name="ConfirmButton" Grid.Row="2" Background="GreenYellow" FontFamily="MV Boli" FontSize="44" Click="ConfirmButton_Click">Confirm</Button>

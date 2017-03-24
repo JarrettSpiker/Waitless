@@ -76,6 +76,6 @@
                 
             </TextBlock>
         </TextBlock>
-        <Frame Grid.Row="3" Name="TheFrame" NavigationUIVisibility="Hidden" />
+        <Frame Grid.Row="3" Name="TheFrame" Source="CategoriesPage.xaml" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

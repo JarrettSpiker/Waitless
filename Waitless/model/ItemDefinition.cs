@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Waitless.model
 {
-    class ItemDefinition
+    public class ItemDefinition
     {
 
         public enum Categories { AppetizersForOne, AppetizersToShare, Burgers, Steaks, SeaFood, Sandwhiches, Pasta, Pizza, Dessert, Drinks, Alcohol };
