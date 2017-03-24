@@ -221,6 +221,14 @@ namespace Waitless
             ChequePage.pendingItems.Add(menuItem);
             Close();
         }
+
+        public void EnterEditMode()
+        {
+            AddToOrderButton.Content = "Update Item";
+            backButton.IsEnabled = false;
+        }
+
+
     }
 }
 

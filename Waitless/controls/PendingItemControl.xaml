@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Name="XButton" Content="X" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Padding="5,0" Background="White" Foreground="Red" BorderThickness="1"/>
         <TextBlock Grid.Column="1" Name="ItemName" Text="Burger" VerticalAlignment="Center" Foreground="Red"/>
-        <Button Grid.Column="2" Content="Edit" Margin="2 2 2 2" Background="White" Foreground="Red"/>
+        <Button Grid.Column="2" Name="EditButton" Content="Edit" Margin="2 2 2 2" Background="White" Foreground="Red"/>
         <TextBlock Grid.Column="3" Text="1" Foreground="Red" HorizontalAlignment="Right"/>
         <TextBlock Grid.Column="4" Name="Price" Text="13.65" HorizontalAlignment="Right" Foreground="Red"/>
     </Grid>

@@ -57,6 +57,12 @@ namespace Waitless
                     }
                 };
 
+                component.EditButton.Click += (s, args) =>
+                {
+                    ItemProfile itemProfile = new ItemProfile(item);
+                    itemProfile.EnterEditMode();
+                    itemProfile.ShowDialog();
+                };
                 PendingItemsComponent.Children.Add(component);
             }
             RecalculatePrice();
