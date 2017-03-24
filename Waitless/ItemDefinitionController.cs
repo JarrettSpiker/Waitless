@@ -119,13 +119,13 @@ namespace Waitless
               false, false, true, true));
 
             definitions.Add(new ItemDefinition("Cheese Pizza", "Sample Description", ItemDefinition.Categories.Pizza,
-              "/Images/MenuItems/cheesePizza.jpg", 5, 2100, "Sample Nutritional Info", false, true, true, false,
+              "/Images/MenuItems/cheesePizza.jpg", 5, 2100, "Sample Nutritional Info", false, false, true, false,
               new List<string> { "Add Parmesean" }, null,
               new List<string> { "12 inch", "14 inch" }, null,
               false, false, false, false));
 
             definitions.Add(new ItemDefinition("Pepperoni Pizza", "Sample Description", ItemDefinition.Categories.Pizza,
-              "/Images/MenuItems/pepperoniPizza.jpg", 4, 2200, "Sample Nutritional Info", false, true, true, false,
+              "/Images/MenuItems/pepperoniPizza.jpg", 4, 2200, "Sample Nutritional Info", false, false, true, false,
               new List<string> { "Add Parmesean" }, null,
               new List<string> { "12 inch", "14 inch" }, null,
               false, false, false, false));

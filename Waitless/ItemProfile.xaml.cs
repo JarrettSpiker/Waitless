@@ -34,6 +34,7 @@ namespace Waitless
             UpdateDescription();
             //UpdateNutritionalInfo(); TODO
             UpdateExpandables();
+            //UpdateButtonStates(); //TODO
 
         }
 
@@ -68,6 +69,83 @@ namespace Waitless
             Xsize.Visibility = menuItem.itemDefinition.hasSize ? Visibility.Visible : Visibility.Collapsed;
 
             CustomizeButton.IsEnabled = menuItem.itemDefinition.isCustomizable;
+
+            //Add the sizes to the expandable
+            if (menuItem.itemDefinition.hasSize)
+            {
+                SizeOptions.Children.Clear();
+                List<string> sizes = menuItem.itemDefinition.possibleSizes;
+                for(int i = 0; i<sizes.Count; i++)
+                {
+                    string size = sizes[i];
+                    RadioButton button = new RadioButton();
+                    button.FontSize = 14;
+                    button.Margin = new Thickness(3);
+                    button.Content = size;
+                    Grid.SetColumn(button, i % 2);
+                    Grid.SetRow(button, i / 2);
+                    button.Click += (s, eArgs) =>
+                    {
+                        menuItem.selectedSize = size;
+                    };
+
+                    SizeOptions.Children.Add(button);
+                }
+            }
+
+            //Add the preperations to the expandable
+            if (menuItem.itemDefinition.needsPreparation)
+            {
+                PreperationOptions.Children.Clear();
+                List<string> preperations = menuItem.itemDefinition.possiblePreparations;
+                for (int i = 0; i < preperations.Count; i++)
+                {
+                    string prep = preperations[i];
+                    RadioButton button = new RadioButton();
+                    button.FontSize = 14;
+                    button.Margin = new Thickness(3);
+                    button.Content = prep;
+                    Grid.SetColumn(button, i % 2);
+                    Grid.SetRow(button, i / 2);
+                    button.Click += (s, eArgs) =>
+                    {
+                        menuItem.selectedPreparation = prep;
+                    };
+
+                    PreperationOptions.Children.Add(button);
+                }
+            }
+
+            //Add the sides to the expandable
+            //make sure to do checked and unchecked
+            if (menuItem.itemDefinition.hasSides)
+            {
+                SidesOptions.Children.Clear();
+                List<string> sides = menuItem.itemDefinition.possibleSides;
+                for (int i = 0; i < sides.Count; i++)
+                {
+                    string side = sides[i];
+                    CheckBox button = new CheckBox();
+                    button.FontSize = 14;
+                    button.Margin = new Thickness(3);
+                    button.Content = side;
+                    Grid.SetColumn(button, i % 2);
+                    Grid.SetRow(button, i / 2);
+
+                    button.Checked += (s, eArgs) =>
+                    {
+                        menuItem.customizations[side] = true;
+                    };
+
+                    button.Unchecked += (s, eArgs) =>
+                    {
+                        menuItem.customizations[side] = false;
+                    };
+
+                    SidesOptions.Children.Add(button);
+                }
+            }
+
 
         }
 

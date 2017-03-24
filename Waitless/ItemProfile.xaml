@@ -125,7 +125,7 @@
                 </Expander>
                 <Expander x:Name="Xprep" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Preparation" FontSize="24">
 
-                    <Grid>
+                    <Grid Name="PreperationOptions">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
@@ -146,7 +146,7 @@
 
                 <Expander x:Name="Xsides" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Sides"  FontSize="24">
 
-                    <Grid>
+                    <Grid Name="SidesOptions">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
@@ -158,20 +158,26 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <CheckBox x:Name="YukonFries" Checked="YukonFries_Checked" Unchecked="YukonFries_Unchecked" Grid.Column="0" FontSize="14" Margin="9,0,1,0">Yukon Fries</CheckBox>
-                        <CheckBox x:Name="YamFries" Checked="YamFries_Checked" Unchecked="YamFries_Unchecked" Grid.Column="1" FontSize="14"  Margin="5,0">Yam Fries</CheckBox>
-                        <CheckBox x:Name="MashedPotatoes" Checked="MashedPotatoes_Checked" Unchecked="MashedPotatoes_Unchecked" Grid.Column="0" Grid.Row="1" FontSize="14" Margin="5,0">Mashed Potatoes</CheckBox>
-                        <CheckBox x:Name="CaesarSalad" Checked="CaesarSalad_Checked" Unchecked="CaesarSalad_Unchecked" Grid.Column="1" Grid.Row="1" FontSize="14" Margin="5,0">Caesar Salad</CheckBox>
+                        <CheckBox x:Name="YukonFries" Grid.Column="0" FontSize="14" Margin="9,0,1,0">Yukon Fries</CheckBox>
+                        <CheckBox x:Name="YamFries" Grid.Column="1" FontSize="14"  Margin="5,0">Yam Fries</CheckBox>
+                        <CheckBox x:Name="MashedPotatoes" Grid.Column="0" Grid.Row="1" FontSize="14" Margin="5,0">Mashed Potatoes</CheckBox>
+                        <CheckBox x:Name="CaesarSalad" Grid.Column="1" Grid.Row="1" FontSize="14" Margin="5,0">Caesar Salad</CheckBox>
                     </Grid>
 
                 </Expander>
                 <Expander x:Name="Xsize" Visibility="Collapsed" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Size" FontSize="24">
 
-                    <Grid>
+                    <Grid Name="SizeOptions">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
                         <RadioButton x:Name="Half" Grid.Column="0" FontSize="14" Margin="5,0">Half Size</RadioButton>
                         <RadioButton x:Name="Full"  Grid.Column="1" FontSize="14" Margin="1,0,5,0" HorizontalAlignment="Stretch" Width="Auto">Full Size</RadioButton>
                     </Grid>
