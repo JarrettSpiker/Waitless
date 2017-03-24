@@ -10,7 +10,25 @@ namespace Waitless
     {
         public static String username;
         public static String tablecode;
-        
+        public static MainWindow Main;
+        public static Keyboard kb;
+
+
+        public static void showKeyboard()
+            {
+            if (kb == null) kb = new Keyboard();
+            kb.Show();
+            }
+
+        public static void hideKeyboard()
+        {
+            if (kb != null)
+            {
+                kb.closed = true;
+                kb.Close();
+                kb = null;
+            }
+        }
 
         public static String ChangeFromDefault(String Ref, String Cmp)
         {
@@ -24,7 +42,6 @@ namespace Waitless
             return cmp[i].ToString();
         }
 
-       
-
+ 
     }
 }

@@ -24,5 +24,14 @@ namespace Waitless
         {
             InitializeComponent();
         }
+
+        private void LeaveTable_Click(object sender, RoutedEventArgs e)
+        {
+            OpeningWindow ow = new OpeningWindow();
+            Global.Main.Hide();
+            ow.Show();
+            Global.Main.Close();
+
+        }
     }
 }

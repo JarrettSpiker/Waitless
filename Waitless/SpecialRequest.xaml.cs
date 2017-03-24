@@ -28,6 +28,7 @@ namespace Waitless
             RequestField.AcceptsReturn = true;
             RequestField.Text = ip.SpecialRequest;
             Ready = true;
+            Global.showKeyboard();
         }
 
         private void RequestField_TextChanged(object sender, TextChangedEventArgs e)
@@ -39,12 +40,14 @@ namespace Waitless
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             IP.SetEnabled(true);
+            Global.hideKeyboard();
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             IP.SetEnabled(true);
+            Global.hideKeyboard();
         }
     }
 }

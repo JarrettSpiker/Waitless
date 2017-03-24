@@ -25,7 +25,7 @@
         <Button x:Name="tableCodeButton" Background="GreenYellow" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Width="Auto" Height="Auto" IsDefault="True" FontFamily="MV Boli" FontSize="36" Click="tableCodeButton_Click">
             <StackPanel>
                 <TextBlock Text="Sit Down at Table"/>
-                <TextBox x:Name="tableCodeField" Width="293" Height="39" FontSize="25" Foreground="Gray" VerticalAlignment="top" TextAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                <TextBox x:Name="tableCodeField" Width="293" Height="39" FontSize="25" Foreground="Gray" MouseEnter="tableCodeField_MouseEnter" MouseLeave="tableCodeField_MouseLeave" VerticalAlignment="top" TextAlignment="Center" TextChanged="TextBox_TextChanged"/>
                 <TextBlock x:Name="LoggedInUser" HorizontalAlignment="Center" Foreground="Red" FontSize="16" Text="Currently logged in as: Guest"/>
             </StackPanel>
         </Button>

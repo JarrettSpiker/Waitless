@@ -23,9 +23,9 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Username:" FontFamily="MV Boli" FontSize="18" />
-        <TextBox x:Name="UsernameField" Grid.Row="1" Grid.Column="1" FontFamily="MV Boli" FontSize="18"/>
+        <TextBox x:Name="UsernameField" MouseEnter="UsernameField_MouseEnter" MouseLeave="UsernameField_MouseLeave" Grid.Row="1" Grid.Column="1" FontFamily="MV Boli" FontSize="18" TextChanged="UsernameField_TextChanged"/>
         <TextBlock Grid.Row="2" Text="Password:" Grid.ColumnSpan="2" FontFamily="MV Boli" FontSize="18" />
-        <PasswordBox x:Name="PasswordField" Grid.Row="3" Grid.Column="1" FontFamily="Symbol" PasswordChar="·"  FontSize="18"/>
+        <PasswordBox x:Name="PasswordField" MouseEnter="UsernameField_MouseEnter" MouseLeave="UsernameField_MouseLeave" Grid.Row="3" Grid.Column="1" FontFamily="Symbol" PasswordChar="·"  FontSize="18"/>
         <Button x:Name="LoginButton" Grid.Row="5" Grid.ColumnSpan="3" FontFamily="MV Boli" Background="GreenYellow" FontSize="18" Height="33" VerticalAlignment="Bottom" Click="LoginButton_Click">Login</Button>
 
     </Grid>

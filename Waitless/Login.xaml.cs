@@ -21,10 +21,12 @@ namespace Waitless
     {
       
         public OpeningWindow theWindow;
+
         public Login(OpeningWindow ow)
         {
             InitializeComponent();
             theWindow = ow;
+          //  Global.showKeyboard();
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -43,13 +45,31 @@ namespace Waitless
             theWindow.tableCodeButton.IsEnabled = true;
             theWindow.tableCodeField.IsEnabled = true;
             theWindow.helpButton.IsEnabled = theWindow.notHelping;
-            
-
+            Global.hideKeyboard();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             closure();  
+        }
+        private String old_username;
+        private void UsernameField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (UsernameField.Text.Length < 14)
+                old_username = UsernameField.Text;
+            else
+                UsernameField.Text = old_username;
+            
+        }
+
+        private void UsernameField_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Global.showKeyboard();
+        }
+
+        private void UsernameField_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Global.hideKeyboard();
         }
     }
 }

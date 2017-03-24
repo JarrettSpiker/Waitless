@@ -42,7 +42,7 @@
                     </DockPanel>
                 </Button>
             </StackPanel>
-            <Button DockPanel.Dock="Bottom" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="AntiqueWhite">
+            <Button DockPanel.Dock="Bottom" x:Name="LeaveTable" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="AntiqueWhite" Click="LeaveTable_Click">
                 <DockPanel>
                     <TextBlock Text="Leave Table" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="30" FontFamily="MV Boli" />
                     <Image Source="Images/leaveTable.png" Width="60" Height="60" Margin="0,0,10,0" HorizontalAlignment="Right"/>

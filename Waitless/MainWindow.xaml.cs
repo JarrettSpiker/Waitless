@@ -29,7 +29,7 @@ namespace Waitless
             TheFrame.NavigationService.Navigate(CurrentUri);
             CurrentButton = MenuButton;
             Back.IsEnabled = false;
-
+            Global.Main = this;
             HackyCommunicationClass.registerMainWindow(this);
         }
 

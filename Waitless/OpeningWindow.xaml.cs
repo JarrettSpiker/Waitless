@@ -89,5 +89,15 @@ namespace Waitless
             helpButton.IsEnabled = false;
             notHelping = false;
         }
+
+        private void tableCodeField_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Global.showKeyboard();
+        }
+
+        private void tableCodeField_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Global.hideKeyboard();
+        }
     }
 }
