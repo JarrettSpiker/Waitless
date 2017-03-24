@@ -24,6 +24,14 @@ namespace Waitless
             InitializeComponent();
             RedrawItems();
             initialized = true;
+            
+        }
+
+        public static void reset()
+        {
+            pendingItems = new List<OrderedItem>();
+            confirmedItems = new List<Tuple<OrderedItem, double>>();
+            othersItems = new List<OrderedItem>();
         }
 
         void addPendingItem(OrderedItem item)

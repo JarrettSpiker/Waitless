@@ -27,6 +27,7 @@ namespace Waitless
 
         private void LeaveTable_Click(object sender, RoutedEventArgs e)
         {
+            ChequePage.reset();
             OpeningWindow ow = new OpeningWindow();
             Global.Main.Hide();
             ow.Show();
