@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="Customize" Height="300" Width="300" MinHeight="300" MinWidth="320" MaxHeight="300" MaxWidth="320">
+        Title="Customize" Height="300" Width="300" MinHeight="300" MinWidth="320" MaxHeight="300" MaxWidth="320" Closing="Window_Closing">
     <Grid Background="#FFF0F0F0">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

@@ -28,6 +28,18 @@ namespace Waitless
 
         }
 
+        public void setEnabled(Boolean state)
+        {
+            if (menuItem.itemDefinition.isCustomizable)
+            CustomizeButton.IsEnabled = state;
+            AddToOrderButton.IsEnabled = state;
+            SpecialRequestButton.IsEnabled = state;
+            Xdescription.IsEnabled = state;
+            Xprep.IsEnabled = state;
+            Xsides.IsEnabled = state;
+            Xsize.IsEnabled = state;
+        }
+
         private void UpdateHeaders()
         {
             ItemName.Text = menuItem.itemDefinition.name;
@@ -174,6 +186,7 @@ namespace Waitless
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
+            Global.Main.Show();
             Close();
         }
 
@@ -206,29 +219,34 @@ namespace Waitless
 
         private void SpecialRequestClicked(object sender, RoutedEventArgs e)
         {
-            SpecialRequest h = new SpecialRequest(menuItem);
+            SpecialRequest h = new SpecialRequest(menuItem,this);
             h.ShowDialog();
         }
 
         private void CustomizeClicked(object sender, RoutedEventArgs e)
         {
-            Customize customizeDialog = new Customize(menuItem);
+            Customize customizeDialog = new Customize(menuItem,this);
             customizeDialog.ShowDialog();
         }
 
         private void OnAddToOrderClicked(object sender, RoutedEventArgs e)
         {
             ChequePage.pendingItems.Add(menuItem);
+            Global.Main.Show();
             Close();
         }
 
         public void EnterEditMode()
         {
+            
             AddToOrderButton.Content = "Update Item";
-            backButton.IsEnabled = false;
+            //backButton.IsEnabled = false;
         }
 
-
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Global.Main.Show();
+        }
     }
 }
 

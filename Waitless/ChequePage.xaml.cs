@@ -59,9 +59,11 @@ namespace Waitless
 
                 component.EditButton.Click += (s, args) =>
                 {
+                    Global.Main.Hide();
                     ItemProfile itemProfile = new ItemProfile(item);
                     itemProfile.EnterEditMode();
                     itemProfile.ShowDialog();
+                    
                 };
                 PendingItemsComponent.Children.Add(component);
             }

@@ -20,13 +20,16 @@ namespace Waitless
     /// </summary>
     public partial class SpecialRequest : Window
     {
-
+        private ItemProfile IP;
         OrderedItem menuItem;
-        public SpecialRequest(OrderedItem item)
+        public SpecialRequest(OrderedItem item, ItemProfile ip)
         {
             InitializeComponent();
             menuItem = item;
             RequestField.Text = item.specialRequest;
+            IP = ip;
+            IP.setEnabled(false);
+            Global.showKeyboard();
         }
 
         private void RequestField_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,7 +40,18 @@ namespace Waitless
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             menuItem.specialRequest = RequestField.Text;
+            IP.setEnabled(true);
+            Global.hideKeyboard();
             this.Close();
+            
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            menuItem.specialRequest = RequestField.Text;
+            IP.setEnabled(true);
+            Global.hideKeyboard();
+            
         }
     }
 }

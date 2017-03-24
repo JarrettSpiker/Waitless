@@ -28,7 +28,9 @@ namespace Waitless
         {
             OrderedItem menuItem = new OrderedItem(ItemDefinitionController.itemDefinitions[(sender as Button).Tag as string], "currentUserId");
             ItemProfile profile = new ItemProfile(menuItem);
+            Global.Main.Hide();
             profile.ShowDialog();
+            
         }
 
 

@@ -11,13 +11,15 @@ namespace Waitless
     {
 
         OrderedItem menuItem;
-
-        public Customize(OrderedItem item)
+        ItemProfile IP;
+        public Customize(OrderedItem item, ItemProfile ip)
         {
 
             InitializeComponent();
             menuItem = item;
             UpdateCustomItems();
+            IP = ip;
+            IP.setEnabled(false);
         }
 
         private void UpdateCustomItems()
@@ -46,7 +48,13 @@ namespace Waitless
        
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
+            IP.setEnabled(true);
             this.Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            IP.setEnabled(true);
         }
     }
 }
