@@ -190,7 +190,7 @@
 
         <Button Name="CustomizeButton" Grid.Row="2" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="16"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
         <Button Name="SpecialRequestButton" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontFamily="MV Boli" Content="Special Request" FontSize="16" Click="SpecialRequestClicked"></Button>
-        <Button Name="AddToOrderButton" Background="NavajoWhite" MinHeight="80" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" FontFamily="MV Boli" Content="Add to Order" FontSize="27" Grid.RowSpan="2"></Button>
+        <Button Name="AddToOrderButton" Background="NavajoWhite" MinHeight="80" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" FontFamily="MV Boli" Content="Add to Order" FontSize="27" Grid.RowSpan="2" Click="OnAddToOrderClicked"></Button>
 
     </Grid>
 </Window>

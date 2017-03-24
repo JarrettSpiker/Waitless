@@ -23,7 +23,7 @@ namespace Waitless
         public MainWindow()
         {
             InitializeComponent();
-            ItemDefinitionController.CreateSerialization();
+            //ItemDefinitionController.CreateSerialization();
             ItemDefinitionController.InitializeItemDefinitions();
             CurrentUri = MenuCategories;
             TheFrame.NavigationService.Navigate(CurrentUri);

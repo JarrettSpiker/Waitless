@@ -42,8 +42,8 @@ namespace Waitless
 
         private void UpdateImage()
         {
-            string imageUri = System.IO.Directory.GetCurrentDirectory() +menuItem.itemDefinition.imageRef;
-            ItemImage.Source =new BitmapImage(new Uri(imageUri));
+            string imageUri = System.IO.Directory.GetCurrentDirectory() + menuItem.itemDefinition.imageRef;
+            ItemImage.Source = new BitmapImage(new Uri(imageUri));
         }
 
         private void UpdateDescription()
@@ -65,7 +65,7 @@ namespace Waitless
             {
                 SizeOptions.Children.Clear();
                 List<string> sizes = menuItem.itemDefinition.possibleSizes;
-                for(int i = 0; i<sizes.Count; i++)
+                for (int i = 0; i < sizes.Count; i++)
                 {
                     string size = sizes[i];
                     RadioButton button = new RadioButton();
@@ -140,10 +140,10 @@ namespace Waitless
             //set the preperation
             if (menuItem.itemDefinition.needsPreparation)
             {
-                foreach(object o in PreperationOptions.Children)
+                foreach (object o in PreperationOptions.Children)
                 {
                     RadioButton button = o as RadioButton;
-                    string prep =button.Tag as string;
+                    string prep = button.Tag as string;
                     button.IsChecked = prep.Equals(menuItem.selectedPreparation);
                 }
             }
@@ -214,6 +214,12 @@ namespace Waitless
         {
             Customize customizeDialog = new Customize(menuItem);
             customizeDialog.ShowDialog();
+        }
+
+        private void OnAddToOrderClicked(object sender, RoutedEventArgs e)
+        {
+            ChequePage.pendingItems.Add(menuItem);
+            Close();
         }
     }
 }
