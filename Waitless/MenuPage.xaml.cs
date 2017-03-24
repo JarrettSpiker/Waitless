@@ -15,6 +15,8 @@ namespace Waitless
         {
             InitializeComponent();
             HackyCommunicationClass.registerMenuPage(this);
+            HideNewItemFlyout();
+            ShowNewItemFlyout("foo");
         }
 
         public void OnBackToCategories(object sender, RoutedEventArgs e)
@@ -29,5 +31,22 @@ namespace Waitless
             profile.ShowDialog();
         }
 
+
+        public void HideNewItemFlyout()
+        {
+            MainGrid.RowDefinitions[2].Height = new GridLength(0, GridUnitType.Pixel);
+        }
+
+
+        public void ShowNewItemFlyout(string itemName)
+        {
+            MainGrid.RowDefinitions[2].Height = new GridLength(25, GridUnitType.Pixel);
+            AddedToOrderText.Text = itemName + " added to order...";
+        }
+
+        public void OnPlaceOrderClicked(object sender, RoutedEventArgs args)
+        {
+            HackyCommunicationClass.mainWindow.SwitchToCheque();
+        }
     }
 }

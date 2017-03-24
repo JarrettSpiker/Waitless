@@ -75,10 +75,15 @@ namespace Waitless
             Back.IsEnabled = false;
         }
 
-        private void ChequeButton_Click(object sender, RoutedEventArgs e)
+        public void SwitchToCheque()
         {
             Toggle(Cheque, ChequeButton);
             Back.IsEnabled = true;
+        }
+
+        private void ChequeButton_Click(object sender, RoutedEventArgs e)
+        {
+            SwitchToCheque();
         }
 
         private void Toggle(Uri uri, Button button)

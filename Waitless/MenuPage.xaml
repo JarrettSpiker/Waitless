@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="448" d:DesignWidth="344"
       Title="MenuPage">
-    <Grid>
+    <Grid Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="25px"/>
             <RowDefinition Height="*" />
@@ -562,8 +562,8 @@
             </StackPanel>
         </ScrollViewer>
         <DockPanel Grid.Row="2"  Background="Gray">
-            <TextBlock Text="Nachos added to order..." Margin="3,0" VerticalAlignment="Center" Foreground="Yellow"/>
-            <Button HorizontalAlignment="Right" Background="AliceBlue" BorderThickness="0">
+            <TextBlock Text="Nachos added to order..." Name="AddedToOrderText" Margin="3,0" VerticalAlignment="Center" Foreground="Yellow"/>
+            <Button HorizontalAlignment="Right" Background="AliceBlue" BorderThickness="0" Click="OnPlaceOrderClicked">
                 <TextBlock Text="Place Order    &#8594;" Margin="3,0" Foreground="Red" HorizontalAlignment="Right" FontWeight="Bold"/>
             </Button>
         </DockPanel>
