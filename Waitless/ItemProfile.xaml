@@ -136,10 +136,10 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <RadioButton x:Name="Rare" Grid.Column="0" FontSize="14" Margin="5,0" Checked="Rare_Checked">Rare</RadioButton>
-                        <RadioButton x:Name="Medium_Rare"  Checked="Medium_Rare_Checked"  Grid.Column="1" FontSize="14" Margin="1,0,5,0" HorizontalAlignment="Stretch" Width="Auto">Medium-Rare</RadioButton>
-                        <RadioButton x:Name="Medium" Checked="Medium_Checked" Grid.Column="0" Grid.Row="2" FontSize="14" Margin="5,0">Medium</RadioButton>
-                        <RadioButton x:Name="Well_Done" Checked="Well_Done_Checked" Grid.Column="1" Grid.Row="2" FontSize="14" Margin="5,0">Well-Done</RadioButton>
+                        <RadioButton x:Name="Rare" Grid.Column="0" FontSize="14" Margin="5,0" >Rare</RadioButton>
+                        <RadioButton x:Name="Medium_Rare" Grid.Column="1" FontSize="14" Margin="1,0,5,0" HorizontalAlignment="Stretch" Width="Auto">Medium-Rare</RadioButton>
+                        <RadioButton x:Name="Medium" Grid.Column="0" Grid.Row="2" FontSize="14" Margin="5,0">Medium</RadioButton>
+                        <RadioButton x:Name="Well_Done" Grid.Column="1" Grid.Row="2" FontSize="14" Margin="5,0">Well-Done</RadioButton>
                     </Grid>
 
                 </Expander>
@@ -188,7 +188,7 @@
 
         <Button Name="CustomizeButton" Grid.Row="2" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="16"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
         <Button Name="SpecialRequestButton" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontFamily="MV Boli" Content="Special Request" FontSize="16" Click="SpecialRequestClicked"></Button>
-        <Button Name="AddToOrderButton" Background="NavajoWhite" MinHeight="80" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" FontFamily="MV Boli" Content="Add to Order" FontSize="27" Click="Button_Click" Grid.RowSpan="2"></Button>
+        <Button Name="AddToOrderButton" Background="NavajoWhite" MinHeight="80" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" FontFamily="MV Boli" Content="Add to Order" FontSize="27" Grid.RowSpan="2"></Button>
 
     </Grid>
 </Window>

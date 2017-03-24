@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Waitless.model;
 
 namespace Waitless
 {
@@ -19,32 +20,24 @@ namespace Waitless
     /// </summary>
     public partial class SpecialRequest : Window
     {
-        private Boolean Ready = false;
-        private ItemProfile IP;
-        public SpecialRequest(ItemProfile ip)
+
+        OrderedItem menuItem;
+        public SpecialRequest(OrderedItem item)
         {
             InitializeComponent();
-            IP = ip;
-            RequestField.AcceptsReturn = true;
-            RequestField.Text = ip.SpecialRequest;
-            Ready = true;
+            menuItem = item;
+            RequestField.Text = item.specialRequest;
         }
 
         private void RequestField_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (Ready)
-            IP.SpecialRequest = RequestField.Text;
+            menuItem.specialRequest = RequestField.Text;
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            IP.SetEnabled(true);
+            menuItem.specialRequest = RequestField.Text;
             this.Close();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            IP.SetEnabled(true);
         }
     }
 }
