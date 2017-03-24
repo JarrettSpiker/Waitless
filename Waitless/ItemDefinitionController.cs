@@ -53,7 +53,7 @@ namespace Waitless
                false, false, false, false));
 
             definitions.Add(new ItemDefinition("Classic Burger", "Sample Description", ItemDefinition.Categories.Burgers,
-               "/Images/MenuItems/classicBurger.jpg", 4, 1600, "Sample Nutritional Info", false, true, false, false,
+               "/Images/MenuItems/classicBurger.jpg", 4, 1600, "Sample Nutritional Info", false, true, false, true,
                new List<string> { "Remove Lettuce", "Remove Tomato", "Remove Pickles" }, null, null,
                new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad" },
                false, false, false, true));

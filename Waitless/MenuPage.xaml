@@ -26,7 +26,7 @@
                 <Border Name="AppetizersForOne" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: For One"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Jalapeno Poppers" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -46,7 +46,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch"  Tag="Calamari" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -70,7 +70,7 @@
                 <Border Name="AppetizersToShare" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: To Share"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Nachos" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -90,7 +90,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Short Ribs" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -115,7 +115,7 @@
                 <Border Name="Burgers" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Burgers"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Classic Burger" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -134,7 +134,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Western Burger"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -152,7 +152,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Chicken Burger" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -174,7 +174,7 @@
                 <Border Name="Steak" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Steak"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="T-Bone Steak" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -192,7 +192,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="New York Strip Loin" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -215,7 +215,7 @@
                 <Border Name="Seafood" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Seafood"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Fish And Chips" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -233,7 +233,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Salmon" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -256,7 +256,7 @@
                 <Border Name="Sandwiches" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Sandwiches"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Chicken Club" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -274,7 +274,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="BLT" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -297,7 +297,7 @@
                 <Border Name="Pasta" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Pasta"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Spaghetti" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -316,7 +316,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Lasagna"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -341,7 +341,7 @@
                 <Border Name="Pizza" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Pizza"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Cheese Pizza" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -360,7 +360,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Pepperoni Pizza"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -384,7 +384,7 @@
                 <Border Name="Desserts" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Desserts"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Ice Cream"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -403,7 +403,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Chocolate Brownie" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -428,7 +428,7 @@
                 <Border Name="NonAlcoholic" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Drinks: Non-alcoholic"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Water" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -443,7 +443,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Milk" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -461,7 +461,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Pepsi"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -479,7 +479,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="7-Up" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -503,7 +503,7 @@
                 <Border Name="Alcoholic" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Drinks: Alcoholic"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Rickards Red" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -521,7 +521,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Alexander Keiths"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>
@@ -539,7 +539,7 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                <Button Height="60" HorizontalContentAlignment="Stretch">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Red Wine"  Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>

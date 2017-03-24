@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Waitless.model
 {
-    class OrderedItem
+    public class OrderedItem
     {
         public ItemDefinition itemDefinition {get;}
         public string userId { get; }

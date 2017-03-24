@@ -208,96 +208,204 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\cook.gif" />
+    <Content Include="Images\cook.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\chequeIcon.png" />
-    <Resource Include="Images\menuIcon.png" />
-    <Resource Include="Images\optionsIcon.png" />
+    <Content Include="Images\chequeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menuIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\optionsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\helpIcon.png" />
-    <Resource Include="Images\leaveTable.png" />
-    <Resource Include="Images\orderHistory.png" />
-    <Resource Include="Images\paymentMethods.png" />
-    <Resource Include="Images\submitFeedback.png" />
-    <Resource Include="Images\submitRating.png" />
+    <Content Include="Images\helpIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\leaveTable.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\orderHistory.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\paymentMethods.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\submitFeedback.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\submitRating.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\TBoneSteak.png" />
+    <Content Include="Images\TBoneSteak.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\7up.png" />
-    <Resource Include="Images\MenuItems\Burger.png" />
-    <Resource Include="Images\MenuItems\burger_sliders.png" />
-    <Resource Include="Images\MenuItems\FishChips.png" />
-    <Resource Include="Images\MenuItems\IcedTea.png" />
-    <Resource Include="Images\MenuItems\Pepsi.png" />
-    <Resource Include="Images\MenuItems\Steak.png" />
+    <Content Include="Images\MenuItems\7up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\Burger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\burger_sliders.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\FishChips.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\IcedTea.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\Pepsi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\Steak.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\burgerCategory.jpg" />
-    <Resource Include="Images\MenuItems\seaFoodCategory.jpg" />
+    <Content Include="Images\MenuItems\burgerCategory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\seaFoodCategory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\sandwichCategory.jpg" />
+    <Content Include="Images\MenuItems\sandwichCategory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\pastaCategory.jpg" />
-    <Resource Include="Images\MenuItems\pizzaCategory.jpg" />
+    <Content Include="Images\MenuItems\pastaCategory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\pizzaCategory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\beerCategory.jpg" />
+    <Content Include="Images\MenuItems\beerCategory.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\jalapenoPopper.jpg" />
+    <Content Include="Images\MenuItems\jalapenoPopper.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\hotIcon.png" />
-    <Resource Include="Images\vegIcon.png" />
+    <Content Include="Images\hotIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\vegIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\chickenBurger.jpg" />
-    <Resource Include="Images\MenuItems\classicBurger.jpg" />
-    <Resource Include="Images\MenuItems\westernBurger.jpg" />
+    <Content Include="Images\MenuItems\chickenBurger.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\classicBurger.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\westernBurger.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\blt.jpg" />
-    <Resource Include="Images\MenuItems\cheesePizza.jpg" />
-    <Resource Include="Images\MenuItems\chickenClub.jpg" />
-    <Resource Include="Images\MenuItems\fishAndChips.jpg" />
-    <Resource Include="Images\MenuItems\lasagna.jpg" />
-    <Resource Include="Images\MenuItems\newYorkStrip.jpg" />
-    <Resource Include="Images\MenuItems\pepperoniPizza.jpg" />
-    <Resource Include="Images\MenuItems\salmon.jpg" />
-    <Resource Include="Images\MenuItems\spaghetti.jpg" />
-    <Resource Include="Images\MenuItems\tBone.jpg" />
+    <Content Include="Images\MenuItems\blt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\cheesePizza.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\chickenClub.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\fishAndChips.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\lasagna.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\newYorkStrip.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\pepperoniPizza.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\salmon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\spaghetti.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\tBone.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\leafIcon.png" />
+    <Content Include="Images\leafIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\calamari.jpg" />
-    <Resource Include="Images\MenuItems\nachos.jpg" />
-    <Resource Include="Images\MenuItems\shortRibs.jpg" />
+    <Content Include="Images\MenuItems\calamari.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\nachos.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\shortRibs.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MenuItems\alexanderKeiths.jpg" />
-    <Resource Include="Images\MenuItems\brownie.jpg" />
-    <Resource Include="Images\MenuItems\IceCream.jpg" />
-    <Resource Include="Images\MenuItems\milk.jpg" />
-    <Resource Include="Images\MenuItems\rickardsRed.jpg" />
-    <Resource Include="Images\MenuItems\water.jpg" />
-    <Resource Include="Images\MenuItems\wine.jpg" />
+    <Content Include="Images\MenuItems\alexanderKeiths.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\brownie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\IceCream.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\milk.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\rickardsRed.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\water.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MenuItems\wine.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Whiteout.png" />
+    <Content Include="Images\Whiteout.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\specialtyIcon.png" />
+    <Content Include="Images\specialtyIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\payPal.png" />
+    <Content Include="Images\payPal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

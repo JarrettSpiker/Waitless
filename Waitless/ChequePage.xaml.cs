@@ -46,7 +46,7 @@ namespace Waitless
             confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Jalapeno Poppers"], "currentUserId"), 0.25));
             
 
-            confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Water"], "currentUserId"), 2.0));
+            confirmedItems.Add(Tuple.Create(new OrderedItem(ItemDefinitionController.itemDefinitions["Water"], "currentUserId"), 1.0));
 
             RedrawItems();
             initialized = true;

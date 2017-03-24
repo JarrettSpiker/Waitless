@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Navigation;
 using System.Windows.Media.Animation;
+using Waitless.model;
 
 namespace Waitless
 {
@@ -21,25 +22,55 @@ namespace Waitless
     /// </summary>
     public partial class ItemProfile : Window
     {
-        public ItemProfile(List<String> sides, List<String> customisations)
+ 
+        OrderedItem menuItem;
+
+        public ItemProfile(OrderedItem item)
         {
-            Sides = sides;
-            Customisations = customisations;
-            if (sides.Contains("Yukon Fries")) YukonFries.IsChecked = true;
-            if (sides.Contains("Caesar Salad")) CaesarSalad.IsChecked = true;
-            if (sides.Contains("Mashed Potatoes")) MashedPotatoes.IsChecked = true;
-            if (sides.Contains("Yam Fries")) YamFries.IsChecked = true;
-            Ready = true;
             InitializeComponent();
+            menuItem = item;
+            UpdateHeaders();
+            UpdateImage();
+            UpdateDescription();
+            //UpdateNutritionalInfo(); TODO
+            UpdateExpandables();
+
         }
 
-        public ItemProfile()
+        private void UpdateHeaders()
         {
-            InitializeComponent();
-            Customisations = new List<string>();
-            Sides = new List<string>();
-            Ready = true;
+            ItemName.Text = menuItem.itemDefinition.name;
+            ItemPrice.Text = "$" + (menuItem.itemDefinition.cost / 100.0).ToString();
+            string starString = "";
+            for (int i = 0; i < menuItem.itemDefinition.numStars; i++)
+            {
+                starString += "✰";
+            }
+            ItemStars.Text = starString;
         }
+
+        private void UpdateImage()
+        {
+            string imageUri = System.IO.Directory.GetCurrentDirectory() +menuItem.itemDefinition.imageRef;
+            ItemImage.Source =new BitmapImage(new Uri(imageUri));
+        }
+
+        private void UpdateDescription()
+        {
+            ItemDescription.Text = menuItem.itemDefinition.description;
+        }
+
+
+        private void UpdateExpandables()
+        {
+            Xprep.Visibility = menuItem.itemDefinition.needsPreparation ? Visibility.Visible : Visibility.Collapsed;
+            Xsides.Visibility = menuItem.itemDefinition.hasSides ? Visibility.Visible : Visibility.Collapsed;
+            Xsize.Visibility = menuItem.itemDefinition.hasSize ? Visibility.Visible : Visibility.Collapsed;
+
+            CustomizeButton.IsEnabled = menuItem.itemDefinition.isCustomizable;
+
+        }
+
         public Boolean Ready = false;
         public List<String> Customisations;
         public String SpecialRequest="";
@@ -51,13 +82,13 @@ namespace Waitless
             Xdescription.IsEnabled = b;
             Xprep.IsEnabled = b;
             Xsides.IsEnabled = b;
-            Customise.IsEnabled = b;
-            AddToOrder.IsEnabled = b;
-            Customise.IsEnabled = b;
+            CustomizeButton.IsEnabled = b;
+            AddToOrderButton.IsEnabled = b;
+            CustomizeButton.IsEnabled = b;
             backButton.IsEnabled = b;
             btnRightMenuHide.IsEnabled = b;
             btnRightMenuShow.IsEnabled = b;
-            SR.IsEnabled = b;
+            SpecialRequestButton.IsEnabled = b;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

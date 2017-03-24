@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Waitless.model;
 
 namespace Waitless
 {
@@ -32,5 +33,13 @@ namespace Waitless
         {
             HackyCommunicationClass.mainWindow.OnBackToCategoriesEvent();
         }
+
+        public void OnMenuItemSelected(object sender, RoutedEventArgs e)
+        {
+            OrderedItem menuItem = new OrderedItem(ItemDefinitionController.itemDefinitions[(sender as Button).Tag as string], "currentUserId");
+            ItemProfile profile = new ItemProfile(menuItem);
+            profile.Show();
+        }
+
     }
 }
