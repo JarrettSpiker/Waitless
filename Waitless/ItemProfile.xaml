@@ -96,7 +96,7 @@
 
         </StackPanel>
 
-        <ScrollViewer Panel.ZIndex="-10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" >
+        <ScrollViewer Panel.ZIndex="-10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
