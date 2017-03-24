@@ -83,7 +83,7 @@ namespace Waitless
               false, false, false, false));
 
             definitions.Add(new ItemDefinition("Fish and Chips", "Sample Description", ItemDefinition.Categories.SeaFood,
-              "/Images/MenuItems/fishAndChips.jpg", 3, 1300, "Sample Nutritional Info", false, true, false, true,
+              "/Images/MenuItems/fishAndChips.png", 3, 1300, "Sample Nutritional Info", false, true, false, true,
               new List<string> { "Add Lemon" }, null,
               null, new List<string> { "Yukon Fries", "Caesar Salad" },
               false, false, false, false));
@@ -147,11 +147,11 @@ namespace Waitless
                 true, false, false, false));
 
             definitions.Add(new ItemDefinition("Pepsi", "Sample Description", ItemDefinition.Categories.Drinks,
-                "/Images/MenuItems/pepsi.jpg", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
+                "/Images/MenuItems/Pepsi.png", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                 true, false, false, false));
 
             definitions.Add(new ItemDefinition("7-Up", "Sample Description", ItemDefinition.Categories.Drinks,
-               "/Images/MenuItems/7up.jpg", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
+               "/Images/MenuItems/7up.png", 0, 300, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                true, false, false, false));
 
             definitions.Add(new ItemDefinition("Rickards Red", "Sample Description", ItemDefinition.Categories.Alcohol,
