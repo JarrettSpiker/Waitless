@@ -34,7 +34,7 @@ namespace Waitless
             UpdateDescription();
             //UpdateNutritionalInfo(); TODO
             UpdateExpandables();
-            //UpdateButtonStates(); //TODO
+            UpdateButtonStates();
 
         }
 
@@ -84,6 +84,7 @@ namespace Waitless
                     button.Content = size;
                     Grid.SetColumn(button, i % 2);
                     Grid.SetRow(button, i / 2);
+                    button.Tag = size;
                     button.Click += (s, eArgs) =>
                     {
                         menuItem.selectedSize = size;
@@ -107,6 +108,7 @@ namespace Waitless
                     button.Content = prep;
                     Grid.SetColumn(button, i % 2);
                     Grid.SetRow(button, i / 2);
+                    button.Tag = prep;
                     button.Click += (s, eArgs) =>
                     {
                         menuItem.selectedPreparation = prep;
@@ -117,7 +119,6 @@ namespace Waitless
             }
 
             //Add the sides to the expandable
-            //make sure to do checked and unchecked
             if (menuItem.itemDefinition.hasSides)
             {
                 SidesOptions.Children.Clear();
@@ -125,21 +126,16 @@ namespace Waitless
                 for (int i = 0; i < sides.Count; i++)
                 {
                     string side = sides[i];
-                    CheckBox button = new CheckBox();
+                    RadioButton button = new RadioButton();
                     button.FontSize = 14;
                     button.Margin = new Thickness(3);
                     button.Content = side;
                     Grid.SetColumn(button, i % 2);
                     Grid.SetRow(button, i / 2);
-
+                    button.Tag = side;
                     button.Checked += (s, eArgs) =>
                     {
-                        menuItem.customizations[side] = true;
-                    };
-
-                    button.Unchecked += (s, eArgs) =>
-                    {
-                        menuItem.customizations[side] = false;
+                        menuItem.selectedSide = side;
                     };
 
                     SidesOptions.Children.Add(button);
@@ -148,6 +144,44 @@ namespace Waitless
 
 
         }
+
+        private void UpdateButtonStates()
+        {
+            //set the preperation
+            if (menuItem.itemDefinition.needsPreparation)
+            {
+                foreach(object o in PreperationOptions.Children)
+                {
+                    RadioButton button = o as RadioButton;
+                    string prep =button.Tag as string;
+                    button.IsChecked = prep.Equals(menuItem.selectedPreparation);
+                }
+            }
+
+            //set the side
+            if (menuItem.itemDefinition.hasSides)
+            {
+                foreach (object o in SidesOptions.Children)
+                {
+                    RadioButton button = o as RadioButton;
+                    string side = button.Tag as string;
+                    button.IsChecked = side.Equals(menuItem.selectedSide);
+                }
+            }
+
+            //set the size
+            if (menuItem.itemDefinition.hasSize)
+            {
+                foreach (object o in SizeOptions.Children)
+                {
+                    RadioButton button = o as RadioButton;
+                    string size = button.Tag as string;
+                    button.IsChecked = size.Equals(menuItem.selectedSize);
+                }
+            }
+
+        }
+
 
         public Boolean Ready = false;
         public List<String> Customisations;
