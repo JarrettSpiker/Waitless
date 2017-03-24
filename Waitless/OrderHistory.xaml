@@ -1,0 +1,19 @@
+﻿<Window x:Class="Waitless.OrderHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waitless"
+        mc:Ignorable="d"
+        Title="OrderHistory" Height="300" MinHeight="300" MaxHeight="300" MaxWidth="300" MinWidth="300" Width="300" Background="Wheat">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontFamily="MV Boli" FontSize="18" Text="This feature is not available in&#x0a;the prototype due to it &#x0a;requiring a server and stored&#x0a;user profiles and order histories."/>
+        <Button Grid.Row="1" FontFamily="MV Boli" Background="GreenYellow" FontSize="44" Click="ConfirmButton_Click">Dismiss</Button>
+
+    </Grid>
+</Window>

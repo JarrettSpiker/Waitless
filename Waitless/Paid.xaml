@@ -1,0 +1,12 @@
+﻿<Window x:Class="Waitless.Paid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waitless"
+        mc:Ignorable="d"
+        Title="Paid" Height="300" Width="300" MinHeight="300" MaxHeight="300" MinWidth="300" MaxWidth="300" Background="Green">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Payment&#x0a;Successful!" FontSize="36" FontFamily="MV Boli"/>
+    </Grid>
+</Window>

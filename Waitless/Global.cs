@@ -13,7 +13,11 @@ namespace Waitless
         public static MainWindow Main;
         public static Keyboard kb;
  
-
+        public static void paid()
+        {
+            Paid i = new Paid();
+            i.Show();
+        }
 
         public static void showKeyboard()
             {

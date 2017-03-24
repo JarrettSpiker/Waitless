@@ -49,7 +49,7 @@
                         <TextBlock Name="NumItemsPendingText" Text="1 item pending" FontSize="12" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="Red"/>
                     </StackPanel>
                 </Button>
-                <Button Grid.Column="2" Height="75" Background="#FFFBCB86">
+                <Button x:Name="Pay" Grid.Column="2" Height="75" Background="#FFFBCB86" Click="Pay_Click">
                     <TextBlock Text="Pay Now" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
                 </Button>
             </Grid>

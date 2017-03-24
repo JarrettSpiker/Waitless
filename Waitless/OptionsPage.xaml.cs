@@ -28,11 +28,41 @@ namespace Waitless
         private void LeaveTable_Click(object sender, RoutedEventArgs e)
         {
             ChequePage.reset();
+            Review.reset();
+            Feedback.text = "";
+            PaymentPage.choice = 0;
             OpeningWindow ow = new OpeningWindow();
             Global.Main.Hide();
             ow.Show();
             Global.Main.Close();
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Global.Main.Hide();
+            Review r = new Review();
+            r.Show();
+        }
+
+        private void feedback_Click(object sender, RoutedEventArgs e)
+        {
+            Feedback fwijl = new Feedback();
+            fwijl.Show();
+            Global.Main.Hide();
+        }
+
+        private void OrderHistory_Click(object sender, RoutedEventArgs e)
+        {
+            OrderHistory owf = new OrderHistory();
+            owf.Show();
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            PaymentPage.paying = false;
+            Global.Main.PaymentPage();
         }
     }
 }

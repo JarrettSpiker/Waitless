@@ -15,23 +15,22 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
             <StackPanel Orientation="Horizontal">
-                <Button Content="X" Width="40" Foreground="Red" HorizontalContentAlignment="Center" Background="White"/>
                 <TextBlock Text="Please Select Payment Option" VerticalAlignment="Center" FontSize="15" FontFamily="Segoe Print" Margin="5,0,0,0"/>
             </StackPanel>
         </Border>
         <StackPanel Grid.Row="1" Orientation="Vertical" Background="AliceBlue">
             <TextBlock FontSize="15" FontFamily="Segoe Print" Text="In Person:" Margin="5,0"/>
-            <Button Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5">
+            <Button x:Name="Cash" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" Click="Cash_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Cash"/>
             </Button>
-            <Button Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5">
+            <Button x:Name="Credit" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5" Click="Credit_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Credit"/>
             </Button>
-            <Button Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5">
+            <Button x:Name="Debit" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5" Click="Debit_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Debit"/>
             </Button>
             <TextBlock FontSize="15" FontFamily="Segoe Print" Text="In App:" Margin="5,0"/>
-            <Button Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" HorizontalContentAlignment="Stretch">
+            <Button x:Name="PayPal" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" HorizontalContentAlignment="Stretch" Click="PayPal_Click">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"/>

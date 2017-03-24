@@ -1,0 +1,34 @@
+﻿<Window x:Class="Waitless.Review"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waitless"
+        mc:Ignorable="d"
+        Title="Review" Height="525" Width="350" MinHeight="525" MaxHeight="525" MinWidth="350" MaxWidth="350" Closing="Window_Closing">
+    <Grid Background="#FFF0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"  Background="Wheat" Height="73" VerticalAlignment="Bottom" Margin="0,0,0,51">
+            <LineBreak/>
+            <Run Text="Rating:  " FontFamily="MV Boli" FontSize="18"/>
+            <Button x:Name="one" Click="one_Click">✰</Button>
+            <Button x:Name="two" Click="two_Click">✰</Button>
+            <Button x:Name="three" Click="three_Click">✰</Button>
+            <Button x:Name="four" Click="four_Click">✰</Button>
+            <Button x:Name="five" Click="five_Click">✰</Button>
+            <LineBreak />
+            <Run Text="Additional Comments:  " FontFamily="MV Boli" FontSize="18"/>
+
+
+
+        </TextBlock>
+        <TextBox x:Name="RequestField" FontFamily="MV Boli" FontSize="18" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Margin="0,73,0,0" Grid.RowSpan="2" TextChanged="RequestField_TextChanged"/>
+        <Button x:Name="ConfirmButton" Grid.Row="2" FontFamily="MV Boli" Background="GreenYellow" FontSize="44" Click="ConfirmButton_Click">Confirm</Button>
+
+    </Grid>
+</Window>

@@ -18,7 +18,7 @@
             <LineBreak/>
             <Run Text="Tell us anything we should know:" FontFamily="MV Boli" FontSize="18"/>
         </TextBlock>
-        <TextBox x:Name="RequestField" Grid.Row="1" FontFamily="MV Boli" FontSize="18" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" TextChanged="RequestField_TextChanged"/>
+        <TextBox x:Name="RequestField" Grid.Row="1" FontFamily="MV Boli" FontSize="18" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextChanged="RequestField_TextChanged"/>
         <Button x:Name="ConfirmButton" Grid.Row="2" FontFamily="MV Boli" Background="GreenYellow" FontSize="44" Click="ConfirmButton_Click">Confirm</Button>
 
     </Grid>

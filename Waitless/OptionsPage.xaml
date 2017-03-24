@@ -11,25 +11,25 @@
     <ScrollViewer Background="WhiteSmoke" VerticalScrollBarVisibility="Auto">
         <DockPanel>
             <StackPanel DockPanel.Dock="Top" Orientation="Vertical">
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
+                <Button x:Name="feedback" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="feedback_Click">
                     <DockPanel>
                         <TextBlock Text="Submit Feedback" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/submitFeedback.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
+                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="Button_Click_1">
                     <DockPanel>
                         <TextBlock Text="Payment Methods" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/paymentMethods.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
+                <Button x:Name="OrderHistory" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="OrderHistory_Click">
                     <DockPanel>
                         <TextBlock Text="Order History" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/orderHistory.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch">
+                <Button x:Name="review" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="Button_Click">
                     <DockPanel>
                         <TextBlock Text="Submit Review" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/submitRating.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
