@@ -15,12 +15,15 @@ namespace Waitless
         public static String ChangeFromDefault(String Ref, String Cmp)
         {
             if (Cmp.Length < Ref.Length) return "";
+            if (Cmp.Length > Ref.Length) return Cmp.ToCharArray()[Cmp.Length - 1].ToString();
             char[] cmp = Cmp.ToCharArray();
             char[] REF = Ref.ToCharArray();
             int i;
             for (i = 0; i < Cmp.Length; i++)
+            {
                 if (cmp[i] != REF[i])
                     break;
+            }
             return cmp[i].ToString();
         }
 
