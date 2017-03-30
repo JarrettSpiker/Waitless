@@ -100,6 +100,9 @@
     <Compile Include="Review.xaml.cs">
       <DependentUpon>Review.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ScrollDebugger.xaml.cs">
+      <DependentUpon>ScrollDebugger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialRequest.xaml.cs">
       <DependentUpon>SpecialRequest.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Review.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScrollDebugger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

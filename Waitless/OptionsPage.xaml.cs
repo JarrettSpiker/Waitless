@@ -31,6 +31,7 @@ namespace Waitless
             Review.reset();
             Feedback.text = "";
             PaymentPage.choice = 0;
+            MenuPage.ScrollPosition = 0;
             OpeningWindow ow = new OpeningWindow();
             Global.Main.Hide();
             ow.Show();
@@ -56,7 +57,7 @@ namespace Waitless
         {
             OrderHistory owf = new OrderHistory();
             owf.Show();
-
+            Global.Main.IsEnabled = false;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -64,5 +65,7 @@ namespace Waitless
             PaymentPage.paying = false;
             Global.Main.PaymentPage();
         }
+
+
     }
 }
