@@ -29,6 +29,8 @@ namespace Waitless
             RequestField.Text = item.specialRequest;
             IP = ip;
             IP.setEnabled(false);
+            Global.kb_Left = 400;
+            Global.kb_Top = 0;
             Global.showKeyboard();
         }
 
