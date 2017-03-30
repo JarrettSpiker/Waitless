@@ -12,6 +12,8 @@ namespace Waitless
         public static String tablecode;
         public static MainWindow Main;
         public static Keyboard kb;
+        public static int kb_Top;
+        public static int kb_Left;
  
         public static void paid()
         {

@@ -53,5 +53,11 @@ namespace Waitless
             Global.hideKeyboard();
             
         }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 32;
+            this.Left = 14;
+        }
     }
 }

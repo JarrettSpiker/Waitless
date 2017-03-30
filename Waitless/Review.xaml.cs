@@ -37,6 +37,8 @@ namespace Waitless
             if (stars == 4) four.IsEnabled = false;
             if (stars == 5) five.IsEnabled = false;
             RequestField.Text = text;
+            Global.kb_Left = 400;
+            Global.kb_Top = 0;
             Global.showKeyboard();
             
         }
@@ -107,6 +109,12 @@ namespace Waitless
         private void RequestField_TextChanged(object sender, TextChangedEventArgs e)
         {
             text = RequestField.Text;
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 0;
+            this.Left = 0;
         }
     }
 }

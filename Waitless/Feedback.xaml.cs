@@ -24,6 +24,8 @@ namespace Waitless
         {
             InitializeComponent();
             RequestField.Text = text;
+            Global.kb_Left = 400;
+            Global.kb_Top = 0;
             Global.showKeyboard();
         }
 
@@ -43,6 +45,12 @@ namespace Waitless
             Global.Main.Show();
             Global.hideKeyboard();
             Close();
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 0;
+            this.Left = 0;
         }
     }
 }

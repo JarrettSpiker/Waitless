@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="Keyboard" Height="163" Width="211" MinHeight="163" MaxHeight="163" MinWidth="211" MaxWidth="211" Closed="Window_Closed">
+        Title="Keyboard" LocationChanged="Window_LocationChanged" Height="163" Width="211" MinHeight="163" MaxHeight="163" MinWidth="211" MaxWidth="211" Closed="Window_Closed">
     <Grid>
         <Image Source="images/keyboard.png"/>
     </Grid>

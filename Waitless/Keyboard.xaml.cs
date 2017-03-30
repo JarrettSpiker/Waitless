@@ -22,6 +22,8 @@ namespace Waitless
         public Keyboard()
         {
             InitializeComponent();
+            this.Top = Global.kb_Top;
+            this.Left = Global.kb_Left;
         }
 
         public Boolean closed = false;
@@ -33,6 +35,12 @@ namespace Waitless
             k.Show();
                 Global.kb = k;
         }
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = Global.kb_Top;
+            this.Left = Global.kb_Left;
         }
     }
 }

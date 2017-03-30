@@ -23,11 +23,14 @@ namespace Waitless
         private String TABLECODE_TEXT = "Enter Table Code";
         private Boolean noTableCode;
         public Boolean notHelping=true;
+        private Login h;
         public OpeningWindow()
         {
             InitializeComponent();
             tableCodeField.Text = TABLECODE_TEXT;
             noTableCode = true;
+            Global.kb_Top = 50;
+            Global.kb_Left = 32;
 
         }
 
@@ -76,8 +79,9 @@ namespace Waitless
                 tableCodeButton.IsEnabled = false;
                 tableCodeField.IsEnabled = false;
                 helpButton.IsEnabled = false;
-                Login h = new Login(this);
-                h.Show();
+                h = new Login(this);
+            h.Show();
+                
             
             
         }
@@ -98,6 +102,19 @@ namespace Waitless
         private void tableCodeField_MouseLeave(object sender, MouseEventArgs e)
         {
             Global.hideKeyboard();
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 0;
+            this.Left = 0;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (loginButton.IsEnabled == false)
+                h.Close();
+
         }
     }
 }

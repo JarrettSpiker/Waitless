@@ -126,6 +126,12 @@ namespace Waitless
             Toggle(Options, OptionsButton);
             Back.IsEnabled = true;
         }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 0;
+            this.Left = 0;
+        }
     }
 
 
