@@ -84,10 +84,22 @@ namespace Waitless
 
         private void helpButton_Click(object sender, RoutedEventArgs e)
         {
-            image.Visibility = Visibility.Hidden;
-            HelpText.Visibility = Visibility.Visible;
-            helpButton.IsEnabled = false;
-            notHelping = false;
+            if (notHelping == true)
+            {
+                image.Visibility = Visibility.Hidden;
+                HelpText.Visibility = Visibility.Visible;
+                notHelping = false;
+            }
+            else
+            {
+                image.Visibility = Visibility.Visible;
+                HelpText.Visibility = Visibility.Hidden;
+                notHelping = true;
+
+            }
+
+
+
         }
 
         private void tableCodeField_MouseEnter(object sender, MouseEventArgs e)
