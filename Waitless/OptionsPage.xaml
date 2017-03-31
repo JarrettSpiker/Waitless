@@ -35,7 +35,7 @@
                         <Image Source="Images/submitRating.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="Salmon">
+                <Button x:Name="Help" Click="Help_Click"  HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="Salmon">
                     <DockPanel>
                         <TextBlock Text="Help" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/helpIcon.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>

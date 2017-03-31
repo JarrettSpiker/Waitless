@@ -66,6 +66,11 @@ namespace Waitless
             Global.Main.PaymentPage();
         }
 
-
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            HelpViewer wijg = new HelpViewer();
+            wijg.Show();
+            Global.Main.Hide();
+        }
     }
 }

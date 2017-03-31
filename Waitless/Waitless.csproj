@@ -79,6 +79,18 @@
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
     <Compile Include="HackyCommunicationClass.cs" />
+    <Compile Include="HelpViewer.xaml.cs">
+      <DependentUpon>HelpViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\cook.xaml.cs">
+      <DependentUpon>cook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\pepsi.xaml.cs">
+      <DependentUpon>pepsi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\Steak.xaml.cs">
+      <DependentUpon>Steak.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ItemDefinitionController.cs" />
     <Compile Include="Keyboard.xaml.cs">
       <DependentUpon>Keyboard.xaml</DependentUpon>
@@ -135,6 +147,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Feedback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\cook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\pepsi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Steak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -250,6 +278,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Arrow.png" />
     <Content Include="Images\cook.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
