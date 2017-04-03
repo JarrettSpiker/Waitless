@@ -59,6 +59,9 @@
     <Compile Include="BillSplitter.xaml.cs">
       <DependentUpon>BillSplitter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="controls\billSplitterItemControl.xaml.cs">
+      <DependentUpon>billSplitterItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="controls\ConfirmedItemControl.xaml.cs">
       <DependentUpon>ConfirmedItemControl.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Confirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\billSplitterItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

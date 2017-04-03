@@ -29,7 +29,10 @@ namespace Waitless
 
         public void OnCategorySelected(object sender, RoutedEventArgs e)
         {
+
+            MenuPage.ScrollPosition = 0;
             HackyCommunicationClass.mainWindow.OnCategorySelected(((Button)sender).Name);
+            
         }
 
         private void AppetizersToShare_Click(object sender, RoutedEventArgs e)

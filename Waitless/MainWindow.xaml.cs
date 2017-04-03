@@ -43,6 +43,7 @@ namespace Waitless
         private Uri Options = new Uri("OptionsPage.xaml", UriKind.Relative);
         private Uri MenuCategories = new Uri("CategoriesPage.xaml", UriKind.Relative);
         private Uri Payment = new Uri("PaymentPage.xaml", UriKind.Relative);
+        private Uri BillSplitter = new Uri("BillSplitter.xaml", UriKind.Relative);
 
         private void request_Click(object sender, RoutedEventArgs e)
         {
@@ -87,6 +88,12 @@ namespace Waitless
         public void OnBackToCategoriesEvent()
         {
             Toggle(MenuCategories, MenuButton);
+        }
+
+
+        public void GoToBillSplitter()
+        {
+            TheFrame.Navigate(new Uri("BillSplitter.xaml", UriKind.Relative));
         }
 
         public void OnCategorySelected(string categoryName)

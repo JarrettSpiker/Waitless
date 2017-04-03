@@ -40,7 +40,7 @@
                     <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Height="75" Background="#FFFBCB86">
+                <Button Grid.Column="0" Height="75" Background="#FFFBCB86" Click="SplitButton_Click">
                     <TextBlock Text="Split Bill" FontFamily="MV Boli" FontSize="23" TextWrapping="Wrap"/>
                 </Button>
                 <Button Grid.Column="1" Height="75" Background="GreenYellow" Click="OnPlaceOrderClicked">

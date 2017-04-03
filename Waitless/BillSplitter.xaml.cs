@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using Waitless.controls;
+using Waitless.model;
+
 namespace Waitless
 {
     /// <summary>
@@ -22,6 +25,16 @@ namespace Waitless
         public BillSplitter()
         {
             InitializeComponent();
+
+
+            billSplitterComponent.Children.Clear();
+            foreach (Tuple<OrderedItem, double> tuple in ChequePage.confirmedItems){
+                billSplitterItemControl control = new billSplitterItemControl();
+
+                control.ItemName.Text = tuple.Item1.itemDefinition.name;
+                // control.Price.Text = tuple.Item1.itemDefinition.cost;
+                billSplitterComponent.Children.Add(control);
+            }
         }
     }
 }

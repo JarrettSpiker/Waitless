@@ -220,5 +220,10 @@ namespace Waitless
             
 
         }
+
+        private void SplitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Global.Main.GoToBillSplitter();
+        }
     }
 }
