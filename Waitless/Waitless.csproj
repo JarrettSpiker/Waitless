@@ -71,6 +71,9 @@
     <Compile Include="Circle.xaml.cs">
       <DependentUpon>Circle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Icon Legend.xaml.cs">
+      <DependentUpon>Icon Legend.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Images\testHelpSlide.xaml.cs">
       <DependentUpon>testHelpSlide.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Circle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icon Legend.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
