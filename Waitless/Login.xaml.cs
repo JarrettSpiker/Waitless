@@ -48,7 +48,7 @@ namespace Waitless
             theWindow.tableCodeField.IsEnabled = true;
             Global.kb_Left = 32;
             Global.kb_Top = 50;
-            theWindow.helpButton.IsEnabled = theWindow.notHelping;
+            theWindow.helpButton.IsEnabled = true;
             Global.hideKeyboard();
         }
 
