@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="OrderHistory" Height="300" MinHeight="300" MaxHeight="300" MaxWidth="300" MinWidth="300" Width="300" Background="Wheat">
+        Title="OrderHistory" LocationChanged="Window_LocationChanged" Top="32" Left="25" Closing="Window_Closing" Height="300" MinHeight="300" MaxHeight="300" MaxWidth="300" MinWidth="300" Width="300" Background="Wheat">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

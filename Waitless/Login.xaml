@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
         Closing="Window_Closing"
-        Title="Login" Height="192" MinHeight="192" MaxHeight="192" MinWidth="240" MaxWidth="240" Width="240">
+        Title="Login" LocationChanged="Window_LocationChanged" Top="32" Left="50" Height="192" MinHeight="192" MaxHeight="192" MinWidth="240" MaxWidth="240" Width="240">
     <Grid Background="Wheat">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

@@ -26,6 +26,8 @@ namespace Waitless
         {
             InitializeComponent();
             theWindow = ow;
+            Global.kb_Top = 256;
+            Global.kb_Left = 50;
           //  Global.showKeyboard();
         }
 
@@ -44,7 +46,9 @@ namespace Waitless
             theWindow.loginButton.IsEnabled = true;
             theWindow.tableCodeButton.IsEnabled = true;
             theWindow.tableCodeField.IsEnabled = true;
-            theWindow.helpButton.IsEnabled = theWindow.notHelping;
+            Global.kb_Left = 32;
+            Global.kb_Top = 50;
+            theWindow.helpButton.IsEnabled = true;
             Global.hideKeyboard();
         }
 
@@ -70,6 +74,12 @@ namespace Waitless
         private void UsernameField_MouseLeave(object sender, MouseEventArgs e)
         {
             Global.hideKeyboard();
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 32;
+            this.Left = 50;
         }
     }
 }

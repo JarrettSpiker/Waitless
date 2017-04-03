@@ -9,14 +9,26 @@ namespace Waitless
     /// </summary>
     public partial class MenuPage : Page
     {
-
+        public static double ScrollPosition = 0;
        
         public MenuPage()
         {
             InitializeComponent();
             HackyCommunicationClass.registerMenuPage(this);
+            ScrollTo(ScrollPosition);
             HideNewItemFlyout();
             ShowNewItemFlyout("foo");
+            if (false)
+            {
+                ScrollDebugger sd = new ScrollDebugger(this);
+                sd.Show();
+            }
+            
+        }
+
+        public void ScrollTo(double value)
+        {
+            Scroll.ScrollToVerticalOffset(value);
         }
 
         public void OnBackToCategories(object sender, RoutedEventArgs e)
@@ -49,6 +61,17 @@ namespace Waitless
         public void OnPlaceOrderClicked(object sender, RoutedEventArgs args)
         {
             HackyCommunicationClass.mainWindow.SwitchToCheque();
+        }
+
+        private void Scroll_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            ScrollPosition = Scroll.VerticalOffset;
+        }
+
+        private void IconLegend_Click(object sender, RoutedEventArgs e)
+        {
+            Icon_Legend i = new Icon_Legend();
+            i.ShowDialog();
         }
     }
 }

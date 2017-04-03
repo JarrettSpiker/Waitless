@@ -29,6 +29,8 @@ namespace Waitless
             RequestField.Text = item.specialRequest;
             IP = ip;
             IP.setEnabled(false);
+            Global.kb_Left = 400;
+            Global.kb_Top = 0;
             Global.showKeyboard();
         }
 
@@ -52,6 +54,12 @@ namespace Waitless
             IP.setEnabled(true);
             Global.hideKeyboard();
             
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 32;
+            this.Left = 14;
         }
     }
 }

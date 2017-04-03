@@ -31,6 +31,7 @@ namespace Waitless
             Back.IsEnabled = false;
             Global.Main = this;
             HackyCommunicationClass.registerMainWindow(this);
+            
         }
 
         private Button PreviousButton;
@@ -58,6 +59,12 @@ namespace Waitless
             requested.Visibility = Visibility.Hidden;
             request.Visibility = Visibility.Visible;
 
+        }
+
+        public void gotoMenu()
+        {
+            PreviousUri = MenuCategories;
+            Toggle(Menu, MenuButton);
         }
 
         public void gotoOptions()
@@ -125,6 +132,12 @@ namespace Waitless
         {
             Toggle(Options, OptionsButton);
             Back.IsEnabled = true;
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 0;
+            this.Left = 0;
         }
     }
 

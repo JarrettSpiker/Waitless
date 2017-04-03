@@ -68,6 +68,18 @@
     <Compile Include="controls\PendingItemControl.xaml.cs">
       <DependentUpon>PendingItemControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Circle.xaml.cs">
+      <DependentUpon>Circle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Icon Legend.xaml.cs">
+      <DependentUpon>Icon Legend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\testHelpSlide.xaml.cs">
+      <DependentUpon>testHelpSlide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Feedback.xaml.cs">
       <DependentUpon>Feedback.xaml</DependentUpon>
     </Compile>
@@ -79,6 +91,18 @@
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
     <Compile Include="HackyCommunicationClass.cs" />
+    <Compile Include="HelpViewer.xaml.cs">
+      <DependentUpon>HelpViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\cook.xaml.cs">
+      <DependentUpon>cook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\pepsi.xaml.cs">
+      <DependentUpon>pepsi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\Steak.xaml.cs">
+      <DependentUpon>Steak.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ItemDefinitionController.cs" />
     <Compile Include="Keyboard.xaml.cs">
       <DependentUpon>Keyboard.xaml</DependentUpon>
@@ -99,6 +123,9 @@
     </Compile>
     <Compile Include="Review.xaml.cs">
       <DependentUpon>Review.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollDebugger.xaml.cs">
+      <DependentUpon>ScrollDebugger.xaml</DependentUpon>
     </Compile>
     <Compile Include="SpecialRequest.xaml.cs">
       <DependentUpon>SpecialRequest.xaml</DependentUpon>
@@ -131,7 +158,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Circle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icon Legend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\testHelpSlide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Feedback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\cook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\pepsi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Steak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +262,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ScrollDebugger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SpecialRequest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,6 +306,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Arrow.png" />
     <Content Include="Images\cook.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -254,6 +318,7 @@
     <Content Include="Images\menuIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\MenuItems\testHelpSlide.png" />
     <Content Include="Images\optionsIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -448,6 +513,7 @@
   <ItemGroup>
     <Resource Include="Images\Keyboard.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

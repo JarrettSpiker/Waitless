@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="Waitless" Height="525" Width="355" MinHeight="525" MinWidth="355" MaxHeight="525" MaxWidth="355" Closing="Window_Closing">
+        Title="Waitless" Top="0" Left="0" LocationChanged="Window_LocationChanged" Height="525" Width="355" MinHeight="525" MinWidth="355" MaxHeight="525" MaxWidth="355" Closing="Window_Closing">
 
 
     <Window.Resources>
         <Storyboard x:Key="sbShowRightMenu" >
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-267,0" To="0,0,-65,0" DecelerationRatio=".9" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-200,124" To="0,0,-25,124" DecelerationRatio=".9" Duration="0:0:1" />
         </Storyboard>
         <Storyboard x:Key="sbHideRightMenu">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-65,0" To="0,0,-267,0" AccelerationRatio=".9" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-50,124" To="0,0,-200,124" AccelerationRatio=".9" Duration="0:0:1" />
         </Storyboard>
 
     </Window.Resources>
@@ -33,68 +33,10 @@
         </Grid.RowDefinitions>
         <Button Name="backButton" Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="3" Content="⬅" Background="#FFFF5100" HorizontalAlignment="Stretch" Height="48" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Click="backButton_Click"/>
         <Border  Background="#FFFF5100" Grid.Column='1' Grid.ColumnSpan="2"  Panel.ZIndex="1"  HorizontalAlignment="Stretch" Height="48" VerticalAlignment="Stretch">
-            <Viewbox   >
+            <Viewbox Margin="0,0,10,0"   >
                 <TextBlock Name="ItemName" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" Foreground="White" Text="T-Bone Steak" Padding="2" />
             </Viewbox>
         </Border>
-        <StackPanel Panel.ZIndex="5" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0"  Name="pnlRightMenu" Height="290" Width="200" Background="White"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,-267,0">
-
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40"/>
-                    <ColumnDefinition Width="160"/>
-
-                </Grid.ColumnDefinitions>
-                <Button Name="btnRightMenuHide" Panel.ZIndex="1000" Background="White"  Height="50" Width="75" Grid.Column="0" Click="btnRightMenuHide_Click" Margin="-105,-250,0,0" Content="Hide" Visibility="Hidden"/>
-                <Button Name="btnRightMenuShow" Panel.ZIndex="1000" Height="55" Width="70" Grid.Column="0" Click="btnRightMenuShow_Click" Margin="-105,-250,0,0" FontSize="25" Background="#FFFF5100" >
-                    <Image Source="Images/Info.png" Height="40"/>
-                </Button>
-
-
-                <StackPanel Grid.Column="1">
-                    <TextBlock Grid.Column="1">
-                            <LineBreak/>
-                        <Run FontWeight="Bold" Text="T-Bone Steak"/>
-                                <LineBreak/>
-                            <Run Text="Calories:" FontStyle="Italic" /> <Run Text="364"/>   <Run Text="Protein:" FontStyle="Italic" /> <Run Text="48g"/>
-                                <LineBreak/>
-                                <Run Text="Fats:" FontStyle="Italic" /> <Run Text="15g"/>     <Run Text="Carbs:" FontStyle="Italic" /> <Run Text="4g"/>
-                                <LineBreak/>
-                  
-                        <Run FontWeight="Bold" Text="Yam Fries"/>
-                                <LineBreak/>
-                            <Run Text="Calories:" FontStyle="Italic" /> <Run Text="650"/>   <Run Text="Protein:" FontStyle="Italic" /> <Run Text="8g"/>
-                                <LineBreak/>
-                                <Run Text="Fats:" FontStyle="Italic" /> <Run Text="33g"/>     <Run Text="Carbs:" FontStyle="Italic" /> <Run Text="58g"/>
-                                <LineBreak/>
-                            
-                            
-                        <Run FontWeight="Bold" Text="Yukon Fries"/>
-                                <LineBreak/>
-                            <Run Text="Calories:" FontStyle="Italic" /> <Run Text="393"/>   <Run Text="Protein:" FontStyle="Italic" /> <Run Text="4g"/>
-                                <LineBreak/>
-                                <Run Text="Fats:" FontStyle="Italic" /> <Run Text="18g"/>     <Run Text="Carbs:" FontStyle="Italic" /> <Run Text="52g"/>
-                                <LineBreak/>              
-                            
-                        <Run FontWeight="Bold" Text="Mashed Potatoes"/>
-                                <LineBreak/>
-                            <Run Text="Calories:" FontStyle="Italic" /> <Run Text="230"/>   <Run Text="Protein:" FontStyle="Italic" /> <Run Text="4g"/>
-                                <LineBreak/>
-                                <Run Text="Fats:" FontStyle="Italic" /> <Run Text="13g"/>     <Run Text="Carbs:" FontStyle="Italic" /> <Run Text="24g"/>
-                                <LineBreak/>
-                            
-                        <Run FontWeight="Bold" Text="Caesar Salad"/>
-                                <LineBreak/>
-                            <Run Text="Calories:" FontStyle="Italic" /> <Run Text="340"/>   <Run Text="Protein:" FontStyle="Italic" /> <Run Text="6g"/>
-                                <LineBreak/>
-                                <Run Text="Fats:" FontStyle="Italic" /> <Run Text="27g"/>     <Run Text="Carbs:" FontStyle="Italic" /> <Run Text="14g"/>
-                                <LineBreak/>
-
-                    </TextBlock>
-                </StackPanel>
-            </Grid>
-
-        </StackPanel>
 
         <ScrollViewer Panel.ZIndex="-10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto">
             <Grid>
@@ -114,7 +56,7 @@
 
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="ItemPrice" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="NavajoWhite" Height="49" TextAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" Text="$21" Margin="0,0,58,0" Width="74" Padding="0 0 0 5"/>
-                <TextBlock x:Name="ItemStars" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="NavajoWhite" HorizontalAlignment="Stretch" Height="49" TextWrapping="Wrap" TextAlignment="Center" Text="✰✰✰✰✰ 4.6" VerticalAlignment="Top" Width="264" FontSize="36" />
+                <TextBlock x:Name="ItemStars" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="NavajoWhite" HorizontalAlignment="Stretch" Height="49" TextWrapping="Wrap" TextAlignment="Center" Text="✰✰✰✰✰ 4.6" VerticalAlignment="Top" FontSize="36" Margin="7,0,0,0" />
                 <Image x:Name="ItemImage" Grid.Row="1" Panel.ZIndex="0" Grid.Column="0" Grid.ColumnSpan="4"  HorizontalAlignment="Stretch" Height="Auto" Margin="2,0,0,0" VerticalAlignment="Stretch" Width="345" RenderTransformOrigin="0.51,0.576">
                     <Image.Source>
                         <BitmapImage UriSource="Images/TBoneSteak.png"></BitmapImage>
@@ -191,6 +133,25 @@
         <Button Name="CustomizeButton" Grid.Row="2" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="16"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
         <Button Name="SpecialRequestButton" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontFamily="MV Boli" Content="Special Request" FontSize="16" Click="SpecialRequestClicked"></Button>
         <Button Name="AddToOrderButton" Background="NavajoWhite" MinHeight="80" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" FontFamily="MV Boli" Content="Add to Order" FontSize="27" Grid.RowSpan="2" Click="OnAddToOrderClicked"></Button>
+        <StackPanel Panel.ZIndex="100" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2"  x:Name="pnlRightMenu" Width="210" Background="White"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,-210,120" Grid.Column="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="160"/>
+
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnRightMenuHide" Panel.ZIndex="101" Background="White"  Height="55" Width="75" Grid.Column="0" Click="btnRightMenuHide_Click" Margin="-105,-250,0,0" Content="Hide" Visibility="Hidden"/>
+                <Button x:Name="btnRightMenuShow" Panel.ZIndex="100" Grid.Column="0" Click="btnRightMenuShow_Click" Margin="-70,0,35,245" FontSize="25" Background="#FFFF5100" >
+                    <Image Source="Images/Info.png" Height="40"/>
+                </Button>
+
+
+                <StackPanel Grid.Column="1" Panel.ZIndex="100" >
+                    <TextBlock><LineBreak/><Run FontWeight="Bold" Text="T-Bone Steak"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="364"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="48g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="15g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run FontWeight="Bold" Text="Yam Fries"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="650"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="8g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="33g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="58g"/><LineBreak/><Run FontWeight="Bold" Text="Yukon Fries"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="393"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="18g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="52g"/><LineBreak/><Run FontWeight="Bold" Text="Mashed Potatoes"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="230"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="13g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="24g"/><LineBreak/><Run FontWeight="Bold" Text="Caesar Salad"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="340"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="6g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="27g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="14g"/><LineBreak/></TextBlock>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
 
     </Grid>
 </Window>

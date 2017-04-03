@@ -1,0 +1,56 @@
+﻿<Window x:Class="Waitless.HelpViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Waitless"
+        mc:Ignorable="d"
+        Title="HelpViewer" Height="525" Width="350" MinHeight="525" MaxHeight="525" MinWidth="350" MaxWidth="350" Top="0" Left="0" LocationChanged="Window_LocationChanged" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" ><InlineUIContainer>
+               <Button x:Name="Exit" Click="Exit_Click"> <TextBlock><Image Source="Images/Arrow.png" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image><Run Text=" Back to Waitless                   " FontSize="18" FontFamily="MV Boli"/></TextBlock></Button>
+            </InlineUIContainer></TextBlock>
+        <Frame NavigationUIVisibility="Hidden" Grid.Row="1" x:Name="HelpImage" />
+        <TextBlock Grid.Row="2" >
+          <Grid Height="30" RenderTransformOrigin="0.5,0.5" Width="350">
+              <Grid.RenderTransform>
+                  <TransformGroup>
+                      <ScaleTransform ScaleY="-1"/>
+                      <SkewTransform/>
+                      <RotateTransform/>
+                      <TranslateTransform/>
+                  </TransformGroup>
+              </Grid.RenderTransform>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="1*" />
+                  <ColumnDefinition Width="1*" />
+              </Grid.ColumnDefinitions>
+              <Button x:Name="Previous" Click="Previous_Click" IsEnabled="False" Grid.Column="0" Margin="-10,0,5,0"><Image Source="Images/Arrow.png" RenderTransformOrigin="0.5,0.5">
+    <Image.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform/>
+            <SkewTransform/>
+            <RotateTransform Angle="180"/>
+            <TranslateTransform/>
+        </TransformGroup>
+    </Image.RenderTransform>
+</Image></Button>
+              <Button x:Name="Next" Click="Next_Click" Grid.ColumnSpan="2" Margin="170,0,5,0"><Image Source="Images/Arrow.png"/></Button>
+          </Grid>
+        </TextBlock>
+    </Grid>
+</Window>

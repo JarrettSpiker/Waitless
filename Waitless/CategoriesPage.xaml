@@ -17,7 +17,7 @@
                             <TextBlock Text="For One" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </Button>
-                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="AppetizersToShare" HorizontalAlignment="Left" Click="OnCategorySelected">
+                    <Button Click="AppetizersToShare_Click" Width="60" Height="60" Margin="5,5,5,5" Name="AppetizersToShare" HorizontalAlignment="Left">
                         <StackPanel Orientation="Vertical">
                             <Image Source="Images/MenuItems/nachos.jpg" Height="40" Width="40" />
                             <TextBlock Text="To Share" HorizontalAlignment="Center"/>
@@ -28,25 +28,25 @@
             <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Entrees" Background="White">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Burgers" HorizontalAlignment="Left" Click="OnCategorySelected">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Burgers" HorizontalAlignment="Left" Click="Burgers_Click">
                             <StackPanel Orientation="Vertical">
                                 <Image Source="Images/MenuItems/burgerCategory.jpg" Height="40" Width="40" />
                                 <TextBlock Text="Burgers" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Button>
-                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Steak" HorizontalAlignment="Left" Click="OnCategorySelected">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Steak" HorizontalAlignment="Left" Click="Steak_Click">
                             <StackPanel Orientation="Vertical">
                                 <Image Source="Images/MenuItems/steak.png" Height="40" Width="40" />
                                 <TextBlock Text="Steaks" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Button>
-                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Seafood" HorizontalAlignment="Left" Click="OnCategorySelected">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Seafood" HorizontalAlignment="Left" Click="Seafood_Click">
                             <StackPanel Orientation="Vertical">
                                 <Image Source="Images/MenuItems/seaFoodCategory.jpg" Height="40" Width="40" />
                                 <TextBlock Text="Sea Food" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Button>
-                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Sandwiches" HorizontalAlignment="Left" Click="OnCategorySelected">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Sandwiches" HorizontalAlignment="Left" Click="Sandwiches_Click">
                             <StackPanel Orientation="Vertical">
                                 <Image Source="Images/MenuItems/sandwichCategory.jpg" Height="40" Width="40" />
                                 <TextBlock Text="Sandwiches" HorizontalAlignment="Center" FontSize="10"/>
@@ -54,13 +54,13 @@
                         </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Pasta" HorizontalAlignment="Left" Click="OnCategorySelected">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Pasta" HorizontalAlignment="Left" Click="Pasta_Click">
                             <StackPanel Orientation="Vertical">
                                 <Image Source="Images/MenuItems/pastaCategory.jpg" Height="40" Width="40" />
                                 <TextBlock Text="Pasta" HorizontalAlignment="Center"/>
                             </StackPanel>
                         </Button>
-                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Pizza" HorizontalAlignment="Left" Click="OnCategorySelected">
+                        <Button Width="60" Height="60" Margin="5,5,5,5" Name="Pizza" HorizontalAlignment="Left" Click="Pizza_Click">
                             <StackPanel Orientation="Vertical">
                                 <Image Source="Images/MenuItems/pizzaCategory.jpg" Height="40" Width="40" />
                                 <TextBlock Text="Pizza" HorizontalAlignment="Center"/>
@@ -71,7 +71,7 @@
             </Expander>
             <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Dessert" Background="White">
                 <StackPanel Orientation="Horizontal">
-                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="Desserts" HorizontalAlignment="Left" Click="OnCategorySelected">
+                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="Desserts" HorizontalAlignment="Left" Click="Desserts_Click">
                         <StackPanel Orientation="Vertical">
                             <Image Source="Images/MenuItems/IceCream.jpg" Height="40" Width="40" />
                             <TextBlock Text="All Desserts" HorizontalAlignment="Center" FontSize="10"/>
@@ -81,13 +81,13 @@
             </Expander>
             <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Drinks" Background="White">
                 <StackPanel Orientation="Horizontal">
-                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="NonAlcoholic" HorizontalAlignment="Left" Click="OnCategorySelected">
+                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="NonAlcoholic" HorizontalAlignment="Left" Click="NonAlcoholic_Click">
                         <StackPanel Orientation="Vertical">
                             <Image Source="Images/MenuItems/Pepsi.png" Height="40" Width="40" />
                             <TextBlock Text="Non-alcoholic" HorizontalAlignment="Center" FontSize="8"/>
                         </StackPanel>
                     </Button>
-                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="Alcoholic" HorizontalAlignment="Left" Click="OnCategorySelected">
+                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="Alcoholic" HorizontalAlignment="Left" Click="Alcoholic_Click">
                         <StackPanel Orientation="Vertical">
                             <Image Source="Images/MenuItems/beerCategory.jpg" Height="40" Width="40" />
                             <TextBlock Text="Alchoholic" HorizontalAlignment="Center"/>

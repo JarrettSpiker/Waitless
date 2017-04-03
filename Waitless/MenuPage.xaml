@@ -13,15 +13,33 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="25px"/>
         </Grid.RowDefinitions>
+
+
         <StackPanel Orientation="Horizontal" Background="Orange">
-            <Button Name="BackToCategoriesButton"  Width="Auto" Background="Azure" Click="OnBackToCategories">
-                <TextBlock Text="&#8592; Back To Categories" Margin="5,0"/>
-            </Button>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="BackToCategoriesButton"  Width="Auto" Background="Azure" Click="OnBackToCategories">
+                    <TextBlock Text="&#8592; Back To Categories" Margin="5,0"/>
+                </Button>
+
+                <Button Grid.Column="1"></Button>
+
+
+                <Button Grid.Column="2" Margin="147,0,-189,0" Click="IconLegend_Click">
+
+                    <Image Source="Images/helpIcon.png" Height="15"></Image>
+                </Button>
+            </Grid>
         </StackPanel>
-        
-        
-        
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="Wheat">
+
+
+
+        <ScrollViewer x:Name="Scroll" ScrollChanged="Scroll_ScrollChanged" Grid.Row="1" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="Wheat">
             <StackPanel Orientation="Vertical">
                 <Border Name="AppetizersForOne" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: For One"/>
@@ -557,8 +575,8 @@
                         <TextBlock Text=">" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2"/>
                     </Grid>
                 </Button>
-                
-                
+
+
             </StackPanel>
         </ScrollViewer>
         <DockPanel Grid.Row="2"  Background="Gray">
