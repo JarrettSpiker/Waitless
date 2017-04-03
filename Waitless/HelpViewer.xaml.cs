@@ -29,6 +29,7 @@ namespace Waitless
             slides[0] = new Uri("Images/cook.xaml", UriKind.Relative);
             slides[1] = new Uri("Images/steak.xaml", UriKind.Relative);
             slides[2] = new Uri("Images/pepsi.xaml", UriKind.Relative);
+            slides[2] = new Uri("Images/testHelpSlide.xaml", UriKind.Relative);
             HelpImage.NavigationService.Navigate(slides[0]);
          
         }
