@@ -44,6 +44,7 @@ namespace Waitless
         private Uri MenuCategories = new Uri("CategoriesPage.xaml", UriKind.Relative);
         private Uri Payment = new Uri("PaymentPage.xaml", UriKind.Relative);
 
+
         private void request_Click(object sender, RoutedEventArgs e)
         {
             request.Visibility = Visibility.Hidden;
@@ -89,6 +90,8 @@ namespace Waitless
             Toggle(MenuCategories, MenuButton);
         }
 
+
+    
         public void OnCategorySelected(string categoryName)
         {
             TheFrame.Navigate(new Uri("MenuPage.xaml", UriKind.Relative));

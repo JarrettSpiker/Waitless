@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Waitless"
+        xmlns:local="clr-namespace:Waitless.controls"
         mc:Ignorable="d"
-        Title="BillSplitter" Height="525" MaxHeight="525" MinHeight="525" MaxWidth="350" MinWidth="350" Width="350">
+        Title="BillSplitter" Closing="Window_Closing" Top="0" Left="0" MinHeight="525" MaxHeight="525" MinWidth="350" MaxWidth="350" LocationChanged="Window_LocationChanged" Height="525" Width="350">
 
     <Grid Background="Wheat">
         <Grid.RowDefinitions>
@@ -23,8 +23,7 @@
 
         </Grid.ColumnDefinitions>
 
-
-        <Button Grid.Row="0" Grid.ColumnSpan="2" Background="Azure">
+        <Button x:Name="Back" Click="Back_Click" Grid.Row="0" Grid.ColumnSpan="2" Background="Azure">
             <TextBlock Text="&#8592;" FontSize="32" VerticalAlignment="Bottom" Margin="5,0"/>
         </Button>
         <TextBlock Grid.Column="2" FontSize="24" TextAlignment="Center" Foreground="Black" Background="Azure"  FontFamily="MV Boli" Grid.ColumnSpan="2" Text="Bill Splitter"/>
@@ -61,6 +60,12 @@
 
         <ScrollViewer Grid.Row="2" Grid.ColumnSpan="4" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="White">
             <StackPanel Orientation="Vertical">
+
+                <StackPanel Background="White" Margin="2 0 0 0" Name="billSplitterComponent">
+                    <local:billSplitterItemControl/>
+                </StackPanel>
+
+                <!--
                 <Grid HorizontalAlignment="Stretch" Height="50">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2.5*"/>
@@ -176,6 +181,7 @@
                         <TextBlock FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SimSun">$21.00</TextBlock>
                     </Border>
                 </Grid>
+                -->
             </StackPanel>
         </ScrollViewer>
 
