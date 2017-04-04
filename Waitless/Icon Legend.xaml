@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="Icon_Legend" Height="300" Width="300">
+        Title="Icon_Legend" MinHeight="300" MaxHeight="300" MinWidth="300" MaxWidth="300" Top="32" LocationChanged="Window_LocationChanged" Closing="Window_Closing" Left="25" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

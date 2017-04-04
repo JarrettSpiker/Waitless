@@ -70,6 +70,7 @@ namespace Waitless
 
         private void IconLegend_Click(object sender, RoutedEventArgs e)
         {
+            Global.Main.IsEnabled = false;
             Icon_Legend i = new Icon_Legend();
             i.ShowDialog();
         }

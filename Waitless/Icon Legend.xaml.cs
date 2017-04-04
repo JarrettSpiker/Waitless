@@ -26,7 +26,19 @@ namespace Waitless
 
         private void OK_click(object sender, RoutedEventArgs e)
         {
+            Global.Main.IsEnabled = true;
             this.Close();
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 32;
+            this.Left = 25;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Global.Main.IsEnabled = true;
         }
     }
 }
