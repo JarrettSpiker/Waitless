@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless.controls"
+        xmlns:local1="clr-namespace:Waitless.dragDropProofOfConcept"
         mc:Ignorable="d"
         Title="BillSplitter" Closing="Window_Closing" Top="0" Left="0" MinHeight="525" MaxHeight="525" MinWidth="350" MaxWidth="350" LocationChanged="Window_LocationChanged" Height="525" Width="350">
 
@@ -32,11 +33,7 @@
         </Border>
         <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="2">
 
-            <Grid Height="40" Width="40" Margin="5,0,5,0">
-                <Ellipse Height="40" Width="40" Fill="BlueViolet" StrokeThickness="15">
-                </Ellipse>
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
-            </Grid>
+            <local1:Circle/>
 
             <Grid Height="40" Width="40" Margin="5,0,5,0">
                 <Ellipse Height="40" Width="40" Fill="LawnGreen" StrokeThickness="15">

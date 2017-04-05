@@ -10,7 +10,7 @@
              AllowDrop = "True">
     <Grid>
         <Ellipse x:Name="circleUI" 
-                 Height="100" Width="100"
+                 Height="30" Width="30"
                  Fill="Blue" />
     </Grid>
 </UserControl>

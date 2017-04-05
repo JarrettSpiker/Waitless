@@ -21,7 +21,7 @@ namespace Waitless.dragDropProofOfConcept
         public partial class Circle : UserControl
         {
 
-            private Brush _previousFill = null;
+            public Brush _previousFill = null;
 
             public Circle()
             {
@@ -45,7 +45,7 @@ namespace Waitless.dragDropProofOfConcept
                 {
                     // Package the data.
                     DataObject data = new DataObject();
-                    data.SetData(DataFormats.StringFormat, circleUI.Fill.ToString());
+                    data.SetData(DataFormats.StringFormat, "user");
                     data.SetData("Double", circleUI.Height);
                     data.SetData("Object", this);
 
@@ -71,7 +71,7 @@ namespace Waitless.dragDropProofOfConcept
                 }
                 else
                 {
-                    Mouse.SetCursor(Cursors.No);
+                    Mouse.SetCursor(Cursors.Pen);
                 }
                 e.Handled = true;
             }
@@ -87,26 +87,10 @@ namespace Waitless.dragDropProofOfConcept
                 {
                     string dataString = (string)e.Data.GetData(DataFormats.StringFormat);
 
-                    // If the string can be converted into a Brush, 
-                    // convert it and apply it to the ellipse.
-                    BrushConverter converter = new BrushConverter();
-                    if (converter.IsValid(dataString))
-                    {
-                        Brush newFill = (Brush)converter.ConvertFromString(dataString);
-                        circleUI.Fill = newFill;
-
-                        // Set Effects to notify the drag source what effect
-                        // the drag-and-drop operation had.
-                        // (Copy if CTRL is pressed; otherwise, move.)
-                        if (e.KeyStates.HasFlag(DragDropKeyStates.ControlKey))
-                        {
-                            e.Effects = DragDropEffects.Copy;
-                        }
-                        else
-                        {
-                            e.Effects = DragDropEffects.Move;
-                        }
-                    }
+                    
+                // If the string can be converted into a Brush, 
+                // convert it and apply it to the ellipse.
+                    
                 }
                 e.Handled = true;
             }
@@ -125,7 +109,7 @@ namespace Waitless.dragDropProofOfConcept
 
                     // If the string can be converted into a Brush, allow copying or moving.
                     BrushConverter converter = new BrushConverter();
-                    if (converter.IsValid(dataString))
+                    if (converter.IsValid("Yellow"))
                     {
                         // Set Effects to notify the drag source what effect
                         // the drag-and-drop operation will have. These values are 
