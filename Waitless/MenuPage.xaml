@@ -13,25 +13,19 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="25px"/>
         </Grid.RowDefinitions>
-
-
-        <StackPanel Orientation="Horizontal" Background="Orange">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-
-                <Button Name="BackToCategoriesButton"  Width="Auto" Background="Azure" Click="OnBackToCategories">
-                    <TextBlock Text="&#8592; Back To Categories" Margin="5,0"/>
-                </Button>
-                <Button Grid.Column="2" Margin="147,0,-189,0" Click="IconLegend_Click">
-
-                    <Image Source="Images/helpIcon.png" Height="15"></Image>
-                </Button>
-            </Grid>
-        </StackPanel>
+        <DockPanel Background="Orange" LastChildFill="False">
+            <Button Name="BackToCategoriesButton"  Width="Auto" Background="Azure" DockPanel.Dock="Left" Click="OnBackToCategories">
+                <TextBlock Text="&#8592; Back To Categories" Margin="5,0"/>
+            </Button>
+            <Button DockPanel.Dock="Right" Click="IconLegend_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Legend:  " />
+                    <Image Source="Images/leafIcon.png"/>
+                    <Image Source="Images/hotIcon.png"/>
+                    <Image Source="Images/specialtyIcon.png"/>
+                </StackPanel>
+            </Button>
+        </DockPanel>
 
 
 
