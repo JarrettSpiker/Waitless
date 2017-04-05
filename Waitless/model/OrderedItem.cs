@@ -13,6 +13,7 @@ namespace Waitless.model
         public string selectedPreparation { get; set; }
         public string specialRequest { get; set; }
         public bool isRefill { get; set; }
+        public int paidAlready = 0;
 
         public OrderedItem(ItemDefinition _itemDefinition, string _userId)
         {
@@ -34,7 +35,7 @@ namespace Waitless.model
         {
             if (!itemDefinition.hasSize || selectedSize == null)
             {
-                return itemDefinition.cost;
+                return itemDefinition.cost - paidAlready;
             }
 
             int modifier = 0;
@@ -46,7 +47,7 @@ namespace Waitless.model
                     break;
                 }
             }
-            return itemDefinition.cost + modifier;
+            return itemDefinition.cost + modifier - paidAlready;
         }
 
         public OrderedItem CreateCopy()
@@ -56,6 +57,7 @@ namespace Waitless.model
             copy.selectedSize = selectedSize;
             copy.selectedPreparation = selectedPreparation;
             copy.specialRequest = specialRequest;
+            copy.paidAlready = paidAlready;
             if (itemDefinition.isCustomizable)
             {
                 foreach(KeyValuePair<string,bool> entry in customizations)

@@ -258,6 +258,9 @@ namespace Waitless
                 {
                     if (item.Item2.Contains("currentUserId"))
                     {
+
+                        item.Item1.paidAlready += item.Item1.EffectiveCost() / item.Item2.Count;
+
                         item.Item2.Remove("currentUserId");
                         RedrawItems();
                     }
