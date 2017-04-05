@@ -62,7 +62,7 @@ namespace Waitless
             {
                 PendingItemControl component = new PendingItemControl();
                 component.ItemName.Text = item.itemDefinition.name;
-                component.Price.Text = item.isRefill ? "0.00" : (item.itemDefinition.cost / 100.0).ToString("F");
+                component.Price.Text = item.isRefill ? "0.00" : (item.EffectiveCost() / 100.0).ToString("F");
                 
                 component.XButton.Click += (s, eArgs) =>
                 {
@@ -79,6 +79,7 @@ namespace Waitless
                     ItemProfile itemProfile = new ItemProfile(item);
                     itemProfile.EnterEditMode();
                     itemProfile.ShowDialog();
+                    RedrawPendingItems();
                     
                 };
                 PendingItemsComponent.Children.Add(component);
@@ -119,12 +120,12 @@ namespace Waitless
             {
                 //update the cost of the confirmed items, since I have that info available,
                 //and I dont want to do all that shit above in the RecalculatePrice method.
-                confirmedItemCost += (amounts[i] * foundItems[i].itemDefinition.cost);
+                confirmedItemCost += (amounts[i] * foundItems[i].EffectiveCost());
 
                 ConfirmedItemControl component = new ConfirmedItemControl();
                 component.ItemName.Text = foundItems[i].itemDefinition.name;
 
-                component.Price.Text = (amounts[i] * foundItems[i].itemDefinition.cost / 100.0).ToString("F");
+                component.Price.Text = (amounts[i] * foundItems[i].EffectiveCost() / 100.0).ToString("F");
 
                 if (foundItems[i].itemDefinition.freeRefills)
                 {
@@ -175,7 +176,7 @@ namespace Waitless
                 OthersItemControl component = new OthersItemControl();
 
                 component.ItemName.Text = item.itemDefinition.name;
-                component.Price.Text = (item.itemDefinition.cost / 100.0).ToString("F");
+                component.Price.Text = (item.EffectiveCost() / 100.0).ToString("F");
                 OthersItemsComponent.Children.Add(component);
             }
 
@@ -186,7 +187,7 @@ namespace Waitless
             double subtotal = 0;
             foreach (OrderedItem item in pendingItems)
             {
-                subtotal += item.isRefill ? 0 : item.itemDefinition.cost;
+                subtotal += item.isRefill ? 0 : item.EffectiveCost();
             }
 
             subtotal += confirmedItemCost;

@@ -97,6 +97,13 @@ namespace Waitless
                     button.FontSize = 14;
                     button.Margin = new Thickness(3);
                     button.Content = size;
+                    if(menuItem.itemDefinition.sizeCosts[i] != 0)
+                    {
+                        button.Content += " (";
+                        button.Content += menuItem.itemDefinition.sizeCosts[i] < 0 ? "- $" : "+ $";
+                        button.Content += (Math.Abs(menuItem.itemDefinition.sizeCosts[i])/100.0).ToString("F");
+                        button.Content += ")";
+                    }
                     Grid.SetColumn(button, i % 2);
                     Grid.SetRow(button, i / 2);
                     button.Tag = size;

@@ -30,6 +30,25 @@ namespace Waitless.model
             
         }
 
+        public int EffectiveCost()
+        {
+            if (!itemDefinition.hasSize || selectedSize == null)
+            {
+                return itemDefinition.cost;
+            }
+
+            int modifier = 0;
+            for(int i = 0; i<itemDefinition.possibleSizes.Count; i++)
+            {
+                if (itemDefinition.possibleSizes[i].Equals(selectedSize))
+                {
+                    modifier = itemDefinition.sizeCosts[i];
+                    break;
+                }
+            }
+            return itemDefinition.cost + modifier;
+        }
+
         public OrderedItem CreateCopy()
         {
             OrderedItem copy = new OrderedItem(itemDefinition, userId);

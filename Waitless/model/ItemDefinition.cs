@@ -34,6 +34,7 @@ namespace Waitless.model
         public List<string> possiblePreparations { get; set; }
         public List<string> possibleSizes { get; set; }
         public List<string> possibleSides { get; set; }
+        public List<int> sizeCosts { get; set; }
 
         public bool freeRefills { get; set; }
 
@@ -46,7 +47,7 @@ namespace Waitless.model
         public ItemDefinition(string _name, string _description, Categories _category, string _imageRef, int _numStars,
             int _cost, string _nutritionalInfo, bool _needsPreparation, bool _hasSides, bool _hasSize, bool _isCustomizable,
             List<string> _customizations, List<string> _preparations, List<string> _sizes, List<string> _sides, bool _refills,
-            bool _isSpicy, bool _isVeg, bool _isSpecialty)
+            bool _isSpicy, bool _isVeg, bool _isSpecialty, List<int> _sizeCosts)
         {
             name = _name;
             description = _description;
@@ -71,6 +72,8 @@ namespace Waitless.model
             isSpecialty = _isSpecialty;
             isSpicy = _isSpicy;
             isVeg = _isVeg;
+
+            sizeCosts = _sizeCosts;
         }
 
     }
