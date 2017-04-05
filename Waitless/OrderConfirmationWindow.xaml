@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="OrderConfirmationWindow" Height="350" Width="200" MinHeight="350" MinWidth="200" MaxHeight="350" MaxWidth="200">
+        Title="OrderConfirmationWindow" Top="75" Left="75" LocationChanged="Window_LocationChanged" Height="350" Width="200" MinHeight="350" MinWidth="200" MaxHeight="350" MaxWidth="200">
     <Grid Background="Wheat">
         <Grid.RowDefinitions>
             <RowDefinition Height="30px"/>

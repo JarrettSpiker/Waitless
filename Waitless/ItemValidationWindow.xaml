@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="ItemValidationWindow" Height="300" Width="200" MinHeight="300" MinWidth="200" MaxHeight="300" MaxWidth="200">
+        Title="ItemValidationWindow" LocationChanged="Window_LocationChanged" Top="75" Left="75" Closing="Window_Closing" Height="300" Width="200" MinHeight="300" MinWidth="200" MaxHeight="300" MaxWidth="200">
     <Grid Background="Wheat">
         <Grid.RowDefinitions>
             <RowDefinition Height="30px"/>
