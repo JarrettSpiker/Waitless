@@ -257,6 +257,16 @@ namespace Waitless
             if (confirmationDialog.confirmed)
             {
                 Global.Main.PaymentPage();
+
+                //remove currentUser from all items
+                foreach(Tuple<OrderedItem, List<string>> item in confirmedItems)
+                {
+                    if (item.Item2.Contains("currentUserId"))
+                    {
+                        item.Item2.Remove("currentUserId");
+                        RedrawItems();
+                    }
+                }
             }
 
         }
