@@ -252,10 +252,12 @@ namespace Waitless
                 return;
             }
 
-
-
-
-            Global.Main.PaymentPage();
+            PaymentConfirmationDialog confirmationDialog = new PaymentConfirmationDialog(GrandTotal.Text);
+            confirmationDialog.ShowDialog();
+            if (confirmationDialog.confirmed)
+            {
+                Global.Main.PaymentPage();
+            }
 
         }
 

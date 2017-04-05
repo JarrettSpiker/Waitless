@@ -86,6 +86,9 @@
     <Compile Include="OrderConfirmationWindow.xaml.cs">
       <DependentUpon>OrderConfirmationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PaymentConfirmationDialog.xaml.cs">
+      <DependentUpon>PaymentConfirmationDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PaymentErrorDialog.xaml.cs">
       <DependentUpon>PaymentErrorDialog.xaml</DependentUpon>
     </Compile>
@@ -184,6 +187,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OrderConfirmationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaymentConfirmationDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
