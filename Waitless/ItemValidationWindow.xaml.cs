@@ -31,5 +31,16 @@ namespace Waitless
         {
             Close();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void Window_LocationChanged(object sender, EventArgs e)
+        {
+            this.Top = 75;
+            this.Left = 75;
+        }
     }
 }
