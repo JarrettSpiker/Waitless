@@ -32,7 +32,7 @@ namespace Waitless
         public void setEnabled(Boolean state)
         {
             if (menuItem.itemDefinition.isCustomizable)
-            CustomizeButton.IsEnabled = state;
+                CustomizeButton.IsEnabled = state;
             AddToOrderButton.IsEnabled = state;
             SpecialRequestButton.IsEnabled = state;
             Xdescription.IsEnabled = state;
@@ -220,33 +220,66 @@ namespace Waitless
 
         private void SpecialRequestClicked(object sender, RoutedEventArgs e)
         {
-            SpecialRequest h = new SpecialRequest(menuItem,this);
+            SpecialRequest h = new SpecialRequest(menuItem, this);
             h.ShowDialog();
         }
 
         private void CustomizeClicked(object sender, RoutedEventArgs e)
         {
-            Customize customizeDialog = new Customize(menuItem,this);
+            Customize customizeDialog = new Customize(menuItem, this);
             customizeDialog.ShowDialog();
         }
 
         private void OnAddToOrderClicked(object sender, RoutedEventArgs e)
         {
-            if (!updateMode)
+
+            //first, validate
+            if (ValidateSelection())
             {
-                ChequePage.pendingItems.Add(menuItem);
+                if (!updateMode)
+                {
+                    ChequePage.pendingItems.Add(menuItem);
+                }
+
+                Global.Main.Show();
+                HackyCommunicationClass.menuPage.UpdateItemFlyout();
+                Close();
             }
 
-            Global.Main.Show();
-            HackyCommunicationClass.menuPage.UpdateItemFlyout();
-            Close();
         }
+
+        private bool ValidateSelection()
+        {
+            bool sidesError = menuItem.itemDefinition.hasSides && menuItem.selectedSide == null;
+            bool sizeError = menuItem.itemDefinition.hasSize && menuItem.selectedSize == null;
+            bool preperationError = menuItem.itemDefinition.needsPreparation && menuItem.selectedPreparation == null;
+
+            if (sidesError || sizeError || preperationError)
+            {
+                Xdescription.IsExpanded = false;
+                Xsides.IsExpanded = sidesError;
+                Xsize.IsExpanded = sizeError;
+                Xprep.IsExpanded = preperationError;
+
+                Scroll.ScrollToBottom();
+
+                new ItemValidationWindow(sidesError, sizeError, preperationError).ShowDialog();
+                return false;
+            }
+            return true;
+        }
+
+        private void ShowValidationErrors(bool sidesError, bool sizeError, bool prepError)
+        {
+
+        }
+
 
         public void EnterEditMode()
         {
             updateMode = true;
             AddToOrderButton.Content = "Update Item";
-            //backButton.IsEnabled = false;
+            backButton.IsEnabled = false;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
