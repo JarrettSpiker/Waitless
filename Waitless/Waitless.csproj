@@ -83,6 +83,9 @@
     <Compile Include="ItemValidationWindow.xaml.cs">
       <DependentUpon>ItemValidationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrderConfirmationWindow.xaml.cs">
+      <DependentUpon>OrderConfirmationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -90,9 +93,6 @@
       <DependentUpon>Feedback.xaml</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="Confirmation.xaml.cs">
-      <DependentUpon>Confirmation.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Customize.xaml.cs">
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
@@ -144,10 +144,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Confirmation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="controls\billSplitterItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,6 +177,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ItemValidationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderConfirmationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

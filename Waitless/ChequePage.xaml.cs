@@ -224,12 +224,17 @@ namespace Waitless
         {
             if (initialized)
             {
-                foreach (OrderedItem pending in pendingItems)
+                OrderConfirmationWindow confirmationDialog = new OrderConfirmationWindow();
+                confirmationDialog.ShowDialog();
+                if (confirmationDialog.confirmed)
                 {
-                    confirmedItems.Add(new Tuple<OrderedItem, List<string>>(pending, new List<string>(){ "currentUserId" }));
+                    foreach (OrderedItem pending in pendingItems)
+                    {
+                        confirmedItems.Add(new Tuple<OrderedItem, List<string>>(pending, new List<string>() { "currentUserId" }));
+                    }
+                    pendingItems.Clear();
+                    RedrawItems();
                 }
-                pendingItems.Clear();
-                RedrawItems();
             }
         }
 
