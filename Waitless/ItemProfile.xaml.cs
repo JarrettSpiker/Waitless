@@ -23,7 +23,7 @@ namespace Waitless
             UpdateHeaders();
             UpdateImage();
             UpdateDescription();
-            //UpdateNutritionalInfo(); TODO once the nutritional info is working again
+            UpdateNutritionalInfo();
             UpdateExpandables();
             UpdateButtonStates();
 
@@ -39,6 +39,18 @@ namespace Waitless
             Xprep.IsEnabled = state;
             Xsides.IsEnabled = state;
             Xsize.IsEnabled = state;
+        }
+
+        private void UpdateNutritionalInfo()
+        {
+            if(!menuItem.itemDefinition.name.Equals("T-Bone Steak"))
+            {
+                NutritionalInfoPanel.Children.Clear();
+                TextBlock info = new TextBlock();
+                info.Text = menuItem.itemDefinition.nutritionalInfo;
+                info.TextWrapping = TextWrapping.Wrap;
+                NutritionalInfoPanel.Children.Add(info);
+            }
         }
 
         private void UpdateHeaders()

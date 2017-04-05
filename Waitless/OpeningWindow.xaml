@@ -19,7 +19,7 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <TextBlock x:Name="Waitless" Grid.Row="0" Text="Waitless" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" FontFamily="Segoe Marker"/>
-        <TextBlock x:Name="HelpText" Grid.Row="1" Text="Getting Started:&#x0a;&#x0a; If you have an account with Waitless click the Login button,&#x0a;then enter your username and password.&#x0a;&#x0a; Your server will provide you with a table code when you are&#x0a;seated. Please enter it into the field below so Waitless knows&#x0a;where you are seated." Visibility="Hidden"/>
+        <TextBlock x:Name="HelpText" Grid.Row="1" Margin="4" Text="Getting Started:&#x0a;&#x0a; If you have an account with Waitless click the Login button,&#x0a;then enter your username and password.&#x0a;&#x0a; Your server will provide you with a table code when you are&#x0a;seated. Please enter it into the field below so Waitless knows&#x0a;where you are seated." Visibility="Hidden"/>
         <Image x:Name="image" Source="Images/cook.gif" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Margin="0,0,0,10" />
         <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Background="#FFFF5100" FontFamily="MV Boli" FontSize="36" Click="loginButton_Click"/>
         <Button x:Name="tableCodeButton" Background="GreenYellow" HorizontalAlignment="Stretch" Grid.Row="3" VerticalAlignment="Stretch" Width="Auto" Height="Auto" IsDefault="True" FontFamily="MV Boli" FontSize="36" Click="tableCodeButton_Click">

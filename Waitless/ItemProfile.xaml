@@ -133,14 +133,14 @@
         <Button Name="CustomizeButton" Grid.Row="2" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontSize="16"  FontFamily="MV Boli" Content="Customize" Click="CustomizeClicked"  ></Button>
         <Button Name="SpecialRequestButton" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" MinHeight="40" BorderBrush="Black" BorderThickness="3" Background="NavajoWhite" FontFamily="MV Boli" Content="Special Request" FontSize="16" Click="SpecialRequestClicked"></Button>
         <Button Name="AddToOrderButton" Background="NavajoWhite" MinHeight="80" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  BorderBrush="Black"  BorderThickness="3" FontFamily="MV Boli" Content="Add to Order" FontSize="27" Grid.RowSpan="2" Click="OnAddToOrderClicked"></Button>
-        <StackPanel Panel.ZIndex="100" Grid.Row="0" Grid.RowSpan="2"  Grid.Column="2" Grid.ColumnSpan="2"  x:Name="pnlRightMenu" Width="210" Background="White"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,-210,120">
+        <StackPanel Panel.ZIndex="100" Grid.Row="0" Grid.RowSpan="5"  Grid.Column="2" Grid.ColumnSpan="2"  x:Name="pnlRightMenu" Width="210" Background="White"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,-210,120">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="48"/>
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="41"/>
                     <ColumnDefinition Width="160"/>
                 </Grid.ColumnDefinitions>
                 
@@ -150,8 +150,36 @@
                 </Button>
 
 
-                <StackPanel Grid.RowSpan="2" Grid.Column="1" Panel.ZIndex="100" >
-                    <TextBlock><LineBreak/><Run FontWeight="Bold" Text="T-Bone Steak"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="364"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="48g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="15g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run FontWeight="Bold" Text="Yam Fries"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="650"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="8g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="33g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="58g"/><LineBreak/><Run FontWeight="Bold" Text="Yukon Fries"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="393"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="18g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="52g"/><LineBreak/><Run FontWeight="Bold" Text="Mashed Potatoes"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="230"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="13g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="24g"/><LineBreak/><Run FontWeight="Bold" Text="Caesar Salad"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="340"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="6g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="27g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="14g"/><LineBreak/></TextBlock>
+                <StackPanel Name="NutritionalInfoPanel" Grid.RowSpan="2" Grid.Column="1" Panel.ZIndex="100" >
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock>
+                        <LineBreak/>
+                        <Run FontWeight="Bold" Text="T-Bone Steak"/>
+                        <LineBreak/><Run Text="Calories:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="364"/><Run Text=" "/>
+                        <Run Text="Protein:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="48g"/><LineBreak/>
+                        <Run Text="Fats:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="15g"/>
+                        <Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="4g"/>
+                        <LineBreak/>
+                        <Run Text="Ingredients: " FontStyle="Italic" /><Run Text="Steak, Butter,"/><LineBreak/>
+                        <Run Text="Beans, Tomatoes, Garlic"/>
+                        <LineBreak/>
+                        <Run FontWeight="Bold" Text="Yam Fries"/>
+                        <LineBreak/>
+                        <Run Text="Calories:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="650"/><Run Text=" "/>
+                        <Run Text="Protein:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="8g"/><LineBreak/>
+                        <Run Text="Fats:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="33g"/><Run Text=" "/>
+                        <Run Text="Carbs:" FontStyle="Italic" />
+                        <Run Text=" "/><Run Text="58g"/>
+                        <LineBreak/>
+                        <Run FontWeight="Bold" Text="Yukon Fries"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="393"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="18g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="52g"/><LineBreak/><Run FontWeight="Bold" Text="Mashed Potatoes"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="230"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="4g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="13g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="24g"/><LineBreak/><Run FontWeight="Bold" Text="Caesar Salad"/><LineBreak/><Run Text="Calories:" FontStyle="Italic" /><Run Text=" "/><Run Text="340"/><Run Text=" "/><Run Text="Protein:" FontStyle="Italic" /><Run Text=" "/><Run Text="6g"/><LineBreak/><Run Text="Fats:" FontStyle="Italic" /><Run Text=" "/><Run Text="27g"/><Run Text=" "/><Run Text="Carbs:" FontStyle="Italic" /><Run Text=" "/><Run Text="14g"/><LineBreak/></TextBlock>
+                    </ScrollViewer>
                 </StackPanel>
             </Grid>
 
