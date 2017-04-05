@@ -240,6 +240,21 @@ namespace Waitless
 
         private void Pay_Click(object sender, RoutedEventArgs e)
         {
+            if(pendingItems.Count > 0)
+            {
+                new PaymentErrorDialog("You still have pending orders. Please confirm all pending items, or remove them from the order, before paying your tab.").ShowDialog();
+                return;
+            }
+
+            if (GrandTotal.Text.Equals("$0.00"))
+            {
+                new PaymentErrorDialog("You have nothing to pay for! If you are finished, please select Leave Table in the Options Tab").ShowDialog();
+                return;
+            }
+
+
+
+
             Global.Main.PaymentPage();
 
         }
