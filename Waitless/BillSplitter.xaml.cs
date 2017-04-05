@@ -24,22 +24,27 @@ namespace Waitless
     public partial class BillSplitter : Window
     {
 
-        private List<Tuple<OrderedItem, List<String>>> nonUserItems = new List<Tuple<OrderedItem, List<String>>>();
+        public static List<Tuple<OrderedItem, List<String>>> userItems = new List<Tuple<OrderedItem, List<String>>>();
+        public static List<Tuple<OrderedItem, List<String>>> nonUserItems = new List<Tuple<OrderedItem, List<String>>>();
 
         public BillSplitter()
         {
             InitializeComponent();
 
+            billSplitterComponent.Children.Clear();
+
+
             if (ChequePage.confirmedItems.Count() > 0)
             {
-                billSplitterComponent.Children.Clear();
+
                 foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
                 {
-                    billSplitterItemControl control = new billSplitterItemControl();
+
 
                     if (tuple.Item2.Contains("currentUserId"))
                     {
-
+                        userItems.Add(tuple);
+                        billSplitterItemControl control = new billSplitterItemControl(true);
                         control.ItemName.Text = tuple.Item1.itemDefinition.name;
                         control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
                         billSplitterComponent.Children.Add(control);
@@ -53,15 +58,15 @@ namespace Waitless
                 }
 
 
-                foreach (Tuple<OrderedItem, List<string>> tuple in nonUserItems)
+                foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
                 {
-                    billSplitterItemControl control = new billSplitterItemControl();
-
-
-                    control.ItemName.Text = tuple.Item1.itemDefinition.name;
-                    control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
-                    billSplitterComponent.Children.Add(control);
-
+                    if (!tuple.Item2.Contains("currentUserId"))
+                    {
+                        billSplitterItemControl control = new billSplitterItemControl(false);
+                        control.ItemName.Text = tuple.Item1.itemDefinition.name;
+                        control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
+                        billSplitterComponent.Children.Add(control);
+                    }
 
 
                 }
