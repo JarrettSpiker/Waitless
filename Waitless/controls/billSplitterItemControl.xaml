@@ -25,7 +25,7 @@
                     AllowDrop="True"
                     Drop="panel_Drop">
 
-            <TextBlock> </TextBlock>
+            
         </StackPanel>
         <Viewbox  Grid.Column="2">
             <TextBlock VerticalAlignment="Center" Name="ItemPrice" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>

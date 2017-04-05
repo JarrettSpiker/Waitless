@@ -1,31 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace Waitless.dragDropProofOfConcept
+namespace Waitless
 {
 
-        /// Interaction logic for Circle.xaml
-        /// </summary>
-        public partial class Circle : UserControl
-        {
+    /// Interaction logic for Circle.xaml
+    /// </summary>
+    public partial class Circle : UserControl
+    {
 
             public Brush _previousFill = null;
+            public string userId;    
 
-            public Circle()
+
+            public Circle(string _userId, Brush colour)
             {
                 InitializeComponent();
+                userId = _userId;
+                _previousFill = colour;
+                circleUI.Fill = colour;
             }
 
 
@@ -35,6 +30,8 @@ namespace Waitless.dragDropProofOfConcept
                 this.circleUI.Height = c.circleUI.Height;
                 this.circleUI.Width = c.circleUI.Height;
                 this.circleUI.Fill = c.circleUI.Fill;
+                userId = c.userId;
+                circleUI.Fill = c._previousFill;
             }
 
 
@@ -45,7 +42,7 @@ namespace Waitless.dragDropProofOfConcept
                 {
                     // Package the data.
                     DataObject data = new DataObject();
-                    data.SetData(DataFormats.StringFormat, "user");
+                    data.SetData(DataFormats.StringFormat, userId);
                     data.SetData("Double", circleUI.Height);
                     data.SetData("Object", this);
 

@@ -101,7 +101,7 @@ namespace Waitless
                 Tuple<OrderedItem, List<string>> item = confirmedItems[i];
                 if (!foundItems.Contains(item.Item1) && item.Item2.Contains("currentUserId"))
                 {
-                    double amnt = 1 / item.Item2.Count;
+                    double amnt = 1.0 / item.Item2.Count;
                     for(int j = i+1; j<confirmedItems.Count; j++)
                     {
                         if(confirmedItems[j].Item1.Equals(item.Item1) && confirmedItems[j].Item2.Contains("currentUserId"))
@@ -275,8 +275,8 @@ namespace Waitless
         private void SplitButton_Click(object sender, RoutedEventArgs e)
         {
             BillSplitter bs = new BillSplitter();
-            bs.Show();
-            Global.Main.Hide();
+            bs.ShowDialog();
+            RedrawItems();
         }
     }
 }
