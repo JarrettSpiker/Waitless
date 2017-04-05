@@ -9,7 +9,7 @@
         Background="Bisque"
         AllowDrop="True"
         Drop="panel_Drop"
-        Height="25">
+        Height="40">
     <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="3*" />
@@ -25,11 +25,9 @@
                     AllowDrop="True"
                     Drop="panel_Drop">
 
-            
+
         </StackPanel>
-        <Viewbox  Grid.Column="2">
-            <TextBlock VerticalAlignment="Center" Name="ItemPrice" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
-        </Viewbox>
+        <TextBlock Grid.Column="2" VerticalAlignment="Center" Name="ItemPrice" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
             
     </Grid>
 </UserControl>

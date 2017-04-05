@@ -179,9 +179,9 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Height="20" Width="20" Fill="BlueViolet" StrokeThickness="15">
+                        <Ellipse Height="20" Width="20" Fill="Blue" StrokeThickness="15">
                         </Ellipse>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Me" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
                         <TextBlock Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" FontSize="20" Text="$20.95"/>
                     </Grid>
                 </Border>
@@ -195,9 +195,9 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Height="20" Width="20" Fill="LawnGreen" StrokeThickness="15">
+                        <Ellipse Height="20" Width="20" Fill="Red" StrokeThickness="15">
                         </Ellipse>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="MJ" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="TG" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
                         <TextBlock Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" FontSize="20" Text="$5.00"/>
                     </Grid>
                 </Border>
@@ -211,9 +211,9 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <Ellipse Height="20" Width="20" Fill="CadetBlue" StrokeThickness="15">
+                        <Ellipse Height="20" Width="20" Fill="Green" StrokeThickness="15">
                         </Ellipse>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="SO" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="CD" FontSize="11" FontFamily="Yu Gothic UI Semibold"/>
                         <TextBlock Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" FontSize="20" Text="$29.00"/>
                     </Grid>
                 </Border>

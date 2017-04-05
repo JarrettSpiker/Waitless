@@ -106,7 +106,7 @@ namespace Waitless
                     {
                         if(confirmedItems[j].Item1.Equals(item.Item1) && confirmedItems[j].Item2.Contains("currentUserId"))
                         {
-                            amnt += 1 / confirmedItems[j].Item2.Count;
+                            amnt += 1.0 / confirmedItems[j].Item2.Count;
                         }
                     }
                     foundItems.Add(item.Item1);

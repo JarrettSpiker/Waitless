@@ -18,10 +18,10 @@ namespace Waitless
         {
             InitializeComponent();
 
-            Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush( Colors.Blue));
-            Circle otherUserCircle = new Circle("otherUserId", new SolidColorBrush(Colors.Red));
-            Circle otherUser2Circle = new Circle("otherUserId2", new SolidColorBrush(Colors.Green));
-            CircleDock.Children.Insert(0, currentUserCircle);
+            Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush( Colors.Blue), "Me");
+            Circle otherUserCircle = new Circle("otherUserId", new SolidColorBrush(Colors.Red), "TG");
+            Circle otherUser2Circle = new Circle("otherUserId2", new SolidColorBrush(Colors.Green), "CD");
+            CircleDock.Children.Insert(0, new Circle(currentUserCircle));
             CircleDock.Children.Insert(1, otherUserCircle);
             CircleDock.Children.Insert(2, otherUser2Circle);
 
@@ -49,8 +49,6 @@ namespace Waitless
                     {
                         control.DropArea.Children.Add(new Circle(otherUser2Circle));
                     }
-
-
 
                     billSplitterComponent.Children.Add(control);
                 }
