@@ -17,13 +17,13 @@
                         <Image Source="Images/submitFeedback.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="Button_Click_1">
+                <Button HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="InvalidOption_Click">
                     <DockPanel>
                         <TextBlock Text="Payment Methods" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/paymentMethods.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button x:Name="OrderHistory" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="OrderHistory_Click">
+                <Button x:Name="OrderHistory" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Click="InvalidOption_Click">
                     <DockPanel>
                         <TextBlock Text="Order History" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
                         <Image Source="Images/orderHistory.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>

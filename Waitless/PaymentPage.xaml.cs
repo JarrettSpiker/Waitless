@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Waitless
 {
@@ -19,49 +20,31 @@ namespace Waitless
     /// </summary>
     public partial class PaymentPage : Page
     {
-        public static int choice = 0;
-        public static Boolean paying;
+        private DispatcherTimer timer;
         public PaymentPage()
         {
             InitializeComponent();
             Global.Main.PaymentMode();
-            if (choice == 1) Cash.IsEnabled = false;
-            if (choice == 2) Credit.IsEnabled = false;
-            if (choice == 3) Debit.IsEnabled = false;
-            if (choice == 4) PayPal.IsEnabled = false;
         }
 
-        private void Cash_Click(object sender, RoutedEventArgs e)
+        private void Option_Click(object sender, RoutedEventArgs e)
         {
-            choice = 1;
-            if (paying)
-                Global.paid();
-            Global.Main.gotoOptions();
-            
+            PaymentMade();
         }
 
-        private void Credit_Click(object sender, RoutedEventArgs e)
+        private void PaymentMade()
         {
-            choice = 2;
-            if (paying)
-                Global.paid();
-            Global.Main.gotoOptions();
+            SuccessString.Visibility = Visibility.Visible;
+            timer = new DispatcherTimer();
+            timer.Tick += new EventHandler(TimerTick);
+            timer.Interval = new TimeSpan(0, 0, 3);
+            timer.Start();
         }
 
-        private void Debit_Click(object sender, RoutedEventArgs e)
+        public void TimerTick(object sender, EventArgs args)
         {
-            choice = 3;
-            if (paying)
-                Global.paid();
             Global.Main.gotoOptions();
-        }
-
-        private void PayPal_Click(object sender, RoutedEventArgs e)
-        {
-            choice = 4;
-            if (paying)
-                Global.paid();
-            Global.Main.gotoOptions();
+            timer.Stop();
         }
     }
 }

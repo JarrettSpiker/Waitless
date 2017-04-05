@@ -96,14 +96,7 @@ namespace Waitless
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             Global.hideKeyboard();
-            Global.Main.Show();
             Close();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Global.Main.Show();
-            Global.hideKeyboard();
         }
 
         private void RequestField_TextChanged(object sender, TextChangedEventArgs e)

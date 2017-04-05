@@ -20,17 +20,17 @@
         </Border>
         <StackPanel Grid.Row="1" Orientation="Vertical" Background="AliceBlue">
             <TextBlock FontSize="15" FontFamily="Segoe Print" Text="In Person:" Margin="5,0"/>
-            <Button x:Name="Cash" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" Click="Cash_Click">
+            <Button x:Name="Cash" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" Click="Option_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Cash"/>
             </Button>
-            <Button x:Name="Credit" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5" Click="Credit_Click">
+            <Button x:Name="Credit" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5" Click="Option_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Credit"/>
             </Button>
-            <Button x:Name="Debit" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5" Click="Debit_Click">
+            <Button x:Name="Debit" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,0,0,5" Click="Option_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Debit"/>
             </Button>
             <TextBlock FontSize="15" FontFamily="Segoe Print" Text="In App:" Margin="5,0"/>
-            <Button x:Name="PayPal" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" HorizontalContentAlignment="Stretch" Click="PayPal_Click">
+            <Button x:Name="PayPal" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" HorizontalContentAlignment="Stretch" Click="Option_Click">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"/>
@@ -40,6 +40,7 @@
                     <TextBlock Grid.Column="1" FontSize="15" FontFamily="Segoe Print" Text="PayPal"/>
                 </Grid>
             </Button>
+            <TextBlock Name="SuccessString" Text="Payment Successful!" Margin="25,50" Foreground="Green" FontFamily="MV Boli" FontSize="25" Visibility="Hidden"/>
         </StackPanel>
     </Grid>
 </Page>

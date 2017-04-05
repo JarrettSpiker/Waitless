@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="HelpViewer" Height="525" Width="350" MinHeight="525" MaxHeight="525" MinWidth="350" MaxWidth="350" Top="0" Left="0" LocationChanged="Window_LocationChanged" Closing="Window_Closing">
+        Title="HelpViewer" Height="525" Width="350" MinHeight="525" MaxHeight="525" MinWidth="350" MaxWidth="350" Top="0" Left="0" LocationChanged="Window_LocationChanged">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

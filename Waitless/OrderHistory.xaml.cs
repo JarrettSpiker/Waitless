@@ -26,13 +26,7 @@ namespace Waitless
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            Global.Main.IsEnabled = true;
             Close();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Global.Main.IsEnabled = true;
         }
 
         private void Window_LocationChanged(object sender, EventArgs e)

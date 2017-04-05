@@ -40,14 +40,8 @@ namespace Waitless
             this.Left = 0;
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Global.Main.Show();
-        }
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Global.Main.Show();
             this.Close();
         }
 

@@ -30,8 +30,6 @@ namespace Waitless
             ChequePage.reset();
             Review.reset();
             Feedback.text = "";
-            PaymentPage.choice = 0;
-            PaymentPage.paying = false;
             MenuPage.ScrollPosition = 0;
             OpeningWindow ow = new OpeningWindow();
             Global.Main.Hide();
@@ -42,36 +40,26 @@ namespace Waitless
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Global.Main.Hide();
             Review r = new Review();
-            r.Show();
+            r.ShowDialog();
         }
 
         private void feedback_Click(object sender, RoutedEventArgs e)
         {
             Feedback fwijl = new Feedback();
-            fwijl.Show();
-            Global.Main.Hide();
+            fwijl.ShowDialog();
         }
 
-        private void OrderHistory_Click(object sender, RoutedEventArgs e)
+        private void InvalidOption_Click(object sender, RoutedEventArgs e)
         {
             OrderHistory owf = new OrderHistory();
-            owf.Show();
-            Global.Main.IsEnabled = false;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            PaymentPage.paying = false;
-            Global.Main.PaymentPage();
+            owf.ShowDialog();
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
             HelpViewer wijg = new HelpViewer();
-            wijg.Show();
-            Global.Main.Hide();
+            wijg.ShowDialog();
         }
     }
 }

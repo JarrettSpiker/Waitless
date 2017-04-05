@@ -240,18 +240,7 @@ namespace Waitless
 
         private void Pay_Click(object sender, RoutedEventArgs e)
         {
-            if (PaymentPage.choice == 0)
-            {
-                PaymentPage.paying = true;
-                Global.Main.PaymentPage();
-            }
-
-            else
-            {
-                Global.paid();
-                Global.Main.gotoOptions();
-            }
-            
+            Global.Main.PaymentPage();
 
         }
 
