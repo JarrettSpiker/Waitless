@@ -164,20 +164,14 @@ namespace Waitless
             List<OrderedItem> foundItems = new List<OrderedItem>();
             foreach (Tuple<OrderedItem,List<string>> item in confirmedItems)
             {
-                if(!foundItems.Contains(item.Item1) && !item.Item2.Contains("currentUserId"))
+                if(!item.Item2.Contains("currentUserId"))
                 {
-                    foundItems.Add(item.Item1);
+                    OthersItemControl component = new OthersItemControl();
+
+                    component.ItemName.Text = item.Item1.itemDefinition.name;
+                    component.Price.Text = (item.Item1.EffectiveCost() / 100.0).ToString("F");
+                    OthersItemsComponent.Children.Add(component);
                 }
-            }
-
-
-            foreach (OrderedItem item in foundItems)
-            {
-                OthersItemControl component = new OthersItemControl();
-
-                component.ItemName.Text = item.itemDefinition.name;
-                component.Price.Text = (item.EffectiveCost() / 100.0).ToString("F");
-                OthersItemsComponent.Children.Add(component);
             }
 
         }
