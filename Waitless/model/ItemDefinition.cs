@@ -9,7 +9,7 @@ namespace Waitless.model
     public class ItemDefinition
     {
 
-        public enum Categories { AppetizersForOne, AppetizersToShare, Burgers, Steaks, SeaFood, Sandwhiches, Pasta, Pizza, Dessert, Drinks, Alcohol };
+        public enum Categories { AppetizersForOne, AppetizersToShare, Burgers, Steaks, SeaFood, Sandwhiches, Pasta, Pizza, Sides, Dessert, Drinks, Alcohol };
 
 
         //NOTE: the set only exists for the stupid deserializer. We should never be setting any of these in code

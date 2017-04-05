@@ -77,21 +77,28 @@ namespace Waitless
             Global.Main.gotoMenu();
         }
 
-        private void Desserts_Click(object sender, RoutedEventArgs e)
+        private void Sides_Click(object sender, RoutedEventArgs e)
         {
             MenuPage.ScrollPosition = 1212;
             Global.Main.gotoMenu();
         }
 
+
+        private void Desserts_Click(object sender, RoutedEventArgs e)
+        {
+            MenuPage.ScrollPosition = 1475;
+            Global.Main.gotoMenu();
+        }
+
         private void NonAlcoholic_Click(object sender, RoutedEventArgs e)
         {
-            MenuPage.ScrollPosition = 1355;
+            MenuPage.ScrollPosition = 1618;
             Global.Main.gotoMenu();
         }
 
         private void Alcoholic_Click(object sender, RoutedEventArgs e)
         {
-            MenuPage.ScrollPosition = 1536;
+            MenuPage.ScrollPosition = 1752;
             Global.Main.gotoMenu();
         }
     }

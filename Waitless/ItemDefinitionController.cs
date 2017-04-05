@@ -162,6 +162,20 @@ namespace Waitless
                "/Images/MenuItems/wine.jpg", 2, 500, "Sample Nutritional Info", false, false, true, false, null, null,
                new List<string> {"Glass", "Bottle" }, null, false, false, false, false));
 
+            definitions.Add(new ItemDefinition("Yukon Fries", "Sample Description", ItemDefinition.Categories.Sides,
+               "/Images/MenuItems/frenchFries.jpg", 4, 500, "Sample Nutritional Info", false, false, false, false, null, null,
+               null, null, false, false, true, true));
+            definitions.Add(new ItemDefinition("Yam Fries", "Sample Description", ItemDefinition.Categories.Sides,
+              "/Images/MenuItems/yamFries.jpg", 5, 600, "Sample Nutritional Info", false, false, false, false, null, null,
+              null, null, false, false, true, false));
+            definitions.Add(new ItemDefinition("Mashed Potatoes", "Sample Description", ItemDefinition.Categories.Sides,
+              "/Images/MenuItems/mashedPotatoes.jpg", 4, 400, "Sample Nutritional Info", false, false, false, false, null, null,
+              null, null, false, false, true, false));
+            definitions.Add(new ItemDefinition("Caesar Salad", "Sample Description", ItemDefinition.Categories.Sides,
+              "/Images/MenuItems/salad.jpg", 4, 300, "Sample Nutritional Info", false, false, false, false, null, null,
+              null, null, false, false, true, false));
+
+
             string json = new JavaScriptSerializer().Serialize(definitions);
             File.WriteAllText(fileName, json);
 

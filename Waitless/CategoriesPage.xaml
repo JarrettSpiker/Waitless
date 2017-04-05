@@ -25,6 +25,7 @@
                     </Button>
                 </StackPanel>
             </Expander>
+
             <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Entrees" Background="White">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
@@ -69,6 +70,22 @@
                     </StackPanel>
                 </StackPanel>
             </Expander>
+
+
+            <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Sides" Background="White">
+                <StackPanel Orientation="Vertical">
+
+                    <Button Width="60" Height="60" Margin="5,5,5,5" Name="Sides" HorizontalAlignment="Left" Click="Sides_Click">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="Images/MenuItems/frenchFries.jpg" Height="40" Width="40" />
+                            <TextBlock Text="All Sides" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </Expander>
+
+
             <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Dessert" Background="White">
                 <StackPanel Orientation="Horizontal">
                     <Button Width="60" Height="60" Margin="5,5,5,5" Name="Desserts" HorizontalAlignment="Left" Click="Desserts_Click">

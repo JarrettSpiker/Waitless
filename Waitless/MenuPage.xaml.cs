@@ -17,13 +17,26 @@ namespace Waitless
             HackyCommunicationClass.registerMenuPage(this);
             ScrollTo(ScrollPosition);
             HideNewItemFlyout();
-            ShowNewItemFlyout("foo");
+            UpdateItemFlyout();
             if (false)
             {
                 ScrollDebugger sd = new ScrollDebugger(this);
                 sd.Show();
             }
             
+        }
+
+        public void UpdateItemFlyout()
+        {
+            if(ChequePage.pendingItems.Count == 0)
+            {
+                HideNewItemFlyout();
+            }
+            else
+            {
+                string itemName = ChequePage.pendingItems[ChequePage.pendingItems.Count - 1].itemDefinition.name;
+                ShowNewItemFlyout(itemName);
+            }
         }
 
         public void ScrollTo(double value)

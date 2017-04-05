@@ -238,6 +238,7 @@ namespace Waitless
             }
 
             Global.Main.Show();
+            HackyCommunicationClass.menuPage.UpdateItemFlyout();
             Close();
         }
 
