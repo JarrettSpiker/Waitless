@@ -68,7 +68,7 @@ namespace Waitless
         public void ShowNewItemFlyout(string itemName)
         {
             MainGrid.RowDefinitions[2].Height = new GridLength(25, GridUnitType.Pixel);
-            AddedToOrderText.Text = itemName + " added to order...";
+            AddedToOrderText.Text = itemName + " added to pending order...";
         }
 
         public void OnPlaceOrderClicked(object sender, RoutedEventArgs args)

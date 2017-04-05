@@ -27,7 +27,7 @@
             <TextBlock Text="&#8592;" FontSize="32" VerticalAlignment="Bottom" Margin="5,0"/>
         </Button>
         <TextBlock Grid.Column="2" FontSize="24" TextAlignment="Center" Foreground="Black" Background="Azure"  FontFamily="MV Boli" Grid.ColumnSpan="2" Text="Bill Splitter"/>
-        <Border Grid.Column="0" Grid.Row="1" BorderThickness="0 0 1 0" BorderBrush="Black">
+        <Border Grid.Column="0" Grid.Row="1" BorderThickness="0 0 1 0" BorderBrush="Black" AllowDrop="True" Drop="Garbage_Drop">
             <Image Source="/Images/garbageIcon.png"/>
         </Border>
         <StackPanel Name="CircleDock" Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="2">

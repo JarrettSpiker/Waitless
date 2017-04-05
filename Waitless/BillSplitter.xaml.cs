@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using Waitless.controls;
 using Waitless.model;
@@ -18,7 +19,7 @@ namespace Waitless
         {
             InitializeComponent();
 
-            Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush( Colors.Blue), "Me");
+            Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush(Colors.Blue), "Me");
             Circle otherUserCircle = new Circle("otherUserId", new SolidColorBrush(Colors.Red), "TG");
             Circle otherUser2Circle = new Circle("otherUserId2", new SolidColorBrush(Colors.Green), "CD");
             CircleDock.Children.Insert(0, new Circle(currentUserCircle));
@@ -32,7 +33,7 @@ namespace Waitless
             {
 
                 foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
-                {   
+                {
                     billSplitterItemControl control = new billSplitterItemControl(tuple);
                     control.ItemName.Text = tuple.Item1.itemDefinition.name;
                     control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
@@ -54,9 +55,9 @@ namespace Waitless
                 }
 
             }
-           
 
-         }
+
+        }
 
         private void Window_LocationChanged(object sender, EventArgs e)
         {
@@ -66,15 +67,41 @@ namespace Waitless
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            
+
             Global.Main.Show();
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-          
+
             Global.Main.Show();
+        }
+
+
+
+        private void Garbage_Drop(object sender, DragEventArgs e)
+        {
+            // If an element in the panel has already handled the drop,
+            // the panel should not also handle it.
+            if (e.Handled == false)
+            {
+                UIElement _element = (UIElement)e.Data.GetData("Object");
+
+                if (sender != null && _element != null)
+                {
+                    StackPanel parent = (StackPanel)VisualTreeHelper.GetParent(_element);
+                    if (parent.Name.Equals("DropArea"))
+                    {
+                        Circle circ = (Circle)_element;
+                        billSplitterItemControl control = (billSplitterItemControl)((ContentPresenter)VisualTreeHelper.GetParent(VisualTreeHelper.GetParent(parent))).TemplatedParent;
+                        control.itemReference.Item2.Remove(circ.userId);
+                        parent.Children.Remove(circ);
+                    }
+                    
+
+                }
+            }
         }
     }
 }
