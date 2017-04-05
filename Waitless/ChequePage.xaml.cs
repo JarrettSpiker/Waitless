@@ -16,8 +16,17 @@ namespace Waitless
         bool initialized = false;
 
         public static List<OrderedItem> pendingItems = new List<OrderedItem>();
-        public static List<Tuple<OrderedItem, double>> confirmedItems = new List<Tuple<OrderedItem, double>>();
-        public static List<OrderedItem> othersItems = new List<OrderedItem>();
+        //the list of strings is the users associated with the item
+        public static List<Tuple<OrderedItem, List<string>>> confirmedItems = new List<Tuple<OrderedItem, List<string>>>();
+        private double confirmedItemCost = 0.0;//storing this seperately to avoid repeating costly operations
+
+        static ChequePage()
+        {
+            //add some fake "others" items
+            confirmedItems.Add( new Tuple<OrderedItem, List<string>>(new OrderedItem(ItemDefinitionController.itemDefinitions["T-Bone Steak"], "otherUserId"), new List<string>() {"otherUserId"}));
+            confirmedItems.Add(new Tuple<OrderedItem, List<string>>(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "otherUserId"), new List<string>() { "otherserId" }));
+            
+        }
 
         public ChequePage()
         {
@@ -30,8 +39,7 @@ namespace Waitless
         public static void reset()
         {
             pendingItems = new List<OrderedItem>();
-            confirmedItems = new List<Tuple<OrderedItem, double>>();
-            othersItems = new List<OrderedItem>();
+            confirmedItems = new List<Tuple<OrderedItem, List<string>>>();
         }
 
         void addPendingItem(OrderedItem item)
@@ -83,35 +91,62 @@ namespace Waitless
         {
             ConfirmedItemsComponent.Children.Clear();
 
+            List<OrderedItem> foundItems = new List<OrderedItem>();
+            List<double> amounts = new List<double>();
 
-            foreach (Tuple<OrderedItem, double> item in confirmedItems)
+            //create the foundItems and amounts lists from the confirmed item list
+            for(int i = 0; i<confirmedItems.Count; i++)
             {
+                Tuple<OrderedItem, List<string>> item = confirmedItems[i];
+                if (!foundItems.Contains(item.Item1) && item.Item2.Contains("currentUserId"))
+                {
+                    double amnt = 1 / item.Item2.Count;
+                    for(int j = i+1; j<confirmedItems.Count; j++)
+                    {
+                        if(confirmedItems[j].Item1.Equals(item.Item1) && confirmedItems[j].Item2.Contains("currentUserId"))
+                        {
+                            amnt += 1 / confirmedItems[j].Item2.Count;
+                        }
+                    }
+                    foundItems.Add(item.Item1);
+                    amounts.Add(amnt);
+                }
+            }
+
+            confirmedItemCost = 0.0;
+            //create new components from each foundItem
+            for(int i = 0; i<foundItems.Count; i++)
+            {
+                //update the cost of the confirmed items, since I have that info available,
+                //and I dont want to do all that shit above in the RecalculatePrice method.
+                confirmedItemCost += (amounts[i] * foundItems[i].itemDefinition.cost);
+
                 ConfirmedItemControl component = new ConfirmedItemControl();
-                component.ItemName.Text = item.Item1.itemDefinition.name;
+                component.ItemName.Text = foundItems[i].itemDefinition.name;
 
-                component.Price.Text = (item.Item2 * item.Item1.itemDefinition.cost / 100.0).ToString("F");
+                component.Price.Text = (amounts[i] * foundItems[i].itemDefinition.cost / 100.0).ToString("F");
 
-                if (item.Item1.itemDefinition.freeRefills)
+                if (foundItems[i].itemDefinition.freeRefills)
                 {
                     component.ReorderButton.Content = "Refill";
                 }
 
-                component.Quantity.Text = item.Item2.ToString("0.##");
+                component.Quantity.Text = amounts[i].ToString("0.##");
 
-                
+                OrderedItem itemRef = foundItems[i];
                 component.ReorderButton.Click += (s, eArgs) =>
                 {
                     if (initialized)
                     {
-                        if (item.Item1.itemDefinition.freeRefills)
+                        if (itemRef.itemDefinition.freeRefills)
                         {
-                            OrderedItem refill = item.Item1.CreateCopy();
+                            OrderedItem refill = itemRef.CreateCopy();
                             refill.isRefill = true;
                             pendingItems.Add(refill);
                             RedrawPendingItems();
                         }else
                         {
-                            pendingItems.Add(item.Item1.CreateCopy());
+                            pendingItems.Add(itemRef.CreateCopy());
                             RedrawPendingItems();
                         }
                     }
@@ -124,7 +159,18 @@ namespace Waitless
         private void RedrawOthersItems()
         {
             OthersItemsComponent.Children.Clear();
-            foreach (OrderedItem item in othersItems)
+
+            List<OrderedItem> foundItems = new List<OrderedItem>();
+            foreach (Tuple<OrderedItem,List<string>> item in confirmedItems)
+            {
+                if(!foundItems.Contains(item.Item1) && !item.Item2.Contains("currentUserId"))
+                {
+                    foundItems.Add(item.Item1);
+                }
+            }
+
+
+            foreach (OrderedItem item in foundItems)
             {
                 OthersItemControl component = new OthersItemControl();
 
@@ -142,10 +188,8 @@ namespace Waitless
             {
                 subtotal += item.isRefill ? 0 : item.itemDefinition.cost;
             }
-            foreach (Tuple<OrderedItem, double> tuple in confirmedItems)
-            {
-                subtotal += tuple.Item2 * (tuple.Item1.itemDefinition.cost);
-            }
+
+            subtotal += confirmedItemCost;
 
             double amntTax = (Int32.Parse(((TaxAmount.SelectedItem as ComboBoxItem).Content as string).Split('%')[0]) / 100.0) + 1;
             double grandTotal = subtotal * amntTax;
@@ -182,22 +226,7 @@ namespace Waitless
             {
                 foreach (OrderedItem pending in pendingItems)
                 {
-                    Tuple<OrderedItem,double> found = null;
-                    foreach (Tuple<OrderedItem, double> confirmedItem in confirmedItems)
-                    {
-                        if (pending.Equals(confirmedItem.Item1))
-                        {
-                            found = confirmedItem;
-                        }
-                    }
-                    if (found!=null)
-                    {
-                        confirmedItems.Remove(found);
-                        confirmedItems.Add(Tuple.Create(pending, found.Item2+ (pending.isRefill ? 0 : 1)));
-                    }else
-                    {
-                        confirmedItems.Add(Tuple.Create(pending, 1.0));
-                    }
+                    confirmedItems.Add(new Tuple<OrderedItem, List<string>>(pending, new List<string>(){ "currentUserId" }));
                 }
                 pendingItems.Clear();
                 RedrawItems();

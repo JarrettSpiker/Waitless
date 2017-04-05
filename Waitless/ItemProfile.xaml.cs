@@ -14,6 +14,7 @@ namespace Waitless
     public partial class ItemProfile : Window
     {
         OrderedItem menuItem;
+        bool updateMode = false;
 
         public ItemProfile(OrderedItem item)
         {
@@ -231,14 +232,18 @@ namespace Waitless
 
         private void OnAddToOrderClicked(object sender, RoutedEventArgs e)
         {
-            ChequePage.pendingItems.Add(menuItem);
+            if (!updateMode)
+            {
+                ChequePage.pendingItems.Add(menuItem);
+            }
+
             Global.Main.Show();
             Close();
         }
 
         public void EnterEditMode()
         {
-            
+            updateMode = true;
             AddToOrderButton.Content = "Update Item";
             //backButton.IsEnabled = false;
         }

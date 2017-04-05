@@ -233,7 +233,7 @@
                 <Border Name="Seafood" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Entrees: Seafood"/>
                 </Border>
-                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Fish And Chips" Click="OnMenuItemSelected">
+                <Button Height="60" HorizontalContentAlignment="Stretch" Tag="Fish and Chips" Click="OnMenuItemSelected">
                     <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="60"/>

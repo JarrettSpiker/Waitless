@@ -28,7 +28,7 @@ namespace Waitless
 
 
             billSplitterComponent.Children.Clear();
-            foreach (Tuple<OrderedItem, double> tuple in ChequePage.confirmedItems){
+            foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems){
                 billSplitterItemControl control = new billSplitterItemControl();
 
                 control.ItemName.Text = tuple.Item1.itemDefinition.name;

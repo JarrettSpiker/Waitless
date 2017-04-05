@@ -18,8 +18,10 @@ namespace Waitless.controls
     /// <summary>
     /// Interaction logic for OrderedItem.xaml
     /// </summary>
+    /// 
     public partial class ConfirmedItemControl : UserControl
     {
+        
         public ConfirmedItemControl()
         {
             InitializeComponent();

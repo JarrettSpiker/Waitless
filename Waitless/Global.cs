@@ -8,8 +8,8 @@ namespace Waitless
 {
     class Global
     {
-        public static String username;
-        public static String tablecode;
+        public static string username;
+        public static string tablecode;
         public static MainWindow Main;
         public static Keyboard kb;
         public static int kb_Top;

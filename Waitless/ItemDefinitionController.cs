@@ -79,7 +79,7 @@ namespace Waitless
               false, false, false, false));
 
             definitions.Add(new ItemDefinition("Fish and Chips", "Sample Description", ItemDefinition.Categories.SeaFood,
-              "/Images/MenuItems/fishAndChips.png", 3, 1300, "Sample Nutritional Info", false, true, false, true,
+              "/Images/MenuItems/fishAndChips.jpg", 3, 1300, "Sample Nutritional Info", false, true, false, true,
               new List<string> { "Add Lemon" }, null,
               null, new List<string> { "Yukon Fries", "Caesar Salad" },
               false, false, false, false));
