@@ -8,13 +8,16 @@
     <Grid
         Background="Bisque"
         AllowDrop="True"
-        Drop="panel_Drop">
+        Drop="panel_Drop"
+        Height="25">
     <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-            <TextBlock VerticalAlignment="Center" Grid.Column="0" Name="ItemName" Text="Steak" Foreground="Blue"/>
+        <Viewbox Grid.Column="0" Margin="3,0">
+            <TextBlock VerticalAlignment="Center"  Name="ItemName" Text="Steak" Foreground="Blue"/>
+        </Viewbox>
         <StackPanel Grid.Column="1"
                     Name="DropArea"
 
@@ -22,9 +25,11 @@
                     AllowDrop="True"
                     Drop="panel_Drop">
 
-            <TextBlock>s</TextBlock>
+            <TextBlock> </TextBlock>
         </StackPanel>
-        
-            <TextBlock Grid.Column="2" VerticalAlignment="Center" Name="ItemPrice" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
+        <Viewbox  Grid.Column="2">
+            <TextBlock VerticalAlignment="Center" Name="ItemPrice" Text="25.95" HorizontalAlignment="Right" Foreground="Blue"/>
+        </Viewbox>
+            
     </Grid>
 </UserControl>

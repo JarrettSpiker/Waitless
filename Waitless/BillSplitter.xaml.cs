@@ -32,7 +32,7 @@ namespace Waitless
                     billSplitterItemControl control = new billSplitterItemControl();
 
                     control.ItemName.Text = tuple.Item1.itemDefinition.name;
-                    // control.Price.Text = tuple.Item1.itemDefinition.cost;
+                    control.ItemPrice.Text = "$"+ (tuple.Item1.EffectiveCost() /100.0).ToString("F");
                     billSplitterComponent.Children.Add(control);
                 }
             }
