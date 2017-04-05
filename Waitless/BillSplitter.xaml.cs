@@ -26,14 +26,15 @@ namespace Waitless
         {
             InitializeComponent();
 
+            if (ChequePage.confirmedItems.Count() > 0){
+                billSplitterComponent.Children.Clear();
+                foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems) {
+                    billSplitterItemControl control = new billSplitterItemControl();
 
-            billSplitterComponent.Children.Clear();
-            foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems){
-                billSplitterItemControl control = new billSplitterItemControl();
-
-                control.ItemName.Text = tuple.Item1.itemDefinition.name;
-                // control.Price.Text = tuple.Item1.itemDefinition.cost;
-                billSplitterComponent.Children.Add(control);
+                    control.ItemName.Text = tuple.Item1.itemDefinition.name;
+                    // control.Price.Text = tuple.Item1.itemDefinition.cost;
+                    billSplitterComponent.Children.Add(control);
+                }
             }
         }
 

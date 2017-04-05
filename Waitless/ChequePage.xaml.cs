@@ -24,7 +24,7 @@ namespace Waitless
         {
             //add some fake "others" items
             confirmedItems.Add( new Tuple<OrderedItem, List<string>>(new OrderedItem(ItemDefinitionController.itemDefinitions["T-Bone Steak"], "otherUserId"), new List<string>() {"otherUserId"}));
-            confirmedItems.Add(new Tuple<OrderedItem, List<string>>(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "otherUserId"), new List<string>() { "otherserId" }));
+            confirmedItems.Add(new Tuple<OrderedItem, List<string>>(new OrderedItem(ItemDefinitionController.itemDefinitions["Alexander Keiths"], "otherUserId"), new List<string>() { "otherUserId" }));
             
         }
 
