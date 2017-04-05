@@ -18,7 +18,7 @@
                 <TextBlock Text="Please Select Payment Option" VerticalAlignment="Center" FontSize="15" FontFamily="Segoe Print" Margin="5,0,0,0"/>
             </StackPanel>
         </Border>
-        <StackPanel Grid.Row="1" Orientation="Vertical" Background="AliceBlue">
+        <StackPanel Grid.Row="1" Orientation="Vertical" Background="Wheat">
             <TextBlock FontSize="15" FontFamily="Segoe Print" Text="In Person:" Margin="5,0"/>
             <Button x:Name="Cash" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" Click="Option_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Cash"/>
