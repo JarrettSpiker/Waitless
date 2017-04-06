@@ -64,10 +64,10 @@
                 </Image>
 
 
-                <Expander x:Name="Xdescription" Header="Description"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" FontSize="24">
+                <Expander Expanded="Xdescription_Expanded" x:Name="Xdescription" Header="Description"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" FontSize="24">
                     <TextBlock Name="ItemDescription" TextWrapping="Wrap" Margin="5" Text="Twenty ounces of the classic combination of filet and &#xD;&#xA;New York strip.  Well-trimmed and aged 'bone-in' for flavor &#xD;&#xA;and tenderness." FontSize="12" Height="60"/>
                 </Expander>
-                <Expander x:Name="Xprep" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Preparation" FontSize="24">
+                <Expander Expanded="Xdescription_Expanded" x:Name="Xprep" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Preparation" FontSize="24">
 
                     <Grid Name="PreperationOptions">
                         <Grid.ColumnDefinitions>
@@ -88,7 +88,7 @@
 
                 </Expander>
 
-                <Expander x:Name="Xsides" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Sides"  FontSize="24">
+                <Expander Expanded="Xdescription_Expanded" x:Name="Xsides" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" Header="Sides"  FontSize="24">
 
                     <Grid Name="SidesOptions">
                         <Grid.ColumnDefinitions>
