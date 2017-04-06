@@ -288,12 +288,6 @@ namespace Waitless
             return true;
         }
 
-        private void ShowValidationErrors(bool sidesError, bool sizeError, bool prepError)
-        {
-
-        }
-
-
         public void EnterEditMode()
         {
             updateMode = true;
@@ -310,6 +304,11 @@ namespace Waitless
         {
             this.Top = 0;
             this.Left = 0;
+        }
+
+        private void Expander_Expanded(object sender, RoutedEventArgs e)
+        {
+            Scroll.ScrollToBottom();
         }
     }
 }
