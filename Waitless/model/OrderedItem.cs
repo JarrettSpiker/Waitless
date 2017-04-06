@@ -89,7 +89,8 @@ namespace Waitless.model
             if(selectedSide != item.selectedSide
                 || selectedSize != item.selectedSize
                 || selectedPreparation != item.selectedPreparation
-                || specialRequest != item.specialRequest)
+                || specialRequest != item.specialRequest
+                || paidAlready != item.paidAlready)
             {
                 return false;
             }
