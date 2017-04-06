@@ -19,11 +19,20 @@ namespace Waitless
     /// </summary>
     public partial class Keyboard : Window
     {
+        private static Boolean fixed_position = true;
         public Keyboard()
         {
             InitializeComponent();
-            this.Top = Global.kb_Top;
-            this.Left = Global.kb_Left;
+            if (fixed_position)
+            {
+                this.Top = 526;
+                this.Left = 0;
+            }
+            else
+            {
+                this.Top = Global.kb_Top;
+                this.Left = Global.kb_Left;
+            }
         }
 
         public Boolean closed = false;
@@ -39,8 +48,16 @@ namespace Waitless
 
         private void Window_LocationChanged(object sender, EventArgs e)
         {
-            this.Top = Global.kb_Top;
-            this.Left = Global.kb_Left;
+            if (fixed_position)
+            {
+                this.Top = 526;
+                this.Left = 0;
+            }
+            else
+            {
+                this.Top = Global.kb_Top;
+                this.Left = Global.kb_Left;
+            }
         }
     }
 }

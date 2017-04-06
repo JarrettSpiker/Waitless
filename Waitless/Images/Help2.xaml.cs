@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Waitless.Images
 {
     /// <summary>
-    /// Interaction logic for cook.xaml
+    /// Interaction logic for Help2.xaml
     /// </summary>
-    public partial class cook : Page
+    public partial class Help2 : Page
     {
-        public cook()
+        public Help2()
         {
             InitializeComponent();
         }

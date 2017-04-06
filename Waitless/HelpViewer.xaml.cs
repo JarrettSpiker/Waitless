@@ -26,8 +26,8 @@ namespace Waitless
         {
             InitializeComponent();
             slides = new Uri[size+1];
-            slides[0] = new Uri("Images/cook.xaml", UriKind.Relative);
-            slides[1] = new Uri("Images/steak.xaml", UriKind.Relative);
+            slides[0] = new Uri("Images/Help1.xaml", UriKind.Relative);
+            slides[1] = new Uri("Images/Help2.xaml", UriKind.Relative);
             slides[2] = new Uri("Images/pepsi.xaml", UriKind.Relative);
             slides[2] = new Uri("Images/testHelpSlide.xaml", UriKind.Relative);
             HelpImage.NavigationService.Navigate(slides[0]);
@@ -43,6 +43,7 @@ namespace Waitless
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            Global.Main.Show();
         }
 
         private void Previous_Click(object sender, RoutedEventArgs e)
@@ -61,6 +62,13 @@ namespace Waitless
             if (Previous.IsEnabled == false)
                 Previous.IsEnabled = true;
             HelpImage.NavigationService.Navigate(slides[position]);
+        }
+
+        
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Global.Main.Show();
         }
     }
 }
