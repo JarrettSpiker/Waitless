@@ -83,6 +83,15 @@
     <Compile Include="Images\Help2.xaml.cs">
       <DependentUpon>Help2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Images\Help3.xaml.cs">
+      <DependentUpon>Help3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\Help4.xaml.cs">
+      <DependentUpon>Help4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\Help5.xaml.cs">
+      <DependentUpon>Help5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Images\testHelpSlide.xaml.cs">
       <DependentUpon>testHelpSlide.xaml</DependentUpon>
     </Compile>
@@ -183,6 +192,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Images\Help2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Help3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Help4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Help5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -345,6 +366,9 @@
     </Content>
     <Resource Include="Images\Help1.png" />
     <Resource Include="Images\help2.png" />
+    <Resource Include="Images\Help3.png" />
+    <Resource Include="Images\Help4.png" />
+    <Resource Include="Images\Help5.png" />
     <Content Include="Images\menuIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
