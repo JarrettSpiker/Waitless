@@ -154,6 +154,7 @@ namespace Waitless
                         {
                             OrderedItem refill = itemRef.CreateCopy();
                             refill.isRefill = true;
+                            refill.paidAlready = refill.itemDefinition.cost;
                             pendingItems.Add(refill);
                             RedrawPendingItems();
                         }else
