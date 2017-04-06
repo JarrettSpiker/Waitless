@@ -114,7 +114,7 @@ namespace Waitless
             int userIntTotal = 0;
             int otherUserIntTotal = 0;
             int otherUser2IntTotal = 0;
-
+            int k;
             foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
                 {
 
