@@ -10,6 +10,7 @@ namespace Waitless
     public partial class MenuPage : Page
     {
         public static double ScrollPosition = 0;
+        int k;
        
         public MenuPage()
         {

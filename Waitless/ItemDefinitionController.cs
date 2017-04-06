@@ -31,42 +31,42 @@ namespace Waitless
         {
             List<ItemDefinition> definitions = new List<ItemDefinition>();
 
-            definitions.Add(new ItemDefinition("Jalapeno Poppers", "Sample Description", ItemDefinition.Categories.AppetizersForOne,
+            definitions.Add(new ItemDefinition("Jalapeno Poppers", "These poppers pack the irresistible combination of spicy peppers and velvety cream cheese.", ItemDefinition.Categories.AppetizersForOne,
                 "/Images/MenuItems/JalapenoPopper.jpg", 4, 900, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                 false, true, true, false, null));
 
-            definitions.Add(new ItemDefinition("Calamari", "Sample Description", ItemDefinition.Categories.AppetizersForOne,
+            definitions.Add(new ItemDefinition("Calamari", "Tender calamari, lightly breaded and fried. Served with marinara sauce and creamy ranch.", ItemDefinition.Categories.AppetizersForOne,
                 "/Images/MenuItems/calamari.jpg", 3, 1100, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                 false, false, false, true, null));
 
-            definitions.Add(new ItemDefinition("Nachos", "Sample Description", ItemDefinition.Categories.AppetizersToShare,
+            definitions.Add(new ItemDefinition("Nachos", "Oven baked corn chips, melted cheese, guacamole, sour cream & salsa. ", ItemDefinition.Categories.AppetizersToShare,
                 "/Images/MenuItems/nachos.jpg", 5, 1100, "Sample Nutritional Info", false, false, false, true, new List<string> {"Add gound beef?" }, null, null, null,
                 false, true, false, true, null));
 
 
-            definitions.Add(new ItemDefinition("Short Ribs", "Sample Description", ItemDefinition.Categories.AppetizersToShare,
+            definitions.Add(new ItemDefinition("Short Ribs", "Braised and grilled bone-in short rib topped with Cabernet demi-glace and fire-roasted zucchini, yellow squash, red peppers and carrots.", ItemDefinition.Categories.AppetizersToShare,
                "/Images/MenuItems/shortRibs.jpg", 3, 1500, "Sample Nutritional Info", false, false, false, false, null, null, null, null,
                false, false, false, false, null));
 
-            definitions.Add(new ItemDefinition("Classic Burger", "Sample Description", ItemDefinition.Categories.Burgers,
+            definitions.Add(new ItemDefinition("Classic Burger", "5oz burger, bbq sauce, pickles & onions ", ItemDefinition.Categories.Burgers,
                "/Images/MenuItems/classicBurger.jpg", 4, 1600, "Sample Nutritional Info", false, true, false, true,
                new List<string> { "Remove Lettuce", "Remove Tomato", "Remove Pickles" }, null, null,
                new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad" },
                false, false, false, true, null));
 
-            definitions.Add(new ItemDefinition("Western Burger", "Sample Description", ItemDefinition.Categories.Burgers,
+            definitions.Add(new ItemDefinition("Western Burger", "6oz Beef patty, Monterey Jack cheese, streaky bacon, salad and pickles. ", ItemDefinition.Categories.Burgers,
               "/Images/MenuItems/westernBurger.jpg", 2, 1900, "Sample Nutritional Info", false, true, false, true,
               new List<string> { "Remove Lettuce", "Remove Tomato", "Remove Pickles"}, null, null,
               new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad" },
               false, false, false, false, null));
 
-            definitions.Add(new ItemDefinition("Chicken Burger", "Sample Description", ItemDefinition.Categories.Burgers,
+            definitions.Add(new ItemDefinition("Chicken Burger", "A boneless breast of chicken seasoned to perfection, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun.", ItemDefinition.Categories.Burgers,
               "/Images/MenuItems/chickenBurger.jpg", 4, 1300, "Sample Nutritional Info", false, true, false, true,
               new List<string> { "Remove Lettuce", "Remove Tomato"}, null, null, 
               new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad" },
               false, false, false, false, null));
 
-            definitions.Add(new ItemDefinition("T-Bone Steak", "Sample Description", ItemDefinition.Categories.Steaks,
+            definitions.Add(new ItemDefinition("T-Bone Steak", "Twenty ounces of the classic combination of filet and New York strip. Well-trimmed and aged 'bone-in' for flavor and tenderness.", ItemDefinition.Categories.Steaks,
               "/Images/MenuItems/tBone.jpg", 5, 3100, "Sample Nutritional Info", true, true, false, true,
               new List<string> { "Add Steak Sauce", "Add Peppercorns"}, new List<string> { "Rare", "Medium-Rare", "Medium", "Well Done" },
               null, new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad"},
@@ -79,7 +79,7 @@ namespace Waitless
               false, false, false, false, null));
 
             definitions.Add(new ItemDefinition("Fish and Chips", "Sample Description", ItemDefinition.Categories.SeaFood,
-              "/Images/MenuItems/fishAndChips.jpg", 3, 1300, "Sample Nutritional Info", false, true, false, true,
+              "/Images/MenuItems/fishAndChips.jpg", 4, 1300, "Sample Nutritional Info", false, true, false, true,
               new List<string> { "Add Lemon" }, null,
               null, new List<string> { "Yukon Fries", "Caesar Salad" },
               false, false, false, false, null));
@@ -162,7 +162,7 @@ namespace Waitless
                "/Images/MenuItems/wine.jpg", 2, 500, "Sample Nutritional Info", false, false, true, false, null, null,
                new List<string> {"Glass", "Bottle" }, null, false, false, false, false, new List<int> { 0, 1500}));
 
-            definitions.Add(new ItemDefinition("Yukon Fries", "Sample Description", ItemDefinition.Categories.Sides,
+            definitions.Add(new ItemDefinition("Yukon Fries", "More delicious than ever, our signature piping hot, thick cut Salted French Fries are golden on the outside and fluffy on the inside", ItemDefinition.Categories.Sides,
                "/Images/MenuItems/frenchFries.jpg", 4, 500, "Sample Nutritional Info", false, false, false, false, null, null,
                null, null, false, false, true, true, null));
             definitions.Add(new ItemDefinition("Yam Fries", "Sample Description", ItemDefinition.Categories.Sides,
