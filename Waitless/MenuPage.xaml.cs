@@ -69,6 +69,16 @@ namespace Waitless
         public void ShowNewItemFlyout(string itemName)
         {
             MainGrid.RowDefinitions[2].Height = new GridLength(25, GridUnitType.Pixel);
+            if (itemName.Length>15)
+            {
+                char[] chars = itemName.ToCharArray();
+                char[] newString = new char[18];
+                for (int i = 0; i < 15; i++)
+                    newString[i] = chars[i];
+                for (int i = 15; i < 18; i++)
+                    newString[i] = '.';
+                itemName = new string(newString);
+            }
             AddedToOrderText.Text = itemName + " added to pending items...";
         }
 
