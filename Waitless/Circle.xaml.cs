@@ -36,10 +36,11 @@ namespace Waitless
 
         protected override void OnMouseMove(MouseEventArgs e)
         {
-            HackyCommunicationClass.billSplitter.Scroller.PanningMode = PanningMode.None;
+
             base.OnMouseMove(e);
             if (e.LeftButton == MouseButtonState.Pressed)
             {
+                HackyCommunicationClass.billSplitter.Scroller.PanningMode = PanningMode.None;
                 // Package the data.
                 DataObject data = new DataObject();
                 data.SetData(DataFormats.StringFormat, userId);
@@ -150,6 +151,7 @@ namespace Waitless
         protected override void OnDragLeave(DragEventArgs e)
         {
             base.OnDragLeave(e);
+            HackyCommunicationClass.billSplitter.Scroller.PanningMode = PanningMode.Both;
             // Undo the preview that was applied in OnDragEnter.
             circleUI.Fill = _previousFill;
         }

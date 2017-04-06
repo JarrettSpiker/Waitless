@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Waitless.model;
+using Waitless;
 
 namespace Waitless.controls
 {
@@ -55,6 +56,7 @@ namespace Waitless.controls
                         DropArea.Children.Add(_circle);
                         // set the value to return to the DoDragDrop call
                         e.Effects = DragDropEffects.Copy;
+                        BillSplitter.recalculateBillSplitterTotals();
 
                     }
                }

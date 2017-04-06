@@ -15,9 +15,11 @@ namespace Waitless
     /// </summary>
     public partial class BillSplitter : Window
     {
+
         public BillSplitter()
         {
             InitializeComponent();
+
             HackyCommunicationClass.RegisterBillSplitter(this);
 
             Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush(Colors.Blue), "Me");
@@ -98,11 +100,54 @@ namespace Waitless
                         billSplitterItemControl control = (billSplitterItemControl)((ContentPresenter)VisualTreeHelper.GetParent(VisualTreeHelper.GetParent(parent))).TemplatedParent;
                         control.itemReference.Item2.Remove(circ.userId);
                         parent.Children.Remove(circ);
+                        recalculateBillSplitterTotals();
                     }
-                    
+
 
                 }
             }
+        }
+
+        public static void recalculateBillSplitterTotals()
+        { 
+
+            int userIntTotal = 0;
+            int otherUserIntTotal = 0;
+            int otherUser2IntTotal = 0;
+
+            foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
+                {
+
+
+                    int itemSplitCost;
+
+                try
+                {
+                    itemSplitCost = tuple.Item1.EffectiveCost() / (tuple.Item2).Count();
+                }
+                catch (DivideByZeroException)
+                {
+                    itemSplitCost = 0;
+                }
+
+                    if (tuple.Item2.Contains("currentUserId"))
+                    {
+                    userIntTotal += itemSplitCost;
+                    }
+                    if (tuple.Item2.Contains("otherUserId"))
+                    {
+                    otherUserIntTotal += itemSplitCost;
+                    }
+                    if (tuple.Item2.Contains("otherUserId2"))
+                    {
+                    otherUser2IntTotal += itemSplitCost;
+                    }
+
+            }
+            //currently giving errors below to references , commented out to avoid build errors
+            //currentUserTotal.Text = "$" + (userIntTotal / 100.0).ToString("F");
+            //otherUserId.Text = "$" + (otherUserIntTotal / 100.0).ToString("F");
+            //otherUserId2.Text = "$" + (otherUser2IntTotal / 100.0).ToString("F");
         }
     }
 }
