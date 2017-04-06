@@ -19,9 +19,7 @@
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" FontSize="25" Background="White" Height="33" VerticalAlignment="Top" x:Name="Back" Click="Button_Click">
-                <TextBlock Text="&#8592;" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-            </Button>
+            <TextBlock Grid.Column="0"/>
             <TextBlock Text="Waitless" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="MV Boli"/>
             <Button x:Name="request" Grid.Column="2" Background="White" HorizontalAlignment="Right" Width="130" Click="request_Click">
             
