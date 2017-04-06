@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Waitless"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="30"
+             d:DesignHeight="45" d:DesignWidth="45"
              AllowDrop = "True">
     <Grid>
         <Ellipse x:Name="circleUI" 
-                 Height="30" Width="30"
+                 Height="45" Width="45"
                  Fill="Blue" />
-        <TextBlock Name="Initials" Text="JD" Margin="8,8,0,0" FontWeight="Bold"/>
+        <TextBlock Name="Initials" FontSize="16" Text="JD" Margin="12,12,0,0" FontWeight="Bold"/>
     </Grid>
 </UserControl>

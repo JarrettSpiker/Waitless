@@ -37,5 +37,11 @@ namespace Waitless
             chequePage = _page;
         } 
 
+
+        public static BillSplitter billSplitter { get; set; }
+        public static void RegisterBillSplitter(BillSplitter _page)
+        {
+            billSplitter = _page;
+        }
     }
 }
