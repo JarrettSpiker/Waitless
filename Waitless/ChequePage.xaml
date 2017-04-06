@@ -67,7 +67,7 @@
                     <TextBlock Grid.Column="2" Text="Price ($)" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
                 </Grid>
             </Border>
-            <ScrollViewer DockPanel.Dock="Bottom" VerticalScrollBarVisibility="Auto">
+            <ScrollViewer PanningMode="Both" DockPanel.Dock="Bottom" VerticalScrollBarVisibility="Auto">
                 <StackPanel >
                     <TextBlock Text="Pending Items:" Margin="2" Foreground="Red" FontSize="14" FontWeight="Bold" FontFamily="MV Boli"/>
                     <Border BorderBrush="Red" BorderThickness="0 0 0 1" Padding="0 0 0 3">

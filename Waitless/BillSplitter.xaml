@@ -41,7 +41,7 @@
         </StackPanel>
 
 
-        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="4" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="White">
+        <ScrollViewer PanningMode="Both" Grid.Row="2" Grid.ColumnSpan="4" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="White">
             <StackPanel Orientation="Vertical">
 
                 <StackPanel Background="White" Margin="2 0 0 0" Name="billSplitterComponent">

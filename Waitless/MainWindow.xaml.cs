@@ -28,7 +28,6 @@ namespace Waitless
             CurrentUri = MenuCategories;
             TheFrame.NavigationService.Navigate(CurrentUri);
             CurrentButton = MenuButton;
-            Back.IsEnabled = false;
             Global.Main = this;
             HackyCommunicationClass.registerMainWindow(this);
             
@@ -87,7 +86,6 @@ namespace Waitless
         public void PaymentMode()
         {
             OptionsButton.IsEnabled = true;
-            Back.IsEnabled = true;
         }
 
         public void OnBackToCategoriesEvent()
@@ -105,13 +103,11 @@ namespace Waitless
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Toggle(PreviousUri, PreviousButton);
-            Back.IsEnabled = false;
         }
 
         public void SwitchToCheque()
         {
             Toggle(Cheque, ChequeButton);
-            Back.IsEnabled = true;
         }
 
         public void SwitchToChequeWithOrder()
@@ -139,13 +135,11 @@ namespace Waitless
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
             Toggle(MenuCategories, MenuButton);
-            Back.IsEnabled = true;
         }
 
         private void OptionsButton_Click(object sender, RoutedEventArgs e)
         {
             Toggle(Options, OptionsButton);
-            Back.IsEnabled = true;
         }
 
         private void Window_LocationChanged(object sender, EventArgs e)

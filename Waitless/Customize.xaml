@@ -16,7 +16,7 @@
 
         <TextBlock Grid.Row="0" Text="Customize your order here:" FontFamily="MV Boli" FontSize="22" Background="Wheat" />
 
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="BlanchedAlmond" >
+        <ScrollViewer PanningMode="Both" Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="BlanchedAlmond" >
             <StackPanel Name="CustomizationOptions">
                 <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="steaksauce">Steak Sauce</CheckBox>
                 <CheckBox Height="30" VerticalContentAlignment="Center" x:Name="peppercorn">Peppercorn</CheckBox>
