@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Please confirm your order" Margin="5" FontFamily="MV Boli" FontWeight="Bold"/>
         <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Would you like to order the following items? Once they have been ordered, food preparation will begin, and items may not be cancelled through Waitless." FontSize="8pt" TextWrapping="Wrap" Margin="5" />
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" >
+        <ScrollViewer PanningMode="Both" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" >
             <StackPanel Name="ItemsToConfirm" Background="White">
             </StackPanel>
         </ScrollViewer>

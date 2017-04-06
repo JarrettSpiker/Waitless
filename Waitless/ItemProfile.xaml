@@ -38,7 +38,7 @@
             </Viewbox>
         </Border>
 
-        <ScrollViewer Name="Scroll" Panel.ZIndex="-10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Name="Scroll" PanningMode="Both" Panel.ZIndex="-10" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>

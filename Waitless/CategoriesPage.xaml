@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="448" d:DesignWidth="344"
       Title="Categories">
-    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="Wheat">
+    <ScrollViewer PanningMode="Both" VerticalScrollBarVisibility="Auto" Background="Wheat">
         <StackPanel Orientation="Vertical">
             <Expander Margin="5,5,0,0" BorderBrush="Black" BorderThickness="2,2,0,2" IsExpanded="True"  Header="Appetizers" Background="White">
                 <StackPanel Orientation="Horizontal">

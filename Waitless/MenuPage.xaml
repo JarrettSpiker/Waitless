@@ -29,7 +29,7 @@
 
 
 
-        <ScrollViewer x:Name="Scroll" ScrollChanged="Scroll_ScrollChanged" Grid.Row="1" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="Wheat">
+        <ScrollViewer x:Name="Scroll" PanningMode="Both" ScrollChanged="Scroll_ScrollChanged" Grid.Row="1" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" Background="Wheat">
             <StackPanel Orientation="Vertical">
                 <Border Name="AppetizersForOne" BorderThickness="2,2,0,2" BorderBrush="Black" Margin="10,2,0,2" CornerRadius="4,0,0,0" Background="White" Padding="5,0,0,0" >
                     <TextBlock Text="Appetizers: For One"/>
