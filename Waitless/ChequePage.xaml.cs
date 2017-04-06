@@ -30,10 +30,21 @@ namespace Waitless
 
         public ChequePage()
         {
+            HackyCommunicationClass.RegisterChequePage(this);
             InitializeComponent();
             RedrawItems();
             initialized = true;
-            
+            Loaded += MyWindow_Loaded;
+        }
+
+
+        private void MyWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (HackyCommunicationClass.shouldChequePageShowDialog)
+            {
+                HackyCommunicationClass.shouldChequePageShowDialog = false;
+                PlaceOrder();
+            }
         }
 
         public static void reset()
@@ -217,6 +228,11 @@ namespace Waitless
 
         private void OnPlaceOrderClicked(object sender, RoutedEventArgs e)
         {
+            PlaceOrder();
+        }
+
+        public void PlaceOrder()
+        {
             if (initialized)
             {
                 OrderConfirmationWindow confirmationDialog = new OrderConfirmationWindow();
@@ -251,19 +267,24 @@ namespace Waitless
             confirmationDialog.ShowDialog();
             if (confirmationDialog.confirmed)
             {
-                Global.Main.PaymentPage();
 
-                //remove currentUser from all items
-                foreach(Tuple<OrderedItem, List<string>> item in confirmedItems)
+                PaymentPage paymentPage = new PaymentPage();
+                paymentPage.ShowDialog();
+                if (paymentPage.paid)
                 {
-                    if (item.Item2.Contains("currentUserId"))
+                    //remove currentUser from all items
+                    foreach (Tuple<OrderedItem, List<string>> item in confirmedItems)
                     {
+                        if (item.Item2.Contains("currentUserId"))
+                        {
 
-                        item.Item1.paidAlready += item.Item1.EffectiveCost() / item.Item2.Count;
+                            item.Item1.paidAlready += item.Item1.EffectiveCost() / item.Item2.Count;
 
-                        item.Item2.Remove("currentUserId");
-                        RedrawItems();
+                            item.Item2.Remove("currentUserId");
+                            RedrawItems();
+                        }
                     }
+                    Global.Main.gotoOptions();
                 }
             }
 

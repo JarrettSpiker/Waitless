@@ -31,6 +31,9 @@ namespace Waitless
                 button.Height = 40;
                 button.VerticalAlignment = VerticalAlignment.Center;
                 button.Content = customization;
+                Thickness margin = button.Margin;
+                margin.Left = 3;
+                button.Margin = margin;
                 button.IsChecked = menuItem.customizations[customization];
                 button.Checked += (s, args) =>
                 {

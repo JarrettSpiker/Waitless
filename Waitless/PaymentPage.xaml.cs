@@ -18,13 +18,13 @@ namespace Waitless
     /// <summary>
     /// Interaction logic for PaymentPage.xaml
     /// </summary>
-    public partial class PaymentPage : Page
+    public partial class PaymentPage : Window
     {
         private DispatcherTimer timer;
+        public bool paid = false;
         public PaymentPage()
         {
             InitializeComponent();
-            Global.Main.PaymentMode();
         }
 
         private void Option_Click(object sender, RoutedEventArgs e)
@@ -37,14 +37,24 @@ namespace Waitless
             SuccessString.Visibility = Visibility.Visible;
             timer = new DispatcherTimer();
             timer.Tick += new EventHandler(TimerTick);
-            timer.Interval = new TimeSpan(0, 0, 3);
+            timer.Interval = new TimeSpan(0, 0, 2);
             timer.Start();
         }
 
         public void TimerTick(object sender, EventArgs args)
         {
-            Global.Main.gotoOptions();
+            paid = true;
             timer.Stop();
+            Close();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if(timer != null)
+            {
+                timer.Stop();
+            }
+            Close();
         }
     }
 }

@@ -73,7 +73,7 @@ namespace Waitless
 
         public void OnPlaceOrderClicked(object sender, RoutedEventArgs args)
         {
-            HackyCommunicationClass.mainWindow.SwitchToCheque();
+            HackyCommunicationClass.mainWindow.SwitchToChequeWithOrder();
         }
 
         private void Scroll_ScrollChanged(object sender, ScrollChangedEventArgs e)

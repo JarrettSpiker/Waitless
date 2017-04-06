@@ -10,6 +10,8 @@ namespace Waitless
     {
         public static MainWindow mainWindow { get; set; }
 
+        public static bool shouldChequePageShowDialog = false;
+
         public static void registerMainWindow(MainWindow _mainWindow)
         {
             mainWindow = _mainWindow;
@@ -28,6 +30,12 @@ namespace Waitless
         {
             categoriesPage = _categoriesPage;
         }
+
+        public static ChequePage chequePage { get; set; }
+        public static void RegisterChequePage(ChequePage _page)
+        {
+            chequePage = _page;
+        } 
 
     }
 }
