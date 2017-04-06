@@ -1,35 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
 using Waitless.controls;
 using Waitless.model;
 
 namespace Waitless
-{ 
+{
 
     /// <summary>
     /// Interaction logic for BillSplitter.xaml
     /// </summary>
     public partial class BillSplitter : Window
     {
-
-        public static List<Tuple<OrderedItem, List<String>>> userItems = new List<Tuple<OrderedItem, List<String>>>();
-        public static List<Tuple<OrderedItem, List<String>>> nonUserItems = new List<Tuple<OrderedItem, List<String>>>();
-
         public BillSplitter()
         {
             InitializeComponent();
+
+            Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush(Colors.Blue), "Me");
+            Circle otherUserCircle = new Circle("otherUserId", new SolidColorBrush(Colors.Red), "TG");
+            Circle otherUser2Circle = new Circle("otherUserId2", new SolidColorBrush(Colors.Green), "CD");
+            CircleDock.Children.Insert(0, new Circle(currentUserCircle));
+            CircleDock.Children.Insert(1, otherUserCircle);
+            CircleDock.Children.Insert(2, otherUser2Circle);
 
             billSplitterComponent.Children.Clear();
 
@@ -39,42 +34,30 @@ namespace Waitless
 
                 foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
                 {
-
+                    billSplitterItemControl control = new billSplitterItemControl(tuple);
+                    control.ItemName.Text = tuple.Item1.itemDefinition.name;
+                    control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
 
                     if (tuple.Item2.Contains("currentUserId"))
                     {
-                        userItems.Add(tuple);
-                        billSplitterItemControl control = new billSplitterItemControl(true);
-                        control.ItemName.Text = tuple.Item1.itemDefinition.name;
-                        control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
-                        billSplitterComponent.Children.Add(control);
+                        control.DropArea.Children.Add(new Circle(currentUserCircle));
                     }
-
-                    else
+                    if (tuple.Item2.Contains("otherUserId"))
                     {
-                        nonUserItems.Add(tuple);
+                        control.DropArea.Children.Add(new Circle(otherUserCircle));
                     }
-
-                }
-
-
-                foreach (Tuple<OrderedItem, List<string>> tuple in ChequePage.confirmedItems)
-                {
-                    if (!tuple.Item2.Contains("currentUserId"))
+                    if (tuple.Item2.Contains("otherUserId2"))
                     {
-                        billSplitterItemControl control = new billSplitterItemControl(false);
-                        control.ItemName.Text = tuple.Item1.itemDefinition.name;
-                        control.ItemPrice.Text = "$" + (tuple.Item1.EffectiveCost() / 100.0).ToString("F");
-                        billSplitterComponent.Children.Add(control);
+                        control.DropArea.Children.Add(new Circle(otherUser2Circle));
                     }
 
-
+                    billSplitterComponent.Children.Add(control);
                 }
 
             }
-           
 
-         }
+
+        }
 
         private void Window_LocationChanged(object sender, EventArgs e)
         {
@@ -84,15 +67,41 @@ namespace Waitless
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            
+
             Global.Main.Show();
             this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-          
+
             Global.Main.Show();
+        }
+
+
+
+        private void Garbage_Drop(object sender, DragEventArgs e)
+        {
+            // If an element in the panel has already handled the drop,
+            // the panel should not also handle it.
+            if (e.Handled == false)
+            {
+                UIElement _element = (UIElement)e.Data.GetData("Object");
+
+                if (sender != null && _element != null)
+                {
+                    StackPanel parent = (StackPanel)VisualTreeHelper.GetParent(_element);
+                    if (parent.Name.Equals("DropArea"))
+                    {
+                        Circle circ = (Circle)_element;
+                        billSplitterItemControl control = (billSplitterItemControl)((ContentPresenter)VisualTreeHelper.GetParent(VisualTreeHelper.GetParent(parent))).TemplatedParent;
+                        control.itemReference.Item2.Remove(circ.userId);
+                        parent.Children.Remove(circ);
+                    }
+                    
+
+                }
+            }
         }
     }
 }

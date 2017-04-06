@@ -73,6 +73,11 @@ namespace Waitless
             Toggle(Options, OptionsButton);
         }
 
+        public void gotoCheque()
+        {
+            Toggle(Cheque, ChequeButton);
+        }
+
         public void PaymentPage()
         {
             Toggle(Payment, CurrentButton);
@@ -107,6 +112,12 @@ namespace Waitless
         {
             Toggle(Cheque, ChequeButton);
             Back.IsEnabled = true;
+        }
+
+        public void SwitchToChequeWithOrder()
+        {
+            HackyCommunicationClass.shouldChequePageShowDialog = true;
+            Toggle(Cheque, ChequeButton);
         }
 
         private void ChequeButton_Click(object sender, RoutedEventArgs e)

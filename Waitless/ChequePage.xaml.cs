@@ -30,10 +30,21 @@ namespace Waitless
 
         public ChequePage()
         {
+            HackyCommunicationClass.RegisterChequePage(this);
             InitializeComponent();
             RedrawItems();
             initialized = true;
-            
+            Loaded += MyWindow_Loaded;
+        }
+
+
+        private void MyWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (HackyCommunicationClass.shouldChequePageShowDialog)
+            {
+                HackyCommunicationClass.shouldChequePageShowDialog = false;
+                PlaceOrder();
+            }
         }
 
         public static void reset()
@@ -101,12 +112,12 @@ namespace Waitless
                 Tuple<OrderedItem, List<string>> item = confirmedItems[i];
                 if (!foundItems.Contains(item.Item1) && item.Item2.Contains("currentUserId"))
                 {
-                    double amnt = 1 / item.Item2.Count;
+                    double amnt = 1.0 / item.Item2.Count;
                     for(int j = i+1; j<confirmedItems.Count; j++)
                     {
                         if(confirmedItems[j].Item1.Equals(item.Item1) && confirmedItems[j].Item2.Contains("currentUserId"))
                         {
-                            amnt += 1 / confirmedItems[j].Item2.Count;
+                            amnt += 1.0 / confirmedItems[j].Item2.Count;
                         }
                     }
                     foundItems.Add(item.Item1);
@@ -164,20 +175,14 @@ namespace Waitless
             List<OrderedItem> foundItems = new List<OrderedItem>();
             foreach (Tuple<OrderedItem,List<string>> item in confirmedItems)
             {
-                if(!foundItems.Contains(item.Item1) && !item.Item2.Contains("currentUserId"))
+                if(!item.Item2.Contains("currentUserId"))
                 {
-                    foundItems.Add(item.Item1);
+                    OthersItemControl component = new OthersItemControl();
+
+                    component.ItemName.Text = item.Item1.itemDefinition.name;
+                    component.Price.Text = (item.Item1.EffectiveCost() / 100.0).ToString("F");
+                    OthersItemsComponent.Children.Add(component);
                 }
-            }
-
-
-            foreach (OrderedItem item in foundItems)
-            {
-                OthersItemControl component = new OthersItemControl();
-
-                component.ItemName.Text = item.itemDefinition.name;
-                component.Price.Text = (item.EffectiveCost() / 100.0).ToString("F");
-                OthersItemsComponent.Children.Add(component);
             }
 
         }
@@ -223,6 +228,11 @@ namespace Waitless
 
         private void OnPlaceOrderClicked(object sender, RoutedEventArgs e)
         {
+            PlaceOrder();
+        }
+
+        public void PlaceOrder()
+        {
             if (initialized)
             {
                 OrderConfirmationWindow confirmationDialog = new OrderConfirmationWindow();
@@ -257,16 +267,24 @@ namespace Waitless
             confirmationDialog.ShowDialog();
             if (confirmationDialog.confirmed)
             {
-                Global.Main.PaymentPage();
 
-                //remove currentUser from all items
-                foreach(Tuple<OrderedItem, List<string>> item in confirmedItems)
+                PaymentPage paymentPage = new PaymentPage();
+                paymentPage.ShowDialog();
+                if (paymentPage.paid)
                 {
-                    if (item.Item2.Contains("currentUserId"))
+                    //remove currentUser from all items
+                    foreach (Tuple<OrderedItem, List<string>> item in confirmedItems)
                     {
-                        item.Item2.Remove("currentUserId");
-                        RedrawItems();
+                        if (item.Item2.Contains("currentUserId"))
+                        {
+
+                            item.Item1.paidAlready += item.Item1.EffectiveCost() / item.Item2.Count;
+
+                            item.Item2.Remove("currentUserId");
+                            RedrawItems();
+                        }
                     }
+                    Global.Main.gotoOptions();
                 }
             }
 
@@ -275,8 +293,8 @@ namespace Waitless
         private void SplitButton_Click(object sender, RoutedEventArgs e)
         {
             BillSplitter bs = new BillSplitter();
-            bs.Show();
-            Global.Main.Hide();
+            bs.ShowDialog();
+            RedrawItems();
         }
     }
 }

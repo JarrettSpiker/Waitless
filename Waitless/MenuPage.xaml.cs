@@ -69,12 +69,12 @@ namespace Waitless
         public void ShowNewItemFlyout(string itemName)
         {
             MainGrid.RowDefinitions[2].Height = new GridLength(25, GridUnitType.Pixel);
-            AddedToOrderText.Text = itemName + " added to order...";
+            AddedToOrderText.Text = itemName + " added to pending items...";
         }
 
         public void OnPlaceOrderClicked(object sender, RoutedEventArgs args)
         {
-            HackyCommunicationClass.mainWindow.SwitchToCheque();
+            HackyCommunicationClass.mainWindow.SwitchToChequeWithOrder();
         }
 
         private void Scroll_ScrollChanged(object sender, ScrollChangedEventArgs e)

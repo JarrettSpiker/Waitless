@@ -1,11 +1,11 @@
-﻿<Page x:Class="Waitless.PaymentPage"
+﻿<Window x:Class="Waitless.PaymentPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Waitless"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="300"
+       Top="0" Left="0" Height="525" Width="355" MinHeight="525" MinWidth="355" MaxHeight="525"
       Title="PaymentPage">
 
     <Grid Background="White">
@@ -15,10 +15,11 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0,0,0,2">
             <StackPanel Orientation="Horizontal">
+                <Button Content="⬅" Width="50" Foreground="Red" Background="White" FontSize="20" Click="Back_Click"/>
                 <TextBlock Text="Please Select Payment Option" VerticalAlignment="Center" FontSize="15" FontFamily="Segoe Print" Margin="5,0,0,0"/>
             </StackPanel>
         </Border>
-        <StackPanel Grid.Row="1" Orientation="Vertical" Background="AliceBlue">
+        <StackPanel Grid.Row="1" Orientation="Vertical" Background="Wheat">
             <TextBlock FontSize="15" FontFamily="Segoe Print" Text="In Person:" Margin="5,0"/>
             <Button x:Name="Cash" Background="White" HorizontalAlignment="Right" Width="250" BorderThickness="5,5,0,5" Click="Option_Click">
                 <TextBlock FontSize="15" FontFamily="Segoe Print" Text="Cash"/>
@@ -43,4 +44,4 @@
             <TextBlock Name="SuccessString" Text="Payment Successful!" Margin="25,50" Foreground="Green" FontFamily="MV Boli" FontSize="25" Visibility="Hidden"/>
         </StackPanel>
     </Grid>
-</Page>
+</Window>
