@@ -20,7 +20,7 @@ namespace Waitless
     public partial class HelpViewer : Window
     {
         private Uri[] slides;
-        private int size = 4;
+        private int size = 5;
         private int position = 0;
         public HelpViewer()
         {
@@ -31,6 +31,7 @@ namespace Waitless
             slides[2] = new Uri("Images/Help3.xaml", UriKind.Relative);
             slides[3] = new Uri("Images/Help4.xaml", UriKind.Relative);
             slides[4] = new Uri("Images/Help5.xaml", UriKind.Relative);
+            slides[5] = new Uri("Images/Help6.xaml", UriKind.Relative);
             HelpImage.NavigationService.Navigate(slides[0]);
          
         }

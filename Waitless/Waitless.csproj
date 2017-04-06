@@ -92,6 +92,9 @@
     <Compile Include="Images\Help5.xaml.cs">
       <DependentUpon>Help5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Images\Help6.xaml.cs">
+      <DependentUpon>Help6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Images\testHelpSlide.xaml.cs">
       <DependentUpon>testHelpSlide.xaml</DependentUpon>
     </Compile>
@@ -204,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Images\Help5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Help6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -369,6 +376,7 @@
     <Resource Include="Images\Help3.png" />
     <Resource Include="Images\Help4.png" />
     <Resource Include="Images\Help5.png" />
+    <Resource Include="Images\Help6.png" />
     <Content Include="Images\menuIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
