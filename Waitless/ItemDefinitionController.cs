@@ -72,7 +72,7 @@ namespace Waitless
               null, new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad"},
               false, false, false, true, null));
 
-            definitions.Add(new ItemDefinition("New York Strip Loin", "Sample Description", ItemDefinition.Categories.Steaks,
+            definitions.Add(new ItemDefinition("New York Strip Loin", "14oz Choice steak broiled over an open flame to enhance its natural flavors.", ItemDefinition.Categories.Steaks,
               "/Images/MenuItems/newYorkStrip.jpg", 5, 3500, "Sample Nutritional Info", true, true, false, true,
               new List<string> { "Add Steak Sauce", "Add Peppercorns" }, new List<string> { "Rare", "Medium-Rare", "Medium", "Well Done" },
               null, new List<string> { "Yukon Fries", "Yam Fries", "Mashed Potatoes", "Caesar Salad" },
