@@ -59,7 +59,8 @@ namespace Waitless
         private void Help_Click(object sender, RoutedEventArgs e)
         {
             HelpViewer wijg = new HelpViewer();
-            wijg.ShowDialog();
+            wijg.Show();
+            Global.Main.Hide();
         }
     }
 }

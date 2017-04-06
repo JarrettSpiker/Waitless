@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Waitless"
         mc:Ignorable="d"
-        Title="PaymentErrorDialog" Top="32" Left="25" Height="300" MinHeight="300" MaxHeight="300" MaxWidth="300" MinWidth="300" Width="300" Background="Wheat">
+        Title="PaymentErrorDialog" Top="32" Left="25" LocationChanged="Window_LocationChanged" Height="300" MinHeight="300" MaxHeight="300" MaxWidth="300" MinWidth="300" Width="300" Background="Wheat">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -13,7 +13,7 @@
             <RowDefinition Height="2*"/>
 
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="You Cant Pey Yet:" FontFamily="MV Boli" FontWeight="Bold" FontSize="25" TextWrapping="Wrap" />
+        <TextBlock Grid.Row="0" Text="You Cant Pay Yet:" FontFamily="MV Boli" FontWeight="Bold" FontSize="25" TextWrapping="Wrap" />
         <TextBlock Grid.Row="1"  Name="ErrorMessage" FontFamily="MV Boli" FontSize="18" TextWrapping="Wrap" />
         <Button Grid.Row="2" FontFamily="MV Boli" Background="GreenYellow" FontSize="44" Click="ConfirmButton_Click">Dismiss</Button>
 

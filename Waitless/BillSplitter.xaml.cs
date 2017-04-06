@@ -18,6 +18,7 @@ namespace Waitless
         public BillSplitter()
         {
             InitializeComponent();
+            HackyCommunicationClass.RegisterBillSplitter(this);
 
             Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush(Colors.Blue), "Me");
             Circle otherUserCircle = new Circle("otherUserId", new SolidColorBrush(Colors.Red), "TG");

@@ -311,6 +311,11 @@ namespace Waitless
             this.Top = 0;
             this.Left = 0;
         }
+
+        private void Xdescription_Expanded(object sender, RoutedEventArgs e)
+        {
+            Scroll.ScrollToBottom();
+        }
     }
 }
 
