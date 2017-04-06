@@ -9,11 +9,11 @@
         Background="Bisque"
         AllowDrop="True"
         Drop="panel_Drop"
-        Height="40">
+        Height="50">
     <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="3*" />
-                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Viewbox Grid.Column="0" Margin="3,0">
             <TextBlock VerticalAlignment="Center"  Name="ItemName" Text="Steak" Foreground="Blue"/>
