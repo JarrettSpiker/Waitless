@@ -56,7 +56,7 @@ namespace Waitless.controls
                         DropArea.Children.Add(_circle);
                         // set the value to return to the DoDragDrop call
                         e.Effects = DragDropEffects.Copy;
-                        BillSplitter.recalculateBillSplitterTotals();
+                        HackyCommunicationClass.billSplitter.recalculateBillSplitterTotals();
 
                     }
                }

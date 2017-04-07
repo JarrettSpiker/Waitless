@@ -21,6 +21,7 @@ namespace Waitless
             InitializeComponent();
 
             HackyCommunicationClass.RegisterBillSplitter(this);
+            recalculateBillSplitterTotals();
 
             Circle currentUserCircle = new Circle("currentUserId", new SolidColorBrush(Colors.Blue), "Me");
             Circle otherUserCircle = new Circle("otherUserId", new SolidColorBrush(Colors.Red), "TG");
@@ -108,7 +109,7 @@ namespace Waitless
             }
         }
 
-        public static void recalculateBillSplitterTotals()
+        public void recalculateBillSplitterTotals()
         { 
 
             int userIntTotal = 0;
@@ -145,9 +146,9 @@ namespace Waitless
 
             }
             //currently giving errors below to references , commented out to avoid build errors
-            //currentUserTotal.Text = "$" + (userIntTotal / 100.0).ToString("F");
-            //otherUserId.Text = "$" + (otherUserIntTotal / 100.0).ToString("F");
-            //otherUserId2.Text = "$" + (otherUser2IntTotal / 100.0).ToString("F");
+            currentUserTotal.Text = "$" + (userIntTotal / 100.0).ToString("F");
+            otherUserId.Text = "$" + (otherUserIntTotal / 100.0).ToString("F");
+            otherUserId2.Text = "$" + (otherUser2IntTotal / 100.0).ToString("F");
         }
     }
 }
