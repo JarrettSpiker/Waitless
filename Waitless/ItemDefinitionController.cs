@@ -40,7 +40,7 @@ namespace Waitless
                 false, false, false, true, null));
 
             definitions.Add(new ItemDefinition("Nachos", "Oven baked corn chips, melted cheese, guacamole, sour cream & salsa. ", ItemDefinition.Categories.AppetizersToShare,
-                "/Images/MenuItems/nachos.jpg", 5, 1100, "Sample Nutritional Info", false, false, false, true, new List<string> {"Add gound beef?" }, null, null, null,
+                "/Images/MenuItems/nachos.jpg", 5, 1100, "Sample Nutritional Info", false, false, false, true, new List<string> {"Add ground beef?" }, null, null, null,
                 false, true, false, true, null));
 
 
