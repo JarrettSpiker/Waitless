@@ -35,6 +35,10 @@ namespace Waitless
             slides[6] = new Uri("Images/Help7.xaml", UriKind.Relative);
             slides[7] = new Uri("Images/Help8.xaml", UriKind.Relative);
             HelpImage.NavigationService.Navigate(slides[Global.HelpPosition]);
+            if (Global.HelpPosition == size)
+                Next.IsEnabled = false;
+            if (Global.HelpPosition == 0)
+                Previous.IsEnabled = false;
          
         }
 
