@@ -25,8 +25,8 @@ namespace Waitless
             InitializeComponent();
             if (fixed_position)
             {
-                this.Top = 526;
-                this.Left = 0;
+                this.Top = 0;
+                this.Left = 351;
             }
             else
             {
@@ -50,8 +50,8 @@ namespace Waitless
         {
             if (fixed_position)
             {
-                this.Top = 526;
-                this.Left = 0;
+                this.Top = 0;
+                this.Left = 351;
             }
             else
             {
