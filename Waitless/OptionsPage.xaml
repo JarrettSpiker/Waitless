@@ -35,12 +35,6 @@
                         <Image Source="Images/submitRating.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
                     </DockPanel>
                 </Button>
-                <Button x:Name="Help" Click="Help_Click"  HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="Salmon">
-                    <DockPanel>
-                        <TextBlock Text="Help" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="20" FontFamily="MV Boli" />
-                        <Image Source="Images/helpIcon.png" Width="25" Height="25" Margin="0,0,10,0" HorizontalAlignment="Right"/>
-                    </DockPanel>
-                </Button>
             </StackPanel>
             <Button DockPanel.Dock="Bottom" x:Name="LeaveTable" HorizontalAlignment="Stretch" MinHeight="40" HorizontalContentAlignment="Stretch" Background="AntiqueWhite" Click="LeaveTable_Click">
                 <DockPanel>

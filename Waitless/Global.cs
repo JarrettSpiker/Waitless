@@ -14,6 +14,7 @@ namespace Waitless
         public static Keyboard kb;
         public static int kb_Top;
         public static int kb_Left;
+        public static int HelpPosition = 0;
 
  
         public static void paid()

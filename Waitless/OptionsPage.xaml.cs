@@ -31,6 +31,7 @@ namespace Waitless
             Review.reset();
             Feedback.text = "";
             MenuPage.ScrollPosition = 0;
+            Global.HelpPosition = 0;
             OpeningWindow ow = new OpeningWindow();
             Global.Main.Hide();
             ow.Show();

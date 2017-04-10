@@ -21,7 +21,7 @@ namespace Waitless
     {
         private Uri[] slides;
         private int size = 7;
-        private int position = 0;
+       
         public HelpViewer()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace Waitless
             slides[5] = new Uri("Images/Help6.xaml", UriKind.Relative);
             slides[6] = new Uri("Images/Help7.xaml", UriKind.Relative);
             slides[7] = new Uri("Images/Help8.xaml", UriKind.Relative);
-            HelpImage.NavigationService.Navigate(slides[0]);
+            HelpImage.NavigationService.Navigate(slides[Global.HelpPosition]);
          
         }
 
@@ -52,20 +52,20 @@ namespace Waitless
 
         private void Previous_Click(object sender, RoutedEventArgs e)
         {
-            if (--position == 0)
+            if (--Global.HelpPosition == 0)
                 Previous.IsEnabled = false;
             if (Next.IsEnabled == false)
                 Next.IsEnabled = true;
-            HelpImage.NavigationService.Navigate(slides[position]);
+            HelpImage.NavigationService.Navigate(slides[Global.HelpPosition]);
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            if (++position == size)
+            if (++Global.HelpPosition == size)
                 Next.IsEnabled = false;
             if (Previous.IsEnabled == false)
                 Previous.IsEnabled = true;
-            HelpImage.NavigationService.Navigate(slides[position]);
+            HelpImage.NavigationService.Navigate(slides[Global.HelpPosition]);
         }
 
         
