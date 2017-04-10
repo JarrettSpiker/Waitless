@@ -377,6 +377,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Arrow.png" />
+    <Resource Include="Images\cancelSymbol.png" />
     <Content Include="Images\cook.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
