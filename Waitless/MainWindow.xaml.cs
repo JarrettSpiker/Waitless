@@ -144,8 +144,8 @@ namespace Waitless
 
         private void Window_LocationChanged(object sender, EventArgs e)
         {
-            this.Top = 0;
-            this.Left = 0;
+            //this.Top = 0;
+            //this.Left = 0;
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

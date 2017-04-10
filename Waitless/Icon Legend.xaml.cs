@@ -32,8 +32,8 @@ namespace Waitless
 
         private void Window_LocationChanged(object sender, EventArgs e)
         {
-            this.Top = 32;
-            this.Left = 25;
+            this.Top = HackyCommunicationClass.mainWindow.Top = 32;
+            this.Left = HackyCommunicationClass.mainWindow.Left + 25;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

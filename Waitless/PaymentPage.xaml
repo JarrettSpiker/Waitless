@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Waitless"
       mc:Ignorable="d" 
        Top="0" Left="0" Height="525" Width="355" MinHeight="525" MinWidth="355" MaxHeight="525"
-      Title="PaymentPage">
+      Title="PaymentPage" LocationChanged="Window_LocationChanged">
 
     <Grid Background="White">
         <Grid.RowDefinitions>

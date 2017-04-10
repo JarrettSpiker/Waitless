@@ -65,8 +65,8 @@ namespace Waitless
 
         private void Window_LocationChanged(object sender, EventArgs e)
         {
-            this.Top = 0;
-            this.Left = 0;
+            this.Top = HackyCommunicationClass.mainWindow.Top;
+            this.Left = HackyCommunicationClass.mainWindow.Left;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

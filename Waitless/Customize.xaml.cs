@@ -62,8 +62,8 @@ namespace Waitless
 
         private void Window_LocationChanged(object sender, System.EventArgs e)
         {
-            this.Top = 32;
-            this.Left = 14;
+            this.Top = HackyCommunicationClass.mainWindow.Top +  32;
+            this.Left = HackyCommunicationClass.mainWindow.Left + 14;
         }
     }
 }
