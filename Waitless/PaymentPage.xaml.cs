@@ -34,6 +34,7 @@ namespace Waitless
 
         private void PaymentMade()
         {
+            paid = true;
             SuccessString.Visibility = Visibility.Visible;
             timer = new DispatcherTimer();
             timer.Tick += new EventHandler(TimerTick);
