@@ -410,7 +410,6 @@
     <Content Include="Images\MenuItems\yamFries.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Images\Minus.png" />
     <Content Include="Images\optionsIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
